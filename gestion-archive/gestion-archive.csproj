@@ -45,8 +45,12 @@
     <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Npgsql, Version=8.0.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>packages\Npgsql.8.0.2\lib\netstandard2.0\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="ReaLTaiizor, Version=3.8.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ReaLTaiizor.3.8.0.1\lib\net48\ReaLTaiizor.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -56,6 +60,7 @@
       <HintPath>packages\System.Collections.Immutable.8.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.0\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
@@ -102,11 +107,38 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="formArchives.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formArchives.Designer.cs">
+      <DependentUpon>formArchives.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formOutil1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formOutil1.Designer.cs">
+      <DependentUpon>formOutil1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main_page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main_page.Designer.cs">
+      <DependentUpon>main_page.cs</DependentUpon>
+    </Compile>
     <Compile Include="password_ft.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formArchives.resx">
+      <DependentUpon>formArchives.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formOutil1.resx">
+      <DependentUpon>formOutil1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_page.resx">
+      <DependentUpon>main_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
