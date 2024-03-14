@@ -16,7 +16,7 @@ namespace gestion_archive
     public partial class MainForm : Form
     {
         formArchives archives; 
-        Tool1Form outil1;
+        AddArchiveForm outil1;
 
         public MainForm()
         {
@@ -114,12 +114,12 @@ namespace gestion_archive
             archives = null;
         }
 
-        private void button_outil1_Click(object sender, EventArgs e)
+        private void button_addarchive_Click(object sender, EventArgs e)
         {
             // Afficher le form de Archives
             if (outil1 == null)
             {
-                outil1 = new Tool1Form();
+                outil1 = new AddArchiveForm();
                 outil1.FormClosed += Outil1_FormClosed; ;
                 outil1.MdiParent = this;
                 outil1.Dock = DockStyle.Fill;
