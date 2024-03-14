@@ -1,6 +1,6 @@
 ﻿namespace gestion_archive
 {
-    partial class Form1
+    partial class LogForm
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogForm));
             this.Label_LogIn = new System.Windows.Forms.Label();
             this.Panel_User = new System.Windows.Forms.Panel();
             this.Panel_Password = new System.Windows.Forms.Panel();

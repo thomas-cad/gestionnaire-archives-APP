@@ -13,12 +13,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace gestion_archive
 {
-    public partial class main_page : Form
+    public partial class MainForm : Form
     {
         formArchives archives; 
-        formOutil1 outil1;
+        Tool1Form outil1;
 
-        public main_page()
+        public MainForm()
         {
             InitializeComponent();  
         }
@@ -119,7 +119,7 @@ namespace gestion_archive
             // Afficher le form de Archives
             if (outil1 == null)
             {
-                outil1 = new formOutil1();
+                outil1 = new Tool1Form();
                 outil1.FormClosed += Outil1_FormClosed; ;
                 outil1.MdiParent = this;
                 outil1.Dock = DockStyle.Fill;

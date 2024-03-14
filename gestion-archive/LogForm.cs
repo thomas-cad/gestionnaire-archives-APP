@@ -13,9 +13,9 @@ using Npgsql;
 
 namespace gestion_archive
 {
-    public partial class Form1 : Form
+    public partial class LogForm : Form
     {
-        public Form1()
+        public LogForm()
         {
             InitializeComponent();
         }
@@ -49,7 +49,8 @@ namespace gestion_archive
 
                     if (count == 1)
                     {
-                        MessageBox.Show("Connection Successful");
+                        MainForm mainForm = new MainForm(); //Call MainForm
+                        mainForm.Show();
                     }
                     else
                     {
