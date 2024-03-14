@@ -1,6 +1,6 @@
 ﻿namespace gestion_archive
 {
-    partial class formOutil1
+    partial class Tool1Form
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace gestion_archive
 {
-    public partial class formOutil1 : Form
+    public partial class Tool1Form : Form
     {
-        public formOutil1()
+        public Tool1Form()
         {
             InitializeComponent();
         }

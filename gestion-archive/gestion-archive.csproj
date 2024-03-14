@@ -107,23 +107,23 @@
     <Compile Include="formArchives.Designer.cs">
       <DependentUpon>formArchives.cs</DependentUpon>
     </Compile>
-    <Compile Include="formOutil1.cs">
+    <Compile Include="Tool1Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formOutil1.Designer.cs">
-      <DependentUpon>formOutil1.cs</DependentUpon>
+    <Compile Include="Tool1Form.Designer.cs">
+      <DependentUpon>Tool1Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="form_log.cs">
+    <Compile Include="LogForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form_log.Designer.cs">
-      <DependentUpon>form_log.cs</DependentUpon>
+    <Compile Include="LogForm.Designer.cs">
+      <DependentUpon>LogForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="main_page.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="main_page.Designer.cs">
-      <DependentUpon>main_page.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="password_ft.cs" />
     <Compile Include="Program.cs" />
@@ -131,14 +131,14 @@
     <EmbeddedResource Include="formArchives.resx">
       <DependentUpon>formArchives.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formOutil1.resx">
-      <DependentUpon>formOutil1.cs</DependentUpon>
+    <EmbeddedResource Include="Tool1Form.resx">
+      <DependentUpon>Tool1Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form_log.resx">
-      <DependentUpon>form_log.cs</DependentUpon>
+    <EmbeddedResource Include="LogForm.resx">
+      <DependentUpon>LogForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="main_page.resx">
-      <DependentUpon>main_page.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
