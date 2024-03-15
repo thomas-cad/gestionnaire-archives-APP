@@ -20,7 +20,9 @@ namespace gestion_archive
 
         public MainForm()
         {
-            InitializeComponent();  
+            InitializeComponent();
+            LogForm logForm = new LogForm();
+            logForm.ShowDialog();
         }
 
         bool toolExpand = false; 
@@ -134,6 +136,11 @@ namespace gestion_archive
         private void Outil1_FormClosed(object sender, FormClosedEventArgs e)
         {
             outil1.Activate(); 
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
