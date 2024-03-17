@@ -35,9 +35,9 @@
             ReaLTaiizor.Controls.BigLabel bigLabel7;
             this.bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.LieuTextBox = new ReaLTaiizor.Controls.BigTextBox();
             this.AdresseTextBox = new ReaLTaiizor.Controls.BigTextBox();
             this.NbrEpiTextBox = new ReaLTaiizor.Controls.BigTextBox();
@@ -52,6 +52,71 @@
             bigLabel7 = new ReaLTaiizor.Controls.BigLabel();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // bigLabel2
+            // 
+            bigLabel2.AutoSize = true;
+            bigLabel2.BackColor = System.Drawing.Color.Transparent;
+            bigLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            bigLabel2.ForeColor = System.Drawing.Color.White;
+            bigLabel2.Location = new System.Drawing.Point(15, 133);
+            bigLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            bigLabel2.Name = "bigLabel2";
+            bigLabel2.Size = new System.Drawing.Size(51, 28);
+            bigLabel2.TabIndex = 33;
+            bigLabel2.Text = "Lieu";
+            // 
+            // bigLabel3
+            // 
+            bigLabel3.AutoSize = true;
+            bigLabel3.BackColor = System.Drawing.Color.Transparent;
+            bigLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            bigLabel3.ForeColor = System.Drawing.Color.White;
+            bigLabel3.Location = new System.Drawing.Point(14, 218);
+            bigLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            bigLabel3.Name = "bigLabel3";
+            bigLabel3.Size = new System.Drawing.Size(86, 28);
+            bigLabel3.TabIndex = 35;
+            bigLabel3.Text = "Adresse";
+            // 
+            // bigLabel5
+            // 
+            bigLabel5.AutoSize = true;
+            bigLabel5.BackColor = System.Drawing.Color.Transparent;
+            bigLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            bigLabel5.ForeColor = System.Drawing.Color.White;
+            bigLabel5.Location = new System.Drawing.Point(14, 343);
+            bigLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            bigLabel5.Name = "bigLabel5";
+            bigLabel5.Size = new System.Drawing.Size(124, 28);
+            bigLabel5.TabIndex = 37;
+            bigLabel5.Text = "Nombre Epi";
+            // 
+            // bigLabel6
+            // 
+            bigLabel6.AutoSize = true;
+            bigLabel6.BackColor = System.Drawing.Color.Transparent;
+            bigLabel6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            bigLabel6.ForeColor = System.Drawing.Color.White;
+            bigLabel6.Location = new System.Drawing.Point(338, 343);
+            bigLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            bigLabel6.Name = "bigLabel6";
+            bigLabel6.Size = new System.Drawing.Size(167, 28);
+            bigLabel6.TabIndex = 39;
+            bigLabel6.Text = "Nombre Etagere";
+            // 
+            // bigLabel7
+            // 
+            bigLabel7.AutoSize = true;
+            bigLabel7.BackColor = System.Drawing.Color.Transparent;
+            bigLabel7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            bigLabel7.ForeColor = System.Drawing.Color.White;
+            bigLabel7.Location = new System.Drawing.Point(644, 343);
+            bigLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            bigLabel7.Name = "bigLabel7";
+            bigLabel7.Size = new System.Drawing.Size(172, 28);
+            bigLabel7.TabIndex = 41;
+            bigLabel7.Text = "Nombre Tablette";
             // 
             // bigLabel4
             // 
@@ -76,6 +141,15 @@
             this.panel2.Size = new System.Drawing.Size(900, 5);
             this.panel2.TabIndex = 25;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.ForeColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(900, 5);
+            this.panel3.TabIndex = 26;
+            // 
             // bigLabel1
             // 
             this.bigLabel1.AutoSize = true;
@@ -85,9 +159,9 @@
             this.bigLabel1.Location = new System.Drawing.Point(12, 302);
             this.bigLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bigLabel1.Name = "bigLabel1";
-            this.bigLabel1.Size = new System.Drawing.Size(202, 31);
+            this.bigLabel1.Size = new System.Drawing.Size(189, 31);
             this.bigLabel1.TabIndex = 28;
-            this.bigLabel1.Text = "Réglages du lieux";
+            this.bigLabel1.Text = "Réglages du lieu";
             // 
             // panel1
             // 
@@ -97,15 +171,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(900, 5);
             this.panel1.TabIndex = 27;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(900, 5);
-            this.panel3.TabIndex = 26;
             // 
             // LieuTextBox
             // 
@@ -124,19 +189,6 @@
             this.LieuTextBox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.LieuTextBox.UseSystemPasswordChar = false;
             // 
-            // bigLabel2
-            // 
-            bigLabel2.AutoSize = true;
-            bigLabel2.BackColor = System.Drawing.Color.Transparent;
-            bigLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            bigLabel2.ForeColor = System.Drawing.Color.White;
-            bigLabel2.Location = new System.Drawing.Point(15, 133);
-            bigLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            bigLabel2.Name = "bigLabel2";
-            bigLabel2.Size = new System.Drawing.Size(51, 28);
-            bigLabel2.TabIndex = 33;
-            bigLabel2.Text = "Lieu";
-            // 
             // AdresseTextBox
             // 
             this.AdresseTextBox.BackColor = System.Drawing.Color.Transparent;
@@ -153,19 +205,6 @@
             this.AdresseTextBox.TabIndex = 36;
             this.AdresseTextBox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.AdresseTextBox.UseSystemPasswordChar = false;
-            // 
-            // bigLabel3
-            // 
-            bigLabel3.AutoSize = true;
-            bigLabel3.BackColor = System.Drawing.Color.Transparent;
-            bigLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            bigLabel3.ForeColor = System.Drawing.Color.White;
-            bigLabel3.Location = new System.Drawing.Point(14, 218);
-            bigLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            bigLabel3.Name = "bigLabel3";
-            bigLabel3.Size = new System.Drawing.Size(86, 28);
-            bigLabel3.TabIndex = 35;
-            bigLabel3.Text = "Adresse";
             // 
             // NbrEpiTextBox
             // 
@@ -184,19 +223,6 @@
             this.NbrEpiTextBox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.NbrEpiTextBox.UseSystemPasswordChar = false;
             // 
-            // bigLabel5
-            // 
-            bigLabel5.AutoSize = true;
-            bigLabel5.BackColor = System.Drawing.Color.Transparent;
-            bigLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            bigLabel5.ForeColor = System.Drawing.Color.White;
-            bigLabel5.Location = new System.Drawing.Point(14, 343);
-            bigLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            bigLabel5.Name = "bigLabel5";
-            bigLabel5.Size = new System.Drawing.Size(124, 28);
-            bigLabel5.TabIndex = 37;
-            bigLabel5.Text = "Nombre Epi";
-            // 
             // NbrEtagereTextBox
             // 
             this.NbrEtagereTextBox.BackColor = System.Drawing.Color.Transparent;
@@ -214,19 +240,6 @@
             this.NbrEtagereTextBox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.NbrEtagereTextBox.UseSystemPasswordChar = false;
             // 
-            // bigLabel6
-            // 
-            bigLabel6.AutoSize = true;
-            bigLabel6.BackColor = System.Drawing.Color.Transparent;
-            bigLabel6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            bigLabel6.ForeColor = System.Drawing.Color.White;
-            bigLabel6.Location = new System.Drawing.Point(338, 343);
-            bigLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            bigLabel6.Name = "bigLabel6";
-            bigLabel6.Size = new System.Drawing.Size(167, 28);
-            bigLabel6.TabIndex = 39;
-            bigLabel6.Text = "Nombre Etagere";
-            // 
             // NbrTabletteTextBox
             // 
             this.NbrTabletteTextBox.BackColor = System.Drawing.Color.Transparent;
@@ -243,19 +256,6 @@
             this.NbrTabletteTextBox.TabIndex = 42;
             this.NbrTabletteTextBox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.NbrTabletteTextBox.UseSystemPasswordChar = false;
-            // 
-            // bigLabel7
-            // 
-            bigLabel7.AutoSize = true;
-            bigLabel7.BackColor = System.Drawing.Color.Transparent;
-            bigLabel7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            bigLabel7.ForeColor = System.Drawing.Color.White;
-            bigLabel7.Location = new System.Drawing.Point(644, 343);
-            bigLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            bigLabel7.Name = "bigLabel7";
-            bigLabel7.Size = new System.Drawing.Size(172, 28);
-            bigLabel7.TabIndex = 41;
-            bigLabel7.Text = "Nombre Tablette";
             // 
             // bigLabel8
             // 
