@@ -49,8 +49,8 @@ namespace gestion_archive
 
                     if (count == 1)
                     {
-                        MainForm mainForm = new MainForm(); //Call MainForm
-                        mainForm.Show();
+                        conn.Close();
+                        this.Close();
                     }
                     else
                     {
@@ -62,7 +62,6 @@ namespace gestion_archive
                     MessageBox.Show(ex.Message);//Show error message
                     Application.Exit(); //Close the application
                 }
-
         }
 
         private void label1_Click_1(object sender, EventArgs e)
