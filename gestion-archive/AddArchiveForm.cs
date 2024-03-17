@@ -18,7 +18,7 @@ namespace gestion_archive
     public partial class AddArchiveForm : Form
     {
         //Définition des reqêtes et connexion pour les menus
-        public NpgsqlConnection conn;
+        private NpgsqlConnection conn;
         private NpgsqlCommand agent_requete;
         private NpgsqlCommand service_requete;
 
@@ -159,6 +159,11 @@ namespace gestion_archive
         {
             AgentTextBox.Text = AgentDataGridView[2, e.RowIndex].Value.ToString(); //Assigne à la TextBox l'id de l'agent selectionne
             AgentDataGridView.Hide(); //cache la data view
+        }
+
+        private void button_cote_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
