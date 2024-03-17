@@ -49,6 +49,7 @@ namespace gestion_archive
 
                     if (count == 1)
                     {
+                        conn.Close();
                         this.Close();
                     }
                     else

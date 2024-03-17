@@ -1,4 +1,6 @@
-﻿using System;
+﻿using data_base;
+using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,14 +17,29 @@ namespace gestion_archive
 {
     public partial class MainForm : Form
     {
-        formArchives archives; 
+        private formArchives archives; 
         AddArchiveForm outil1;
+
+        public NpgsqlConnection conn;
+
 
         public MainForm()
         {
             InitializeComponent();
             LogForm logForm = new LogForm();
             logForm.ShowDialog();
+            conn = Data_base.GetDBConnection("systeme_archive");
+            try
+            {
+                conn.Open();
+                MessageBox.Show("Connection Succefull");            
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);//Show error message
+                this.Close();
+
+            }
         }
 
         bool toolExpand = false; 
@@ -121,7 +138,7 @@ namespace gestion_archive
             // Afficher le form de Archives
             if (outil1 == null)
             {
-                outil1 = new AddArchiveForm();
+                outil1 = new AddArchiveForm(conn);
                 outil1.FormClosed += Outil1_FormClosed; ;
                 outil1.MdiParent = this;
                 outil1.Dock = DockStyle.Fill;
