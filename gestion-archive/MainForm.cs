@@ -26,19 +26,19 @@ namespace gestion_archive
         public MainForm()
         {
             InitializeComponent();
+            //Creation d'un form de log
             LogForm logForm = new LogForm();
             logForm.ShowDialog();
+            //Connexion à la BDD
             conn = Data_base.GetDBConnection("systeme_archive");
             try
             {
-                conn.Open();
-                MessageBox.Show("Connection Succefull");            
+                conn.Open();            
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);//Show error message
-                this.Close();
-
+                this.Close(); //Ferme l'application si la connection echoue
             }
         }
 

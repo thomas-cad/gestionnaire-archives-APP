@@ -92,7 +92,10 @@ namespace gestion_archive
             {
                 //Conversion des types
                 metrage_lineaire = float.Parse(bigTextBox5.Text);
-                temps_conservation = int.Parse(bigTextBox6.Text);
+                if(bigTextBox6.Text != null)
+                {
+                    temps_conservation = int.Parse(bigTextBox6.Text);
+                }
                 id_agent = int.Parse(AgentTextBox.Text);
                 id_service = int.Parse(ServiceTextBox.Text);
 
