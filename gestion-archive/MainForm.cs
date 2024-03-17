@@ -159,5 +159,11 @@ namespace gestion_archive
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddEmplacementForm addEmplacementForm = new AddEmplacementForm(conn);
+            addEmplacementForm.Show();
+        }
     }
 }

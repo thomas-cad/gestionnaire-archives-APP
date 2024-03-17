@@ -30,16 +30,14 @@
         {
             this.main_label = new ReaLTaiizor.Controls.BigLabel();
             this.panel1 = new ReaLTaiizor.Controls.Panel();
-            this.bigLabel5 = new ReaLTaiizor.Controls.BigLabel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.ServiceDataGridView = new System.Windows.Forms.DataGridView();
+            this.AgentDataGridView = new System.Windows.Forms.DataGridView();
             this.bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ServiceTextBox = new ReaLTaiizor.Controls.BigTextBox();
             this.ServiceLabel = new ReaLTaiizor.Controls.BigLabel();
             this.DateArchivage = new System.Windows.Forms.DateTimePicker();
             this.DateArchive = new System.Windows.Forms.DateTimePicker();
-            this.AgentDataGridView = new System.Windows.Forms.DataGridView();
             this.AgentTextBox = new ReaLTaiizor.Controls.BigTextBox();
             this.bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
             this.bigTextBox6 = new ReaLTaiizor.Controls.BigTextBox();
@@ -53,6 +51,8 @@
             this.button_submit = new ReaLTaiizor.Controls.AirButton();
             this.button_cote = new ReaLTaiizor.Controls.BigTextBox();
             this.titre_label = new ReaLTaiizor.Controls.BigLabel();
+            this.bigLabel5 = new ReaLTaiizor.Controls.BigLabel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ServiceDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AgentDataGridView)).BeginInit();
@@ -107,28 +107,6 @@
             this.panel1.TabIndex = 5;
             this.panel1.Text = "panel1";
             // 
-            // bigLabel5
-            // 
-            this.bigLabel5.AutoSize = true;
-            this.bigLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel5.ForeColor = System.Drawing.Color.White;
-            this.bigLabel5.Location = new System.Drawing.Point(32, 338);
-            this.bigLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bigLabel5.Name = "bigLabel5";
-            this.bigLabel5.Size = new System.Drawing.Size(267, 31);
-            this.bigLabel5.TabIndex = 26;
-            this.bigLabel5.Text = "Informations Archivage";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(37, 369);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1099, 5);
-            this.panel3.TabIndex = 25;
-            // 
             // ServiceDataGridView
             // 
             this.ServiceDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -140,6 +118,18 @@
             this.ServiceDataGridView.Size = new System.Drawing.Size(551, 105);
             this.ServiceDataGridView.TabIndex = 21;
             this.ServiceDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ServiceDataGridView_CellContentClick);
+            // 
+            // AgentDataGridView
+            // 
+            this.AgentDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AgentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AgentDataGridView.Location = new System.Drawing.Point(36, 291);
+            this.AgentDataGridView.Name = "AgentDataGridView";
+            this.AgentDataGridView.RowHeadersWidth = 51;
+            this.AgentDataGridView.RowTemplate.Height = 24;
+            this.AgentDataGridView.Size = new System.Drawing.Size(551, 105);
+            this.AgentDataGridView.TabIndex = 17;
+            this.AgentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AgentDataGridView_CellContentClick);
             // 
             // bigLabel4
             // 
@@ -215,18 +205,6 @@
             this.DateArchive.Size = new System.Drawing.Size(311, 30);
             this.DateArchive.TabIndex = 18;
             this.DateArchive.Value = new System.DateTime(2024, 3, 17, 0, 0, 0, 0);
-            // 
-            // AgentDataGridView
-            // 
-            this.AgentDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AgentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AgentDataGridView.Location = new System.Drawing.Point(36, 291);
-            this.AgentDataGridView.Name = "AgentDataGridView";
-            this.AgentDataGridView.RowHeadersWidth = 51;
-            this.AgentDataGridView.RowTemplate.Height = 24;
-            this.AgentDataGridView.Size = new System.Drawing.Size(551, 105);
-            this.AgentDataGridView.TabIndex = 17;
-            this.AgentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AgentDataGridView_CellContentClick);
             // 
             // AgentTextBox
             // 
@@ -409,6 +387,7 @@
             this.button_cote.TabIndex = 1;
             this.button_cote.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.button_cote.UseSystemPasswordChar = false;
+            this.button_cote.TextChanged += new System.EventHandler(this.button_cote_TextChanged);
             // 
             // titre_label
             // 
@@ -422,6 +401,28 @@
             this.titre_label.Size = new System.Drawing.Size(55, 28);
             this.titre_label.TabIndex = 0;
             this.titre_label.Text = "Cote";
+            // 
+            // bigLabel5
+            // 
+            this.bigLabel5.AutoSize = true;
+            this.bigLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel5.ForeColor = System.Drawing.Color.White;
+            this.bigLabel5.Location = new System.Drawing.Point(32, 338);
+            this.bigLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bigLabel5.Name = "bigLabel5";
+            this.bigLabel5.Size = new System.Drawing.Size(267, 31);
+            this.bigLabel5.TabIndex = 26;
+            this.bigLabel5.Text = "Informations Archivage";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.ForeColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(37, 369);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1099, 5);
+            this.panel3.TabIndex = 25;
             // 
             // AddArchiveForm
             // 
