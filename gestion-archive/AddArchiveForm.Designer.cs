@@ -142,7 +142,6 @@
             this.ServiceLabel.Size = new System.Drawing.Size(81, 28);
             this.ServiceLabel.TabIndex = 20;
             this.ServiceLabel.Text = "Service";
-            this.ServiceLabel.Click += new System.EventHandler(this.bigLabel4_Click);
             // 
             // DateArchivage
             // 
@@ -172,7 +171,7 @@
             this.AgentDataGridView.RowTemplate.Height = 24;
             this.AgentDataGridView.Size = new System.Drawing.Size(551, 105);
             this.AgentDataGridView.TabIndex = 17;
-            this.AgentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Result_agent_CellContentClick);
+            this.AgentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AgentDataGridView_CellContentClick);
             // 
             // AgentTextBox
             // 
@@ -192,7 +191,6 @@
             this.AgentTextBox.UseSystemPasswordChar = false;
             this.AgentTextBox.TextChanged += new System.EventHandler(this.bigTextBox1_TextChanged);
             this.AgentTextBox.Enter += new System.EventHandler(this.bigTextBox1_Enter);
-            this.AgentTextBox.Leave += new System.EventHandler(this.bigTextBox1_Leave);
             // 
             // bigLabel3
             // 
@@ -206,7 +204,6 @@
             this.bigLabel3.Size = new System.Drawing.Size(69, 28);
             this.bigLabel3.TabIndex = 15;
             this.bigLabel3.Text = "Agent";
-            this.bigLabel3.Click += new System.EventHandler(this.bigLabel3_Click);
             // 
             // bigTextBox6
             // 

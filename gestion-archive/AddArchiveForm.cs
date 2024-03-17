@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using data_base;
+using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.ApplicationServices;
 using Npgsql;
 
@@ -16,10 +17,13 @@ namespace gestion_archive
 {
     public partial class AddArchiveForm : Form
     {
+        //Définition des reqêtes et connexion pour les menus
         public NpgsqlConnection conn;
         private NpgsqlCommand agent_requete;
         private NpgsqlCommand service_requete;
 
+
+        //Attributs d'une archive
         private int id_agent;
         private int id_service;
         private string cote;
@@ -28,17 +32,21 @@ namespace gestion_archive
         private float metrage_lineaire;
         private DateTime date_archive;
         private DateTime date_archivage;
+
+        //Constructeur
         public AddArchiveForm(NpgsqlConnection conn_main_form)
         {
             InitializeComponent();
+            //Cache les menus au démarrage
             AgentDataGridView.Hide();
             ServiceDataGridView.Hide();
 
             conn = conn_main_form; //Recupere les informations de la BDD
 
+            //Requete Recherche agent
             agent_requete = new NpgsqlCommand("SELECT nom, prenom, id_agent FROM agent WHERE CAST(id_agent AS TEXT) LIKE @textbox OR nom LIKE @textbox OR prenom LIKE @textbox", conn);
-            //Requete pour trouver l'agent, limite à 5
 
+            //Requete Recherche service
             service_requete = new NpgsqlCommand("SELECT nom, id_service FROM service WHERE CAST(id_service AS TEXT) LIKE @textbox OR nom LIKE @textbox", conn);
         }
 
@@ -47,79 +55,34 @@ namespace gestion_archive
             this.ControlBox = false;
         }
 
-        private void bigLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bigTextBox1_TextChanged(object sender, EventArgs e)
         {
-            agent_requete.Parameters.Clear();
+            //Supprime les parametres de l'ancienne recherche
+             agent_requete.Parameters.Clear();
 
-            if (AgentTextBox.Text.Length > 2)
-            {
-                agent_requete.Parameters.AddWithValue("@textbox", $"%{AgentTextBox.Text}%");
+            //Recupere le parametre de la nouvelle recherche
+             agent_requete.Parameters.AddWithValue("@textbox", $"%{AgentTextBox.Text}%");
 
-                agent_requete.Prepare();
+            //Prepare la requete
+             agent_requete.Prepare();
 
-                NpgsqlDataAdapter da = new NpgsqlDataAdapter(agent_requete);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                AgentDataGridView.DataSource = dt; // Put result into the dataview
-            }
-
-            
-
+            //Recuperation requete
+             NpgsqlDataAdapter da = new NpgsqlDataAdapter(agent_requete); //Craies un data adapter pour recuperer la requete
+             DataTable dt = new DataTable(); //Creation d'une data table pour stocker la requete
+             da.Fill(dt); //Stocke la requete dans la data table
+             AgentDataGridView.DataSource = dt; // Recuperation de la data table dans la data view
         }
 
-        private void AddArchiveForm_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Result_agent_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            MessageBox.Show("Hello");
-            AgentTextBox.Text = AgentDataGridView[2, e.RowIndex].Value.ToString();
-            AgentDataGridView.Hide();
-        }
-
-        private void Result_agent_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void bigTextBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void bigTextBox1_Leave(object sender, EventArgs e)
-        {
-            
-        }
 
         private void bigTextBox1_Enter(object sender, EventArgs e)
         {
-            AgentDataGridView.Show();
+            AgentDataGridView.Show(); //Affiche la data view lorsqu'on rentre dans la TextBox de agent
         }
 
-        private void Result_agent_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bigTextBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button_submit_Click(object sender, EventArgs e)
         {
+            //Recuperation dans des variables des text box
             cote = button_cote.Text;
             description = button_description.Text;
             date_archive = DateArchive.Value;
@@ -127,6 +90,7 @@ namespace gestion_archive
 
             try
             {
+                //Conversion des types
                 metrage_lineaire = float.Parse(bigTextBox5.Text);
                 temps_conservation = int.Parse(bigTextBox6.Text);
                 id_agent = int.Parse(AgentTextBox.Text);
@@ -135,11 +99,12 @@ namespace gestion_archive
                 // Vérification des valeurs converties
                 if (metrage_lineaire != 0 && temps_conservation != 0 && id_agent != 0)
                 {
+                    //Requete
                     var insert_requete = new NpgsqlCommand("INSERT INTO archive (id_service, id_agent, cote, description, date_archive, date_archivage, temps_conservation, metrage_lineaire) VALUES (@id_service, @id_agent, @cote, @description, @date_archive, @date_archivage, @temps_conservation, @metrage_lineaire)", conn);
                     insert_requete.Parameters.AddWithValue("@id_service", id_service);
                     insert_requete.Parameters.AddWithValue("@id_agent", id_agent);
                     insert_requete.Parameters.AddWithValue("@cote", cote);
-                    insert_requete.Parameters.AddWithValue("@description", description); // correction ici
+                    insert_requete.Parameters.AddWithValue("@description", description);
                     insert_requete.Parameters.AddWithValue("@date_archive", date_archive.Date);
                     insert_requete.Parameters.AddWithValue("@date_archivage", date_archivage.Date);
                     insert_requete.Parameters.AddWithValue("@temps_conservation", temps_conservation);
@@ -161,37 +126,36 @@ namespace gestion_archive
             }
         }
 
-        private void bigLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ServiceTextBox_TextChanged(object sender, EventArgs e)
         {
+            //CF. L.58 : private void bigTextBox1_TextChanged(object sender, EventArgs e)
             service_requete.Parameters.Clear();
 
-            if (ServiceTextBox.Text.Length > 2)
-            {
-                service_requete.Parameters.AddWithValue("@textbox", $"%{ServiceTextBox.Text}%");
+            service_requete.Parameters.AddWithValue("@textbox", $"%{ServiceTextBox.Text}%");
 
-                service_requete.Prepare();
+            service_requete.Prepare();
 
-                NpgsqlDataAdapter da = new NpgsqlDataAdapter(service_requete);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                ServiceDataGridView.DataSource = dt; // Put result into the dataview
-            }
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(service_requete);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            ServiceDataGridView.DataSource = dt;
         }
 
         private void ServiceDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            ServiceTextBox.Text = ServiceDataGridView[1, e.RowIndex].Value.ToString();
-            ServiceDataGridView.Hide();
+            ServiceTextBox.Text = ServiceDataGridView[1, e.RowIndex].Value.ToString();  //Assigne à la TextBox l'id de l'agent selectionne
+            ServiceDataGridView.Hide(); 
         }
 
         private void ServiceTextBox_Enter(object sender, EventArgs e)
         {
-            ServiceDataGridView.Show();
+            ServiceDataGridView.Show(); //Montre la data view lorsqu'on rentre dans le champ Service
+        }
+
+        private void AgentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            AgentTextBox.Text = AgentDataGridView[2, e.RowIndex].Value.ToString(); //Assigne à la TextBox l'id de l'agent selectionne
+            AgentDataGridView.Hide(); //cache la data view
         }
     }
 }
