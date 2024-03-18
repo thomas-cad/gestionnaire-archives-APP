@@ -43,31 +43,36 @@ namespace gestion_archive
                 id_lieu_requete.Parameters.AddWithValue("@nom_lieu", nom_lieu);
                 int id_lieu = Convert.ToInt32(id_lieu_requete.ExecuteScalar());
 
-                //Création des emplacements
-                var new_emplacement_requete = new NpgsqlCommand("INSERT INTO emplacement (id_lieu, trave, etagere, tablette) VALUES (@id_lieu, @epi, @etagere, @tablette)", conn);
-                new_emplacement_requete.Parameters.AddWithValue("@id_lieu", id_lieu);
-                for (int i = 1; i <= nbr_epi; i++) //Incrémentation des epis
-                {
-                    new_emplacement_requete.Parameters.AddWithValue("@epi", i); //Incrémentation des etageres
-                    for (int j = 1; j <= nbr_etagere; j++)
-                    {
-                        new_emplacement_requete.Parameters.AddWithValue("@etagere", j); //Incrémentation des tablettes
-                        for (int k = 1; k <= nbr_tablette; k++)
-                        {
-                            //Reecriture des variables
-                            new_emplacement_requete.Parameters.AddWithValue("@id_lieu", id_lieu);
-                            new_emplacement_requete.Parameters.AddWithValue("@epi", i);
-                            new_emplacement_requete.Parameters.AddWithValue("@etagere", j);
-                            new_emplacement_requete.Parameters.AddWithValue("@tablette", k);
+                var command = new NpgsqlCommand("SELECT insert_emplacements(@epi, @etagere, @tablette, @lieu)", conn); //Creation des emplacements par le serveur PostgreSQL avec une seule requete
+                /*
+                 * Script de la fonction insert_emplacements
+                 * 
+                 * CREATE OR REPLACE FUNCTION public.insert_emplacements(
+                        nbr_epi INTEGER,
+                        nbr_etagere INTEGER,
+                        nbr_tablette INTEGER,
+                        lieu INTEGER
+                    )
+                    RETURNS void AS
+                    $$
+                    BEGIN
+                        FOR i IN 1..nbr_epi LOOP
+                            FOR j IN 1..nbr_etagere LOOP
+                                FOR l IN 1..nbr_tablette LOOP
+                                    INSERT INTO emplacement (id_lieu, epi, etagere, tablette) VALUES (lieu, i, j, l);
+                                END LOOP;
+                            END LOOP;
+                        END LOOP;
+                    END;
+                    $$ LANGUAGE plpgsql;
+                */
 
-                            //Execution de la requete
-                            new_emplacement_requete.ExecuteNonQuery();
+                command.Parameters.AddWithValue("@epi", nbr_epi);
+                command.Parameters.AddWithValue("@etagere", nbr_etagere);
+                command.Parameters.AddWithValue("@tablette", nbr_tablette);
+                command.Parameters.AddWithValue("@lieu", id_lieu);
 
-                            //Supression des anciennes variables
-                            new_emplacement_requete.Parameters.Clear(); 
-                        }
-                    }
-                }
+                command.ExecuteNonQuery();
 
                 MessageBox.Show("Emplacements créés avec succès");
             }

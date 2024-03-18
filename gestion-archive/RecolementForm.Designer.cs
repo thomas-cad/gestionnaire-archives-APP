@@ -245,6 +245,7 @@
             // 
             // IdEmplacementTextBox
             // 
+            this.IdEmplacementTextBox.BackColor = System.Drawing.Color.Transparent;
             this.IdEmplacementTextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IdEmplacementTextBox.ForeColor = System.Drawing.Color.DimGray;
             this.IdEmplacementTextBox.Image = null;
@@ -258,6 +259,7 @@
             this.IdEmplacementTextBox.TabIndex = 47;
             this.IdEmplacementTextBox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.IdEmplacementTextBox.UseSystemPasswordChar = false;
+            this.IdEmplacementTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IdEmplacementTextBox_KeyDown);
             // 
             // EmplacementTitleLabel
             // 
