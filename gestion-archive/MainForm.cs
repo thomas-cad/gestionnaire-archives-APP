@@ -165,5 +165,11 @@ namespace gestion_archive
             AddEmplacementForm addEmplacementForm = new AddEmplacementForm(conn);
             addEmplacementForm.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            RecolementForm recolementForm = new RecolementForm(conn);
+            recolementForm.Show();
+        }
     }
 }

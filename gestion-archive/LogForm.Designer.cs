@@ -45,24 +45,29 @@
             // 
             // Panel_User
             // 
+            this.Panel_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.Panel_User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.Panel_User.Location = new System.Drawing.Point(25, 271);
             this.Panel_User.Name = "Panel_User";
-            this.Panel_User.Size = new System.Drawing.Size(300, 2);
+            this.Panel_User.Size = new System.Drawing.Size(300, 3);
             this.Panel_User.TabIndex = 3;
             // 
             // Panel_Password
             // 
+            this.Panel_Password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.Panel_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.Panel_Password.Location = new System.Drawing.Point(25, 341);
             this.Panel_Password.Name = "Panel_Password";
-            this.Panel_Password.Size = new System.Drawing.Size(300, 2);
+            this.Panel_Password.Size = new System.Drawing.Size(300, 3);
             this.Panel_Password.TabIndex = 5;
             // 
             // Button_LogIn
             // 
-            this.Button_LogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(75)))), ((int)(((byte)(77)))));
+            this.Button_LogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.Button_LogIn.FlatAppearance.BorderSize = 0;
             this.Button_LogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_LogIn.Font = new System.Drawing.Font("Bauhaus 93", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_LogIn.Font = new System.Drawing.Font("Segoe UI Black", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_LogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.Button_LogIn.Location = new System.Drawing.Point(25, 374);
             this.Button_LogIn.Name = "Button_LogIn";
             this.Button_LogIn.Size = new System.Drawing.Size(300, 45);
@@ -74,11 +79,11 @@
             // Label_Exit
             // 
             this.Label_Exit.AutoSize = true;
-            this.Label_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(75)))), ((int)(((byte)(77)))));
-            this.Label_Exit.Location = new System.Drawing.Point(152, 433);
+            this.Label_Exit.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.Label_Exit.Location = new System.Drawing.Point(137, 422);
             this.Label_Exit.Name = "Label_Exit";
-            this.Label_Exit.Size = new System.Drawing.Size(48, 25);
+            this.Label_Exit.Size = new System.Drawing.Size(63, 38);
             this.Label_Exit.TabIndex = 7;
             this.Label_Exit.Text = "Exit";
             this.Label_Exit.Click += new System.EventHandler(this.label1_Click_1);
@@ -86,8 +91,8 @@
             // TextBox_User
             // 
             this.TextBox_User.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBox_User.Font = new System.Drawing.Font("Bauhaus 93", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(75)))), ((int)(((byte)(77)))));
+            this.TextBox_User.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox_User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.TextBox_User.Location = new System.Drawing.Point(77, 222);
             this.TextBox_User.Multiline = true;
             this.TextBox_User.Name = "TextBox_User";
@@ -97,8 +102,8 @@
             // TextBox_Password
             // 
             this.TextBox_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBox_Password.Font = new System.Drawing.Font("Bauhaus 93", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(75)))), ((int)(((byte)(77)))));
+            this.TextBox_Password.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.TextBox_Password.Location = new System.Drawing.Point(77, 292);
             this.TextBox_Password.Multiline = true;
             this.TextBox_Password.Name = "TextBox_Password";
