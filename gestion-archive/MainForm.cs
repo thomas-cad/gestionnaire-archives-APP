@@ -1,10 +1,18 @@
 ﻿using data_base;
+using ExportRecolment;
+using iText.IO.Image;
+using iText.Kernel.Exceptions;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
 using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -155,6 +163,8 @@ namespace gestion_archive
             outil1.Activate(); 
         }
 
+        
+
         private void MainForm_Load(object sender, EventArgs e)
         {
 
@@ -170,6 +180,12 @@ namespace gestion_archive
         {
             RecolementForm recolementForm = new RecolementForm(conn);
             recolementForm.Show();
+        }
+
+        //BOUTON TELECHARGEMENT DU RECOLEMENT
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
