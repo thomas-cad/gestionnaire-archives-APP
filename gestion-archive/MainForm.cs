@@ -185,7 +185,11 @@ namespace gestion_archive
         //BOUTON TELECHARGEMENT DU RECOLEMENT
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            // Crée une instance de ExportRecolement.
+            ExportRecolement exportRecolment = new ExportRecolement();
+
+            // Appelle la méthode Download
+            exportRecolment.Download(conn);
         }
     }
 }
