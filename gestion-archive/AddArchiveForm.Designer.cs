@@ -30,15 +30,11 @@
         {
             this.main_label = new ReaLTaiizor.Controls.BigLabel();
             this.panel1 = new ReaLTaiizor.Controls.Panel();
-            this.ServiceDataGridView = new System.Windows.Forms.DataGridView();
-            this.AgentDataGridView = new System.Windows.Forms.DataGridView();
             this.bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ServiceTextBox = new ReaLTaiizor.Controls.BigTextBox();
             this.ServiceLabel = new ReaLTaiizor.Controls.BigLabel();
             this.DateArchivage = new System.Windows.Forms.DateTimePicker();
             this.DateArchive = new System.Windows.Forms.DateTimePicker();
-            this.AgentTextBox = new ReaLTaiizor.Controls.BigTextBox();
             this.bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
             this.bigTextBox6 = new ReaLTaiizor.Controls.BigTextBox();
             this.button_tempsconservation = new ReaLTaiizor.Controls.BigLabel();
@@ -53,9 +49,9 @@
             this.titre_label = new ReaLTaiizor.Controls.BigLabel();
             this.bigLabel5 = new ReaLTaiizor.Controls.BigLabel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.AgentComboBox = new System.Windows.Forms.ComboBox();
+            this.ServiceComboBox = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ServiceDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AgentDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // main_label
@@ -74,15 +70,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panel1.Controls.Add(this.ServiceDataGridView);
-            this.panel1.Controls.Add(this.AgentDataGridView);
+            this.panel1.Controls.Add(this.ServiceComboBox);
+            this.panel1.Controls.Add(this.AgentComboBox);
             this.panel1.Controls.Add(this.bigLabel4);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.ServiceTextBox);
             this.panel1.Controls.Add(this.ServiceLabel);
             this.panel1.Controls.Add(this.DateArchivage);
             this.panel1.Controls.Add(this.DateArchive);
-            this.panel1.Controls.Add(this.AgentTextBox);
             this.panel1.Controls.Add(this.bigLabel3);
             this.panel1.Controls.Add(this.bigTextBox6);
             this.panel1.Controls.Add(this.button_tempsconservation);
@@ -107,30 +101,6 @@
             this.panel1.TabIndex = 5;
             this.panel1.Text = "panel1";
             // 
-            // ServiceDataGridView
-            // 
-            this.ServiceDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ServiceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ServiceDataGridView.Location = new System.Drawing.Point(334, 291);
-            this.ServiceDataGridView.Name = "ServiceDataGridView";
-            this.ServiceDataGridView.RowHeadersWidth = 51;
-            this.ServiceDataGridView.RowTemplate.Height = 24;
-            this.ServiceDataGridView.Size = new System.Drawing.Size(551, 105);
-            this.ServiceDataGridView.TabIndex = 21;
-            this.ServiceDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ServiceDataGridView_CellContentClick);
-            // 
-            // AgentDataGridView
-            // 
-            this.AgentDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AgentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AgentDataGridView.Location = new System.Drawing.Point(36, 291);
-            this.AgentDataGridView.Name = "AgentDataGridView";
-            this.AgentDataGridView.RowHeadersWidth = 51;
-            this.AgentDataGridView.RowTemplate.Height = 24;
-            this.AgentDataGridView.Size = new System.Drawing.Size(551, 105);
-            this.AgentDataGridView.TabIndex = 17;
-            this.AgentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AgentDataGridView_CellContentClick);
-            // 
             // bigLabel4
             // 
             this.bigLabel4.AutoSize = true;
@@ -152,25 +122,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1099, 5);
             this.panel2.TabIndex = 23;
-            // 
-            // ServiceTextBox
-            // 
-            this.ServiceTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.ServiceTextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ServiceTextBox.ForeColor = System.Drawing.Color.DimGray;
-            this.ServiceTextBox.Image = null;
-            this.ServiceTextBox.Location = new System.Drawing.Point(334, 255);
-            this.ServiceTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.ServiceTextBox.MaxLength = 32767;
-            this.ServiceTextBox.Multiline = false;
-            this.ServiceTextBox.Name = "ServiceTextBox";
-            this.ServiceTextBox.ReadOnly = false;
-            this.ServiceTextBox.Size = new System.Drawing.Size(237, 48);
-            this.ServiceTextBox.TabIndex = 22;
-            this.ServiceTextBox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ServiceTextBox.UseSystemPasswordChar = false;
-            this.ServiceTextBox.TextChanged += new System.EventHandler(this.ServiceTextBox_TextChanged);
-            this.ServiceTextBox.Enter += new System.EventHandler(this.ServiceTextBox_Enter);
             // 
             // ServiceLabel
             // 
@@ -205,25 +156,6 @@
             this.DateArchive.Size = new System.Drawing.Size(311, 30);
             this.DateArchive.TabIndex = 18;
             this.DateArchive.Value = new System.DateTime(2024, 3, 17, 0, 0, 0, 0);
-            // 
-            // AgentTextBox
-            // 
-            this.AgentTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.AgentTextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgentTextBox.ForeColor = System.Drawing.Color.DimGray;
-            this.AgentTextBox.Image = null;
-            this.AgentTextBox.Location = new System.Drawing.Point(37, 255);
-            this.AgentTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.AgentTextBox.MaxLength = 32767;
-            this.AgentTextBox.Multiline = false;
-            this.AgentTextBox.Name = "AgentTextBox";
-            this.AgentTextBox.ReadOnly = false;
-            this.AgentTextBox.Size = new System.Drawing.Size(237, 48);
-            this.AgentTextBox.TabIndex = 16;
-            this.AgentTextBox.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.AgentTextBox.UseSystemPasswordChar = false;
-            this.AgentTextBox.TextChanged += new System.EventHandler(this.bigTextBox1_TextChanged);
-            this.AgentTextBox.Enter += new System.EventHandler(this.bigTextBox1_Enter);
             // 
             // bigLabel3
             // 
@@ -387,7 +319,6 @@
             this.button_cote.TabIndex = 1;
             this.button_cote.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.button_cote.UseSystemPasswordChar = false;
-            this.button_cote.TextChanged += new System.EventHandler(this.button_cote_TextChanged);
             // 
             // titre_label
             // 
@@ -424,6 +355,24 @@
             this.panel3.Size = new System.Drawing.Size(1099, 5);
             this.panel3.TabIndex = 25;
             // 
+            // AgentComboBox
+            // 
+            this.AgentComboBox.FormattingEnabled = true;
+            this.AgentComboBox.Location = new System.Drawing.Point(38, 263);
+            this.AgentComboBox.Name = "AgentComboBox";
+            this.AgentComboBox.Size = new System.Drawing.Size(237, 24);
+            this.AgentComboBox.TabIndex = 27;
+            this.AgentComboBox.TextChanged += new System.EventHandler(this.AgentComboBox_TextChanged);
+            // 
+            // ServiceComboBox
+            // 
+            this.ServiceComboBox.FormattingEnabled = true;
+            this.ServiceComboBox.Location = new System.Drawing.Point(335, 263);
+            this.ServiceComboBox.Name = "ServiceComboBox";
+            this.ServiceComboBox.Size = new System.Drawing.Size(237, 24);
+            this.ServiceComboBox.TabIndex = 28;
+            this.ServiceComboBox.TextChanged += new System.EventHandler(this.ServiceComboBox_TextChanged);
+            // 
             // AddArchiveForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -439,8 +388,6 @@
             this.Load += new System.EventHandler(this.formOutil1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ServiceDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AgentDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -459,19 +406,17 @@
         private ReaLTaiizor.Controls.AirButton button_submit;
         private ReaLTaiizor.Controls.BigTextBox button_cote;
         private ReaLTaiizor.Controls.BigLabel titre_label;
-        private ReaLTaiizor.Controls.BigTextBox AgentTextBox;
         private ReaLTaiizor.Controls.BigLabel bigLabel3;
-        private System.Windows.Forms.DataGridView AgentDataGridView;
         private System.Windows.Forms.DateTimePicker DateArchive;
         private System.Windows.Forms.DateTimePicker DateArchivage;
         private ReaLTaiizor.Controls.BigTextBox bigTextBox5;
         private ReaLTaiizor.Controls.BigLabel button_metragelineaire;
-        private ReaLTaiizor.Controls.BigTextBox ServiceTextBox;
-        private System.Windows.Forms.DataGridView ServiceDataGridView;
         private ReaLTaiizor.Controls.BigLabel ServiceLabel;
         private System.Windows.Forms.Panel panel2;
         private ReaLTaiizor.Controls.BigLabel bigLabel4;
         private ReaLTaiizor.Controls.BigLabel bigLabel5;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox ServiceComboBox;
+        private System.Windows.Forms.ComboBox AgentComboBox;
     }
 }
