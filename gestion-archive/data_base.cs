@@ -8,7 +8,7 @@ namespace data_base
         // Connection Informations for DB
         private static string Host = Environment.GetEnvironmentVariable("DB_ARCHIVE_HOST");
         private static string User = Environment.GetEnvironmentVariable("DB_ARCHIVE_USER");
-        private static string Password = Environment.GetEnvironmentVariable("DB_ARCHIVE_PWR");
+        private static string Password = Environment.GetEnvironmentVariable("DB_ARCHIVE_PWD");
         private static string Port = Environment.GetEnvironmentVariable("DB_ARCHIVE_PORT");
 
 
