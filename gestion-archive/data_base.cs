@@ -6,10 +6,11 @@ namespace data_base
     public class Data_base
     {
         // Connection Informations for DB
-        private static string Host = "***REMOVED***";
-        private static string User = "***REMOVED***";
-        private static string Password = "***REMOVED***";
-        private static string Port = "***REMOVED***";
+        private static string Host = Environment.GetEnvironmentVariable("DB_ARCHIVE_HOST");
+        private static string User = Environment.GetEnvironmentVariable("DB_ARCHIVE_USER");
+        private static string Password = Environment.GetEnvironmentVariable("DB_ARCHIVE_PWD");
+        private static string Port = Environment.GetEnvironmentVariable("DB_ARCHIVE_PORT");
+
 
         //Connection to the DB
         public static NpgsqlConnection GetDBConnection(string DBname)
