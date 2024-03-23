@@ -2,6 +2,10 @@
 
 ## A propos
 
+Projet etudiant de développement d'une IHM en C# Télécom Saint-Etienne
+
+**Sujet : Application de gestion d'archives**
+
 ## Elements de configuration
 
 ### Nugget Packages
@@ -17,3 +21,7 @@ Il est necessaire de posséder ces variables d'environnement
 - DB_ARCHIVE_PORT
 - DB_ARCHIVE_PWD
 - DB_ARCHIVE_USER
+
+### MR BDD
+
+Le modele relationnel de la BDD se trouve à la racine du repertoire
