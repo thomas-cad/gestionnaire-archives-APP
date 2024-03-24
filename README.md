@@ -54,7 +54,7 @@ Ce projet est distribué sous la Licence MIT. Voir le fichier `LICENSE` pour plu
 
 ## Contacts
 
-- Thomas Cadegros - [thomas.cadegros@telecom-st-etienne.fr]
-- Amine Slaoui - [amine.slaoui@telecom-st-etienne.fr]
+- Thomas Cadegros - [thomas.cadegros@telecom-st-etienne.fr](thomas.cadegros@telecom-st-etienne.fr)
+- Amine Slaoui - [amine.slaoui@telecom-st-etienne.fr](amine.slaoui@telecom-st-etienne.fr)
 
 Projet Lien: [https://gitlab.com/votreprojet/gestion-archive](https://gitlab.com/votreprojet/gestion-archive)
