@@ -1,4 +1,4 @@
-# Gestion d'Archive
+# Gestion d'Archives
 
 ## À Propos
 
@@ -52,7 +52,7 @@ Ce projet est distribué sous la Licence MIT. Voir le fichier `LICENSE` pour plu
 - Thomas Cadegros
 - Amine Slaoui
 
-## Contact
+## Contacts
 
 - Thomas Cadegros - [thomas.cadegros@telecom-st-etienne.fr]
 - Amine Slaoui - [amine.slaoui@telecom-st-etienne.fr]
