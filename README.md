@@ -47,7 +47,7 @@ Nous accueillons avec plaisir les contributions de la communauté ! Si vous souh
 
 Ce projet est distribué sous la Licence MIT. Voir le fichier `LICENSE` pour plus d'informations.
 
-##Contributeurs
+## Contributeurs
 
 - Thomas Cadegros
 - Amine Slaoui
