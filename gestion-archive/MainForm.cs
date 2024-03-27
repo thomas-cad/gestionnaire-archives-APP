@@ -1,4 +1,4 @@
-﻿using data_base;
+using data_base;
 using ExportRecolment;
 using iText.IO.Image;
 using iText.Kernel.Exceptions;
@@ -29,7 +29,6 @@ namespace gestion_archive
         AddArchiveForm addArchive;
         AddEmplacementForm addEmplacement;
         RecolementForm recolement;
-        DeleteRecolementForm deleteRecolement;
 
         public NpgsqlConnection conn;
 
