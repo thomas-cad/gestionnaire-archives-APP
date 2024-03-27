@@ -259,5 +259,14 @@
   <ItemGroup>
     <None Include="Properties\image\Icon_User.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\image\icon_exporter32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\image\icon_plus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\image\icon_moins32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

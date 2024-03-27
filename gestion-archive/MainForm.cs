@@ -276,7 +276,19 @@ namespace gestion_archive
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            // Afficher le form de Archives
+            if (archives == null)
+            {
+                archives = new formArchives();
+                archives.FormClosed += Archives_FormClosed;
+                archives.MdiParent = this;
+                archives.Dock = DockStyle.Fill;
+                archives.Show();
+            }
+            else
+            {
+                archives.Activate();
+            }
         }
     }
 }
