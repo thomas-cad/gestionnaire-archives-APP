@@ -26,7 +26,10 @@ namespace gestion_archive
     public partial class MainForm : Form
     {
         private formArchives archives; 
-        AddArchiveForm outil1;
+        AddArchiveForm addArchive;
+        AddEmplacementForm addEmplacement;
+        RecolementForm recolement;
+        DeleteRecolementForm deleteRecolement;
 
         public NpgsqlConnection conn;
 
@@ -66,7 +69,7 @@ namespace gestion_archive
             {
                 toolContainer.Height += 10;
 
-                if (toolContainer.Height >= 160)
+                if (toolContainer.Height >= 212)
                 {
                     toolTransition.Stop();
                     toolExpand = true;
@@ -75,10 +78,41 @@ namespace gestion_archive
             else //Diminuer la taille
             {
                 toolContainer.Height -= 10;
-                if (toolContainer.Height <= 60)
+                if (toolContainer.Height <= 53)
                 {
                     toolTransition.Stop();
                     toolExpand = false;
+                }
+            }
+        }
+
+        bool recolementExpand = false;
+
+        private void button_recolement_Click(object sender, EventArgs e)
+        {
+            recolementTransistion.Start();
+        }
+        private void recolementTransition_Tick(object sender, EventArgs e)
+        {
+            //Gestion du menu deroulant du recolement
+
+            if (recolementExpand == false) //Augmenter la taille
+            {
+                recolementContainer.Height += 10;
+
+                if (recolementContainer.Height >= 160)
+                {
+                    recolementTransistion.Stop();
+                    recolementExpand = true;
+                }
+            }
+            else //Diminuer la taille
+            {
+                recolementContainer.Height -= 10;
+                if (recolementContainer.Height <= 53)
+                {
+                    recolementTransistion.Stop(); 
+                    recolementExpand = false;
                 }
             }
         }
@@ -144,52 +178,117 @@ namespace gestion_archive
         private void button_addarchive_Click(object sender, EventArgs e)
         {
             // Afficher le form de Archives
-            if (outil1 == null)
+            if (addArchive == null)
             {
-                outil1 = new AddArchiveForm(conn);
-                outil1.FormClosed += Outil1_FormClosed; ;
-                outil1.MdiParent = this;
-                outil1.Dock = DockStyle.Fill;
-                outil1.Show();
+                addArchive = new AddArchiveForm(conn);
+                addArchive.FormClosed += Outil1_FormClosed; 
+                addArchive.MdiParent = this;
+                addArchive.Dock = DockStyle.Fill;
+                addArchive.Show();
             }
             else
             {
-                outil1.Activate();
+                addArchive.Activate();
             }
         }
 
         private void Outil1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            outil1.Activate(); 
+            addArchive.Activate(); 
         }
 
-        
-
-        private void MainForm_Load(object sender, EventArgs e)
+        private void button_addemplacement_Click(object sender, EventArgs e)
         {
-
+            // Afficher le form de addEmplacement
+            if (addEmplacement == null)
+            {
+                addEmplacement = new AddEmplacementForm(conn);
+                addEmplacement.FormClosed += AddEmplacement_FormClosed; ;
+                addEmplacement.MdiParent = this;
+                addEmplacement.Dock = DockStyle.Fill;
+                addEmplacement.Show();
+            }
+            else
+            {
+                addEmplacement.Activate();
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AddEmplacement_FormClosed(object sender, FormClosedEventArgs e)
         {
-            AddEmplacementForm addEmplacementForm = new AddEmplacementForm(conn);
-            addEmplacementForm.Show();
+            addEmplacement.Activate(); 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button_deletearchive_Click(object sender, EventArgs e)
         {
-            RecolementForm recolementForm = new RecolementForm(conn);
-            recolementForm.Show();
+            // Afficher le form de addEmplacement
+            if (deleteRecolement == null)
+            {
+                deleteRecolement = new DeleteRecolementForm();
+                deleteRecolement.FormClosed += DeleteRecolement_FormClosed;
+                deleteRecolement.MdiParent = this;
+                deleteRecolement.Dock = DockStyle.Fill;
+                deleteRecolement.Show();
+            }
+            else
+            {
+                deleteRecolement.Activate();
+            }
         }
 
+        private void DeleteRecolement_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            deleteRecolement.Activate();  
+        }
+
+        private void button_dorecolement_Click(object sender, EventArgs e)
+        {
+            // Afficher le form du recolement
+            if (recolement == null)
+            {
+                recolement = new RecolementForm(conn);
+                recolement.FormClosed += Recolement_FormClosed; 
+                recolement.MdiParent = this;
+                recolement.Dock = DockStyle.Fill;
+                recolement.Show();
+            }
+            else
+            {
+                recolement.Activate();
+            }
+        }
+
+        private void Recolement_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            recolement.Activate();
+        }
+
+       
         //BOUTON TELECHARGEMENT DU RECOLEMENT
-        private void button3_Click(object sender, EventArgs e)
+        private void button_exportrecolement_Click(object sender, EventArgs e)
         {
             // Crée une instance de ExportRecolement.
             ExportRecolement exportRecolment = new ExportRecolement();
 
             // Appelle la méthode Download
             exportRecolment.Download(conn);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            // Afficher le form de Archives
+            if (archives == null)
+            {
+                archives = new formArchives();
+                archives.FormClosed += Archives_FormClosed;
+                archives.MdiParent = this;
+                archives.Dock = DockStyle.Fill;
+                archives.Show();
+            }
+            else
+            {
+                archives.Activate();
+            }
         }
     }
 }
