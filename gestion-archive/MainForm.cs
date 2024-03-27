@@ -224,7 +224,7 @@ namespace gestion_archive
             // Afficher le form de addEmplacement
             if (deleteForm == null)
             {
-                deleteForm = new deleteForm();
+                deleteForm = new DeleteForm();
                 deleteForm.FormClosed += DeleteRecolement_FormClosed;
                 deleteForm.MdiParent = this;
                 deleteForm.Dock = DockStyle.Fill;
