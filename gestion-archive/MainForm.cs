@@ -48,10 +48,6 @@ namespace gestion_archive
                 MessageBox.Show(ex.Message);//Show error message
                 this.Close(); //Ferme l'application si la connection echoue
             }
-
-            //TEST A SUPPRIMER
-            DeleteForm deleteForm = new DeleteForm(conn);
-            deleteForm.Show();
         }
 
         bool toolExpand = false; 
