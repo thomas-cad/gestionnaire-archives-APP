@@ -16,7 +16,7 @@ namespace gestion_archive
         private NpgsqlConnection conn;
         private DataTable dt_delete = new DataTable();
         private DataTable dt_id_archive = new DataTable();
-        private int nbr_archive;
+        private int nbr_archive = 0;
         private int id_agent = -1;
         public DeleteForm(NpgsqlConnection conn_main)
         {
@@ -25,6 +25,13 @@ namespace gestion_archive
 
             Update_delete_table();
             MajAgent();
+
+            NbrArchiveInfoLabel.Text = nbr_archive.ToString(); //Affichage de 0 archives actives
+
+            DataColumn dataColumn = new DataColumn("id", typeof(int)); //Cration colonne DataTable
+            dt_id_archive.Columns.Add(dataColumn); //Ajout de la colonne
+
+            IdArchiveTextBox.Focus();//Focus dans l'id archive
         }
         
         private void Update_delete_table()
@@ -32,24 +39,34 @@ namespace gestion_archive
             try
             {
                 var requete_delete_archive = new NpgsqlCommand(@"
-                SELECT 
-                archive.cote, 
-                archive.id_archive, 
-                emplacement.id_emplacement, 
-                lieu.nom AS lieu,
-                emplacement.epi, 
-                emplacement.etagere, 
-                emplacement.epi
+                    SELECT 
+                    archive.cote, 
+                    archive.id_archive, 
+                    emplacement.id_emplacement, 
+                    lieu.nom AS lieu,
+                    emplacement.epi, 
+                    emplacement.etagere, 
+                    emplacement.tablette
 
-                FROM archive
+                    FROM archive
 
-                INNER JOIN emplacement ON archive.id_emplacement = emplacement.id_emplacement
-                INNER JOIN lieu ON emplacement.id_lieu = lieu.id_lieu
+                    LEFT JOIN emplacement ON archive.id_emplacement = emplacement.id_emplacement --Jointure externe gauche
+                    LEFT JOIN lieu ON emplacement.id_lieu = lieu.id_lieu --Jointure externe gauche
 
-                WHERE archive.date_archivage + archive.temps_conservation * INTERVAL '1 year' <= CURRENT_DATE", conn);
+                    WHERE 
+	                    archive.date_archivage + archive.temps_conservation * INTERVAL '1 year' <= CURRENT_DATE
+                        AND
+                        archive.id_archive NOT IN (SELECT id_archive FROM destruction);
+                ", conn);
 
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(requete_delete_archive); //Craies un data adapter pour recuperer la requete
                 da.Fill(dt_delete); //Stocke la requete dans la data table
+                
+                //Vide data table grid view
+                DeleteDataView.DataSource = null;
+                DeleteDataView.Rows.Clear();
+
+                //Remplie data table grid view
                 DeleteDataView.DataSource = dt_delete;
 
                 NbDeleteLabel.Text = dt_delete.Rows.Count.ToString(); //MAJ nb Rows DELETE
@@ -138,13 +155,7 @@ namespace gestion_archive
             IdArchiveTextBox.Text = "";
         }
 
-        private void AjouterButton_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode.Equals(Keys.Enter))
-            {
-                this.NewIdArchive();
-            }
-        }
+
 
         private void AjouterButton_Click(object sender, EventArgs e)
         {
@@ -178,7 +189,7 @@ namespace gestion_archive
                 {
                     var new_destruction = new NpgsqlCommand(@"
                         UPDATE archive SET id_emplacement = NULL WHERE id_archive = @id_archive;
-                        INSERT INTO destruction (id_archive, id_agent, date) VALUES (@id_archive, @id_agent, CURRENT DATE)", conn);
+                        INSERT INTO destruction (id_archive, id_agent, date) VALUES (@id_archive, @id_agent, CURRENT_DATE)", conn);
 
                     foreach (DataRow row in dt_id_archive.Rows)
                     {
@@ -274,6 +285,14 @@ namespace gestion_archive
             catch
             {
                 id_agent = -1; //Desafecte l'id de l'agent
+            }
+        }
+
+        private void IdArchiveTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                this.NewIdArchive();
             }
         }
     }

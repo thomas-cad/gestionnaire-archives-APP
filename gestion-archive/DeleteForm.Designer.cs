@@ -36,6 +36,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.NbDeleteLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.AgentComboBox = new System.Windows.Forms.ComboBox();
+            this.bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
             this.NbrArchiveInfoLabel = new System.Windows.Forms.Label();
             this.IdArchiveTextBox = new System.Windows.Forms.TextBox();
             this.AnnulerButton = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@
             this.AjouterButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.ArchiveTitleLabel = new ReaLTaiizor.Controls.BigLabel();
-            this.AgentComboBox = new System.Windows.Forms.ComboBox();
-            this.bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
             bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             IdArchiveTitleLabel = new ReaLTaiizor.Controls.BigLabel();
             ArchivesEnCoursTitleLabel = new ReaLTaiizor.Controls.BigLabel();
@@ -153,6 +153,31 @@
             this.panel3.Size = new System.Drawing.Size(377, 365);
             this.panel3.TabIndex = 5;
             // 
+            // AgentComboBox
+            // 
+            this.AgentComboBox.FormattingEnabled = true;
+            this.AgentComboBox.Location = new System.Drawing.Point(8, 252);
+            this.AgentComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.AgentComboBox.Name = "AgentComboBox";
+            this.AgentComboBox.Size = new System.Drawing.Size(179, 21);
+            this.AgentComboBox.TabIndex = 83;
+            this.AgentComboBox.SelectedIndexChanged += new System.EventHandler(this.AgentComboBox_SelectedIndexChanged);
+            this.AgentComboBox.TextChanged += new System.EventHandler(this.AgentComboBox_TextChanged);
+            this.AgentComboBox.Click += new System.EventHandler(this.AgentComboBox_Click);
+            this.AgentComboBox.Leave += new System.EventHandler(this.AgentComboBox_Leave);
+            // 
+            // bigLabel3
+            // 
+            this.bigLabel3.AutoSize = true;
+            this.bigLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel3.ForeColor = System.Drawing.Color.White;
+            this.bigLabel3.Location = new System.Drawing.Point(3, 218);
+            this.bigLabel3.Name = "bigLabel3";
+            this.bigLabel3.Size = new System.Drawing.Size(56, 21);
+            this.bigLabel3.TabIndex = 82;
+            this.bigLabel3.Text = "Agent";
+            // 
             // NbrArchiveInfoLabel
             // 
             this.NbrArchiveInfoLabel.AutoSize = true;
@@ -170,6 +195,7 @@
             this.IdArchiveTextBox.Name = "IdArchiveTextBox";
             this.IdArchiveTextBox.Size = new System.Drawing.Size(200, 20);
             this.IdArchiveTextBox.TabIndex = 79;
+            this.IdArchiveTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IdArchiveTextBox_KeyDown);
             // 
             // AnnulerButton
             // 
@@ -206,7 +232,6 @@
             this.AjouterButton.Text = "Ajouter";
             this.AjouterButton.UseVisualStyleBackColor = true;
             this.AjouterButton.Click += new System.EventHandler(this.AjouterButton_Click);
-            this.AjouterButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AjouterButton_KeyDown);
             // 
             // panel4
             // 
@@ -229,31 +254,6 @@
             this.ArchiveTitleLabel.Size = new System.Drawing.Size(107, 25);
             this.ArchiveTitleLabel.TabIndex = 74;
             this.ArchiveTitleLabel.Text = "Supprimer";
-            // 
-            // AgentComboBox
-            // 
-            this.AgentComboBox.FormattingEnabled = true;
-            this.AgentComboBox.Location = new System.Drawing.Point(8, 252);
-            this.AgentComboBox.Margin = new System.Windows.Forms.Padding(2);
-            this.AgentComboBox.Name = "AgentComboBox";
-            this.AgentComboBox.Size = new System.Drawing.Size(179, 21);
-            this.AgentComboBox.TabIndex = 83;
-            this.AgentComboBox.SelectedIndexChanged += new System.EventHandler(this.AgentComboBox_SelectedIndexChanged);
-            this.AgentComboBox.TextChanged += new System.EventHandler(this.AgentComboBox_TextChanged);
-            this.AgentComboBox.Click += new System.EventHandler(this.AgentComboBox_Click);
-            this.AgentComboBox.Leave += new System.EventHandler(this.AgentComboBox_Leave);
-            // 
-            // bigLabel3
-            // 
-            this.bigLabel3.AutoSize = true;
-            this.bigLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel3.ForeColor = System.Drawing.Color.White;
-            this.bigLabel3.Location = new System.Drawing.Point(3, 218);
-            this.bigLabel3.Name = "bigLabel3";
-            this.bigLabel3.Size = new System.Drawing.Size(56, 21);
-            this.bigLabel3.TabIndex = 82;
-            this.bigLabel3.Text = "Agent";
             // 
             // DeleteForm
             // 
