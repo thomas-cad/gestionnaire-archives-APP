@@ -29,6 +29,7 @@ namespace gestion_archive
         AddArchiveForm addArchive;
         AddEmplacementForm addEmplacement;
         RecolementForm recolement;
+        DeleteForm deleteForm;
 
         public NpgsqlConnection conn;
 
@@ -221,23 +222,23 @@ namespace gestion_archive
         private void button_deletearchive_Click(object sender, EventArgs e)
         {
             // Afficher le form de addEmplacement
-            if (deleteRecolement == null)
+            if (deleteForm == null)
             {
-                deleteRecolement = new DeleteRecolementForm();
-                deleteRecolement.FormClosed += DeleteRecolement_FormClosed;
-                deleteRecolement.MdiParent = this;
-                deleteRecolement.Dock = DockStyle.Fill;
-                deleteRecolement.Show();
+                deleteForm = new deleteForm();
+                deleteForm.FormClosed += DeleteRecolement_FormClosed;
+                deleteForm.MdiParent = this;
+                deleteForm.Dock = DockStyle.Fill;
+                deleteForm.Show();
             }
             else
             {
-                deleteRecolement.Activate();
+                deleteForm.Activate();
             }
         }
 
         private void DeleteRecolement_FormClosed(object sender, FormClosedEventArgs e)
         {
-            deleteRecolement.Activate();  
+            deleteForm.Activate();  
         }
 
         private void button_dorecolement_Click(object sender, EventArgs e)
