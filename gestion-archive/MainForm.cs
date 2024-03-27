@@ -29,6 +29,7 @@ namespace gestion_archive
         AddArchiveForm addArchive;
         AddEmplacementForm addEmplacement;
         RecolementForm recolement;
+        DeleteRecolementForm deleteRecolement;
 
         public NpgsqlConnection conn;
 
@@ -68,7 +69,7 @@ namespace gestion_archive
             {
                 toolContainer.Height += 10;
 
-                if (toolContainer.Height >= 160)
+                if (toolContainer.Height >= 212)
                 {
                     toolTransition.Stop();
                     toolExpand = true;
@@ -85,7 +86,7 @@ namespace gestion_archive
             }
         }
 
-        bool recolementExpand = true;
+        bool recolementExpand = false;
 
         private void button_recolement_Click(object sender, EventArgs e)
         {
@@ -218,6 +219,28 @@ namespace gestion_archive
             addEmplacement.Activate(); 
         }
 
+        private void button_deletearchive_Click(object sender, EventArgs e)
+        {
+            // Afficher le form de addEmplacement
+            if (deleteRecolement == null)
+            {
+                deleteRecolement = new DeleteRecolementForm();
+                deleteRecolement.FormClosed += DeleteRecolement_FormClosed;
+                deleteRecolement.MdiParent = this;
+                deleteRecolement.Dock = DockStyle.Fill;
+                deleteRecolement.Show();
+            }
+            else
+            {
+                deleteRecolement.Activate();
+            }
+        }
+
+        private void DeleteRecolement_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            deleteRecolement.Activate();  
+        }
+
         private void button_dorecolement_Click(object sender, EventArgs e)
         {
             // Afficher le form du recolement
@@ -249,6 +272,11 @@ namespace gestion_archive
 
             // Appelle la méthode Download
             exportRecolment.Download(conn);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
