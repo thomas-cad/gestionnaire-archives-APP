@@ -165,6 +165,12 @@
       <DependentUpon>AddEmplacementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ExportRecolement.cs" />
+    <Compile Include="DeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteForm.Designer.cs">
+      <DependentUpon>DeleteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RecolementForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddEmplacementForm.resx">
       <DependentUpon>AddEmplacementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteForm.resx">
+      <DependentUpon>DeleteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecolementForm.resx">
       <DependentUpon>RecolementForm.cs</DependentUpon>
