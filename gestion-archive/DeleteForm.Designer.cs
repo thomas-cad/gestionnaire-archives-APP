@@ -31,6 +31,7 @@
             ReaLTaiizor.Controls.BigLabel bigLabel1;
             ReaLTaiizor.Controls.BigLabel IdArchiveTitleLabel;
             ReaLTaiizor.Controls.BigLabel ArchivesEnCoursTitleLabel;
+            ReaLTaiizor.Controls.BigLabel bigLabel2;
             this.DeleteDataView = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -45,9 +46,11 @@
             this.AjouterButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.ArchiveTitleLabel = new ReaLTaiizor.Controls.BigLabel();
+            this.bigLabel8 = new ReaLTaiizor.Controls.BigLabel();
             bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             IdArchiveTitleLabel = new ReaLTaiizor.Controls.BigLabel();
             ArchivesEnCoursTitleLabel = new ReaLTaiizor.Controls.BigLabel();
+            bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteDataView)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -62,9 +65,9 @@
             bigLabel1.ForeColor = System.Drawing.Color.White;
             bigLabel1.Location = new System.Drawing.Point(88, 13);
             bigLabel1.Name = "bigLabel1";
-            bigLabel1.Size = new System.Drawing.Size(212, 28);
+            bigLabel1.Size = new System.Drawing.Size(192, 28);
             bigLabel1.TabIndex = 51;
-            bigLabel1.Text = "Archives à supprimer";
+            bigLabel1.Text = "Archives à détruire";
             // 
             // IdArchiveTitleLabel
             // 
@@ -98,27 +101,28 @@
             this.DeleteDataView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.DeleteDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DeleteDataView.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DeleteDataView.Location = new System.Drawing.Point(13, 13);
+            this.DeleteDataView.Location = new System.Drawing.Point(13, 38);
             this.DeleteDataView.Name = "DeleteDataView";
             this.DeleteDataView.ReadOnly = true;
-            this.DeleteDataView.Size = new System.Drawing.Size(361, 413);
+            this.DeleteDataView.Size = new System.Drawing.Size(361, 388);
             this.DeleteDataView.TabIndex = 0;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(88)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
+            this.panel1.Controls.Add(bigLabel2);
             this.panel1.Controls.Add(this.DeleteDataView);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 73);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(390, 436);
             this.panel1.TabIndex = 3;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(88)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.panel2.Controls.Add(this.NbDeleteLabel);
             this.panel2.Controls.Add(bigLabel1);
-            this.panel2.Location = new System.Drawing.Point(411, 12);
+            this.panel2.Location = new System.Drawing.Point(411, 73);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(377, 63);
             this.panel2.TabIndex = 4;
@@ -136,7 +140,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(88)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.panel3.Controls.Add(this.AgentComboBox);
             this.panel3.Controls.Add(this.bigLabel3);
             this.panel3.Controls.Add(this.NbrArchiveInfoLabel);
@@ -148,7 +152,7 @@
             this.panel3.Controls.Add(IdArchiveTitleLabel);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.ArchiveTitleLabel);
-            this.panel3.Location = new System.Drawing.Point(411, 83);
+            this.panel3.Location = new System.Drawing.Point(411, 144);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(377, 365);
             this.panel3.TabIndex = 5;
@@ -199,38 +203,52 @@
             // 
             // AnnulerButton
             // 
+            this.AnnulerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.AnnulerButton.FlatAppearance.BorderSize = 0;
+            this.AnnulerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AnnulerButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnnulerButton.ForeColor = System.Drawing.Color.White;
             this.AnnulerButton.Location = new System.Drawing.Point(212, 121);
             this.AnnulerButton.Margin = new System.Windows.Forms.Padding(2);
             this.AnnulerButton.Name = "AnnulerButton";
             this.AnnulerButton.Size = new System.Drawing.Size(122, 39);
             this.AnnulerButton.TabIndex = 78;
             this.AnnulerButton.Text = "Annuler";
-            this.AnnulerButton.UseVisualStyleBackColor = true;
+            this.AnnulerButton.UseVisualStyleBackColor = false;
             this.AnnulerButton.Click += new System.EventHandler(this.AnnulerButton_Click);
             // 
             // TerminerButton
             // 
+            this.TerminerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.TerminerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TerminerButton.FlatAppearance.BorderSize = 0;
+            this.TerminerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TerminerButton.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TerminerButton.ForeColor = System.Drawing.Color.White;
             this.TerminerButton.Location = new System.Drawing.Point(136, 305);
             this.TerminerButton.Margin = new System.Windows.Forms.Padding(2);
             this.TerminerButton.Name = "TerminerButton";
             this.TerminerButton.Size = new System.Drawing.Size(122, 39);
             this.TerminerButton.TabIndex = 77;
             this.TerminerButton.Text = "Terminer";
-            this.TerminerButton.UseVisualStyleBackColor = true;
+            this.TerminerButton.UseVisualStyleBackColor = false;
             this.TerminerButton.Click += new System.EventHandler(this.TerminerButton_Click);
             // 
             // AjouterButton
             // 
+            this.AjouterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.AjouterButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AjouterButton.FlatAppearance.BorderSize = 0;
+            this.AjouterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AjouterButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AjouterButton.ForeColor = System.Drawing.Color.White;
             this.AjouterButton.Location = new System.Drawing.Point(212, 78);
             this.AjouterButton.Margin = new System.Windows.Forms.Padding(2);
             this.AjouterButton.Name = "AjouterButton";
             this.AjouterButton.Size = new System.Drawing.Size(122, 39);
             this.AjouterButton.TabIndex = 76;
             this.AjouterButton.Text = "Ajouter";
-            this.AjouterButton.UseVisualStyleBackColor = true;
+            this.AjouterButton.UseVisualStyleBackColor = false;
             this.AjouterButton.Click += new System.EventHandler(this.AjouterButton_Click);
             // 
             // panel4
@@ -255,23 +273,51 @@
             this.ArchiveTitleLabel.TabIndex = 74;
             this.ArchiveTitleLabel.Text = "Supprimer";
             // 
+            // bigLabel8
+            // 
+            this.bigLabel8.AutoSize = true;
+            this.bigLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel8.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.bigLabel8.Location = new System.Drawing.Point(320, 9);
+            this.bigLabel8.Name = "bigLabel8";
+            this.bigLabel8.Size = new System.Drawing.Size(194, 45);
+            this.bigLabel8.TabIndex = 44;
+            this.bigLabel8.Text = "Destruction";
+            // 
+            // bigLabel2
+            // 
+            bigLabel2.AutoSize = true;
+            bigLabel2.BackColor = System.Drawing.Color.Transparent;
+            bigLabel2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            bigLabel2.ForeColor = System.Drawing.Color.White;
+            bigLabel2.Location = new System.Drawing.Point(105, 0);
+            bigLabel2.Name = "bigLabel2";
+            bigLabel2.Size = new System.Drawing.Size(192, 28);
+            bigLabel2.TabIndex = 74;
+            bigLabel2.Text = "Archives à détruire";
+            // 
             // DeleteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 457);
+            this.ClientSize = new System.Drawing.Size(823, 545);
+            this.Controls.Add(this.bigLabel8);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DeleteForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.DeleteDataView)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -291,5 +337,6 @@
         private System.Windows.Forms.Label NbrArchiveInfoLabel;
         private System.Windows.Forms.ComboBox AgentComboBox;
         private ReaLTaiizor.Controls.BigLabel bigLabel3;
+        private ReaLTaiizor.Controls.BigLabel bigLabel8;
     }
 }

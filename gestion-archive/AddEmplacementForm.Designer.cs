@@ -45,6 +45,7 @@
             this.NbrTabletteTextBox = new ReaLTaiizor.Controls.BigTextBox();
             this.bigLabel8 = new ReaLTaiizor.Controls.BigLabel();
             this.AddLieuButton = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
             bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
             bigLabel5 = new ReaLTaiizor.Controls.BigLabel();
@@ -56,10 +57,10 @@
             // bigLabel2
             // 
             bigLabel2.AutoSize = true;
-            bigLabel2.BackColor = System.Drawing.Color.Transparent;
+            bigLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             bigLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             bigLabel2.ForeColor = System.Drawing.Color.White;
-            bigLabel2.Location = new System.Drawing.Point(11, 108);
+            bigLabel2.Location = new System.Drawing.Point(55, 128);
             bigLabel2.Name = "bigLabel2";
             bigLabel2.Size = new System.Drawing.Size(42, 21);
             bigLabel2.TabIndex = 33;
@@ -68,10 +69,10 @@
             // bigLabel3
             // 
             bigLabel3.AutoSize = true;
-            bigLabel3.BackColor = System.Drawing.Color.Transparent;
+            bigLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             bigLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             bigLabel3.ForeColor = System.Drawing.Color.White;
-            bigLabel3.Location = new System.Drawing.Point(10, 177);
+            bigLabel3.Location = new System.Drawing.Point(54, 197);
             bigLabel3.Name = "bigLabel3";
             bigLabel3.Size = new System.Drawing.Size(69, 21);
             bigLabel3.TabIndex = 35;
@@ -80,10 +81,10 @@
             // bigLabel5
             // 
             bigLabel5.AutoSize = true;
-            bigLabel5.BackColor = System.Drawing.Color.Transparent;
+            bigLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             bigLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             bigLabel5.ForeColor = System.Drawing.Color.White;
-            bigLabel5.Location = new System.Drawing.Point(10, 279);
+            bigLabel5.Location = new System.Drawing.Point(55, 323);
             bigLabel5.Name = "bigLabel5";
             bigLabel5.Size = new System.Drawing.Size(101, 21);
             bigLabel5.TabIndex = 37;
@@ -92,10 +93,10 @@
             // bigLabel6
             // 
             bigLabel6.AutoSize = true;
-            bigLabel6.BackColor = System.Drawing.Color.Transparent;
+            bigLabel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             bigLabel6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             bigLabel6.ForeColor = System.Drawing.Color.White;
-            bigLabel6.Location = new System.Drawing.Point(254, 279);
+            bigLabel6.Location = new System.Drawing.Point(299, 323);
             bigLabel6.Name = "bigLabel6";
             bigLabel6.Size = new System.Drawing.Size(135, 21);
             bigLabel6.TabIndex = 39;
@@ -104,10 +105,10 @@
             // bigLabel7
             // 
             bigLabel7.AutoSize = true;
-            bigLabel7.BackColor = System.Drawing.Color.Transparent;
+            bigLabel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             bigLabel7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             bigLabel7.ForeColor = System.Drawing.Color.White;
-            bigLabel7.Location = new System.Drawing.Point(483, 279);
+            bigLabel7.Location = new System.Drawing.Point(528, 323);
             bigLabel7.Name = "bigLabel7";
             bigLabel7.Size = new System.Drawing.Size(139, 21);
             bigLabel7.TabIndex = 41;
@@ -116,10 +117,10 @@
             // bigLabel4
             // 
             this.bigLabel4.AutoSize = true;
-            this.bigLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.bigLabel4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel4.ForeColor = System.Drawing.Color.White;
-            this.bigLabel4.Location = new System.Drawing.Point(10, 72);
+            this.bigLabel4.Location = new System.Drawing.Point(54, 92);
             this.bigLabel4.Name = "bigLabel4";
             this.bigLabel4.Size = new System.Drawing.Size(117, 25);
             this.bigLabel4.TabIndex = 26;
@@ -130,8 +131,8 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.panel3);
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(14, 98);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(58, 118);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(675, 4);
             this.panel2.TabIndex = 25;
@@ -141,7 +142,7 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.ForeColor = System.Drawing.Color.White;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(675, 4);
             this.panel3.TabIndex = 26;
@@ -149,10 +150,10 @@
             // bigLabel1
             // 
             this.bigLabel1.AutoSize = true;
-            this.bigLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.bigLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel1.ForeColor = System.Drawing.Color.White;
-            this.bigLabel1.Location = new System.Drawing.Point(9, 245);
+            this.bigLabel1.Location = new System.Drawing.Point(54, 289);
             this.bigLabel1.Name = "bigLabel1";
             this.bigLabel1.Size = new System.Drawing.Size(157, 25);
             this.bigLabel1.TabIndex = 28;
@@ -162,19 +163,19 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(13, 271);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(58, 315);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(675, 4);
             this.panel1.TabIndex = 27;
             // 
             // LieuTextBox
             // 
-            this.LieuTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.LieuTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.LieuTextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LieuTextBox.ForeColor = System.Drawing.Color.DimGray;
             this.LieuTextBox.Image = null;
-            this.LieuTextBox.Location = new System.Drawing.Point(16, 134);
+            this.LieuTextBox.Location = new System.Drawing.Point(60, 154);
             this.LieuTextBox.MaxLength = 32767;
             this.LieuTextBox.Multiline = false;
             this.LieuTextBox.Name = "LieuTextBox";
@@ -186,11 +187,11 @@
             // 
             // AdresseTextBox
             // 
-            this.AdresseTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.AdresseTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.AdresseTextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdresseTextBox.ForeColor = System.Drawing.Color.DimGray;
             this.AdresseTextBox.Image = null;
-            this.AdresseTextBox.Location = new System.Drawing.Point(15, 203);
+            this.AdresseTextBox.Location = new System.Drawing.Point(59, 223);
             this.AdresseTextBox.MaxLength = 32767;
             this.AdresseTextBox.Multiline = false;
             this.AdresseTextBox.Name = "AdresseTextBox";
@@ -202,11 +203,11 @@
             // 
             // NbrEpiTextBox
             // 
-            this.NbrEpiTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.NbrEpiTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.NbrEpiTextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NbrEpiTextBox.ForeColor = System.Drawing.Color.DimGray;
             this.NbrEpiTextBox.Image = null;
-            this.NbrEpiTextBox.Location = new System.Drawing.Point(15, 305);
+            this.NbrEpiTextBox.Location = new System.Drawing.Point(60, 349);
             this.NbrEpiTextBox.MaxLength = 32767;
             this.NbrEpiTextBox.Multiline = false;
             this.NbrEpiTextBox.Name = "NbrEpiTextBox";
@@ -218,11 +219,11 @@
             // 
             // NbrEtagereTextBox
             // 
-            this.NbrEtagereTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.NbrEtagereTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.NbrEtagereTextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NbrEtagereTextBox.ForeColor = System.Drawing.Color.DimGray;
             this.NbrEtagereTextBox.Image = null;
-            this.NbrEtagereTextBox.Location = new System.Drawing.Point(258, 305);
+            this.NbrEtagereTextBox.Location = new System.Drawing.Point(303, 349);
             this.NbrEtagereTextBox.MaxLength = 32767;
             this.NbrEtagereTextBox.Multiline = false;
             this.NbrEtagereTextBox.Name = "NbrEtagereTextBox";
@@ -234,11 +235,11 @@
             // 
             // NbrTabletteTextBox
             // 
-            this.NbrTabletteTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.NbrTabletteTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.NbrTabletteTextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NbrTabletteTextBox.ForeColor = System.Drawing.Color.DimGray;
             this.NbrTabletteTextBox.Image = null;
-            this.NbrTabletteTextBox.Location = new System.Drawing.Point(488, 305);
+            this.NbrTabletteTextBox.Location = new System.Drawing.Point(533, 349);
             this.NbrTabletteTextBox.MaxLength = 32767;
             this.NbrTabletteTextBox.Multiline = false;
             this.NbrTabletteTextBox.Name = "NbrTabletteTextBox";
@@ -253,8 +254,8 @@
             this.bigLabel8.AutoSize = true;
             this.bigLabel8.BackColor = System.Drawing.Color.Transparent;
             this.bigLabel8.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel8.ForeColor = System.Drawing.Color.White;
-            this.bigLabel8.Location = new System.Drawing.Point(275, 19);
+            this.bigLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.bigLabel8.Location = new System.Drawing.Point(320, 19);
             this.bigLabel8.Name = "bigLabel8";
             this.bigLabel8.Size = new System.Drawing.Size(173, 45);
             this.bigLabel8.TabIndex = 43;
@@ -262,23 +263,36 @@
             // 
             // AddLieuButton
             // 
+            this.AddLieuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.AddLieuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddLieuButton.FlatAppearance.BorderSize = 0;
+            this.AddLieuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddLieuButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddLieuButton.Location = new System.Drawing.Point(269, 376);
-            this.AddLieuButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddLieuButton.ForeColor = System.Drawing.Color.White;
+            this.AddLieuButton.Location = new System.Drawing.Point(314, 420);
+            this.AddLieuButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddLieuButton.Name = "AddLieuButton";
             this.AddLieuButton.Size = new System.Drawing.Size(160, 41);
             this.AddLieuButton.TabIndex = 44;
             this.AddLieuButton.Text = "Ajouter";
-            this.AddLieuButton.UseVisualStyleBackColor = true;
+            this.AddLieuButton.UseVisualStyleBackColor = false;
             this.AddLieuButton.Click += new System.EventHandler(this.AddLieuButton_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
+            this.panel4.Location = new System.Drawing.Point(43, 80);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(728, 409);
+            this.panel4.TabIndex = 45;
             // 
             // AddEmplacementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(711, 439);
+            this.ClientSize = new System.Drawing.Size(837, 520);
             this.Controls.Add(this.AddLieuButton);
             this.Controls.Add(this.bigLabel8);
             this.Controls.Add(this.NbrTabletteTextBox);
@@ -295,10 +309,12 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bigLabel4);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddEmplacementForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.AddEmplacementForm_Load);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -319,5 +335,6 @@
         private ReaLTaiizor.Controls.BigTextBox NbrTabletteTextBox;
         private ReaLTaiizor.Controls.BigLabel bigLabel8;
         private System.Windows.Forms.Button AddLieuButton;
+        private System.Windows.Forms.Panel panel4;
     }
 }

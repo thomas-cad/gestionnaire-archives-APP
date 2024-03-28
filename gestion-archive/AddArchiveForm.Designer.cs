@@ -30,6 +30,7 @@
         {
             this.main_label = new ReaLTaiizor.Controls.BigLabel();
             this.panel1 = new ReaLTaiizor.Controls.Panel();
+            this.AjouterButton = new System.Windows.Forms.Button();
             this.ServiceComboBox = new System.Windows.Forms.ComboBox();
             this.AgentComboBox = new System.Windows.Forms.ComboBox();
             this.bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
@@ -46,7 +47,6 @@
             this.bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
             this.DescriptionTextBox = new ReaLTaiizor.Controls.BigTextBox();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
-            this.button_submit = new ReaLTaiizor.Controls.AirButton();
             this.CoteTextBox = new ReaLTaiizor.Controls.BigTextBox();
             this.titre_label = new ReaLTaiizor.Controls.BigLabel();
             this.bigLabel5 = new ReaLTaiizor.Controls.BigLabel();
@@ -59,7 +59,7 @@
             this.main_label.AutoSize = true;
             this.main_label.BackColor = System.Drawing.Color.Transparent;
             this.main_label.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.main_label.ForeColor = System.Drawing.Color.White;
+            this.main_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.main_label.Location = new System.Drawing.Point(310, 7);
             this.main_label.Name = "main_label";
             this.main_label.Size = new System.Drawing.Size(322, 45);
@@ -68,7 +68,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
+            this.panel1.Controls.Add(this.AjouterButton);
             this.panel1.Controls.Add(this.ServiceComboBox);
             this.panel1.Controls.Add(this.AgentComboBox);
             this.panel1.Controls.Add(this.bigLabel4);
@@ -85,7 +86,6 @@
             this.panel1.Controls.Add(this.bigLabel2);
             this.panel1.Controls.Add(this.DescriptionTextBox);
             this.panel1.Controls.Add(this.bigLabel1);
-            this.panel1.Controls.Add(this.button_submit);
             this.panel1.Controls.Add(this.CoteTextBox);
             this.panel1.Controls.Add(this.titre_label);
             this.panel1.Controls.Add(this.bigLabel5);
@@ -94,10 +94,27 @@
             this.panel1.Location = new System.Drawing.Point(10, 62);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(884, 443);
+            this.panel1.Size = new System.Drawing.Size(884, 460);
             this.panel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.panel1.TabIndex = 5;
             this.panel1.Text = "panel1";
+            // 
+            // AjouterButton
+            // 
+            this.AjouterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.AjouterButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AjouterButton.FlatAppearance.BorderSize = 0;
+            this.AjouterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AjouterButton.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AjouterButton.ForeColor = System.Drawing.Color.White;
+            this.AjouterButton.Location = new System.Drawing.Point(336, 408);
+            this.AjouterButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AjouterButton.Name = "AjouterButton";
+            this.AjouterButton.Size = new System.Drawing.Size(200, 45);
+            this.AjouterButton.TabIndex = 78;
+            this.AjouterButton.Text = "Ajouter";
+            this.AjouterButton.UseVisualStyleBackColor = false;
+            this.AjouterButton.Click += new System.EventHandler(this.TerminerButton_Click);
             // 
             // ServiceComboBox
             // 
@@ -302,22 +319,6 @@
             this.bigLabel1.TabIndex = 3;
             this.bigLabel1.Text = "Description";
             // 
-            // button_submit
-            // 
-            this.button_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button_submit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_submit.Customization = "Hh4e/x4eHv8eHh7/Hh4e/x4eHv8eHh7/Hh4e//////8UFBT/Hh4e/w==";
-            this.button_submit.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_submit.Image = null;
-            this.button_submit.Location = new System.Drawing.Point(316, 396);
-            this.button_submit.Name = "button_submit";
-            this.button_submit.NoRounding = false;
-            this.button_submit.Size = new System.Drawing.Size(316, 39);
-            this.button_submit.TabIndex = 2;
-            this.button_submit.Text = "Ajouter";
-            this.button_submit.Transparent = false;
-            this.button_submit.Click += new System.EventHandler(this.button_submit_Click);
-            // 
             // CoteTextBox
             // 
             this.CoteTextBox.BackColor = System.Drawing.Color.Transparent;
@@ -372,8 +373,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
-            this.ClientSize = new System.Drawing.Size(903, 515);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(903, 556);
             this.Controls.Add(this.main_label);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -397,7 +398,6 @@
         private ReaLTaiizor.Controls.BigLabel bigLabel2;
         private ReaLTaiizor.Controls.BigTextBox DescriptionTextBox;
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
-        private ReaLTaiizor.Controls.AirButton button_submit;
         private ReaLTaiizor.Controls.BigTextBox CoteTextBox;
         private ReaLTaiizor.Controls.BigLabel titre_label;
         private ReaLTaiizor.Controls.BigLabel bigLabel3;
@@ -412,5 +412,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox ServiceComboBox;
         private System.Windows.Forms.ComboBox AgentComboBox;
+        private System.Windows.Forms.Button AjouterButton;
     }
 }
