@@ -165,7 +165,7 @@
             this.RecolementTitleLabel.BackColor = System.Drawing.Color.Transparent;
             this.RecolementTitleLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecolementTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
-            this.RecolementTitleLabel.Location = new System.Drawing.Point(262, 7);
+            this.RecolementTitleLabel.Location = new System.Drawing.Point(252, 6);
             this.RecolementTitleLabel.Name = "RecolementTitleLabel";
             this.RecolementTitleLabel.Size = new System.Drawing.Size(195, 45);
             this.RecolementTitleLabel.TabIndex = 48;
@@ -207,31 +207,42 @@
             // 
             // AjouterButton
             // 
+            this.AjouterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.AjouterButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AjouterButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.AjouterButton.FlatAppearance.BorderSize = 0;
+            this.AjouterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AjouterButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AjouterButton.ForeColor = System.Drawing.Color.White;
             this.AjouterButton.Location = new System.Drawing.Point(211, 197);
             this.AjouterButton.Margin = new System.Windows.Forms.Padding(2);
             this.AjouterButton.Name = "AjouterButton";
             this.AjouterButton.Size = new System.Drawing.Size(122, 39);
             this.AjouterButton.TabIndex = 59;
             this.AjouterButton.Text = "Ajouter";
-            this.AjouterButton.UseVisualStyleBackColor = true;
+            this.AjouterButton.UseVisualStyleBackColor = false;
             this.AjouterButton.Click += new System.EventHandler(this.AjouterButton_Click);
             // 
             // TerminerButton
             // 
+            this.TerminerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.TerminerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TerminerButton.FlatAppearance.BorderSize = 0;
+            this.TerminerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TerminerButton.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TerminerButton.ForeColor = System.Drawing.Color.White;
             this.TerminerButton.Location = new System.Drawing.Point(270, 307);
             this.TerminerButton.Margin = new System.Windows.Forms.Padding(2);
             this.TerminerButton.Name = "TerminerButton";
             this.TerminerButton.Size = new System.Drawing.Size(122, 39);
             this.TerminerButton.TabIndex = 62;
             this.TerminerButton.Text = "Terminer";
-            this.TerminerButton.UseVisualStyleBackColor = true;
+            this.TerminerButton.UseVisualStyleBackColor = false;
             this.TerminerButton.Click += new System.EventHandler(this.TerminerButton_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(88)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.panel2.Controls.Add(this.IdArchiveTextBox);
             this.panel2.Controls.Add(this.IdEmplacementTextBox);
             this.panel2.Controls.Add(this.AnnulerButton);
@@ -279,26 +290,35 @@
             // 
             // AnnulerButton
             // 
+            this.AnnulerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.AnnulerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AnnulerButton.FlatAppearance.BorderSize = 0;
+            this.AnnulerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AnnulerButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnnulerButton.ForeColor = System.Drawing.Color.White;
             this.AnnulerButton.Location = new System.Drawing.Point(211, 240);
             this.AnnulerButton.Margin = new System.Windows.Forms.Padding(2);
             this.AnnulerButton.Name = "AnnulerButton";
             this.AnnulerButton.Size = new System.Drawing.Size(122, 39);
             this.AnnulerButton.TabIndex = 69;
             this.AnnulerButton.Text = "Annuler";
-            this.AnnulerButton.UseVisualStyleBackColor = true;
+            this.AnnulerButton.UseVisualStyleBackColor = false;
             this.AnnulerButton.Click += new System.EventHandler(this.AnnulerButton_Click);
             // 
             // ValiderEmplacementButton
             // 
+            this.ValiderEmplacementButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.ValiderEmplacementButton.FlatAppearance.BorderSize = 0;
+            this.ValiderEmplacementButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ValiderEmplacementButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValiderEmplacementButton.ForeColor = System.Drawing.Color.White;
             this.ValiderEmplacementButton.Location = new System.Drawing.Point(211, 70);
             this.ValiderEmplacementButton.Margin = new System.Windows.Forms.Padding(2);
             this.ValiderEmplacementButton.Name = "ValiderEmplacementButton";
             this.ValiderEmplacementButton.Size = new System.Drawing.Size(122, 39);
             this.ValiderEmplacementButton.TabIndex = 68;
             this.ValiderEmplacementButton.Text = "Valider";
-            this.ValiderEmplacementButton.UseVisualStyleBackColor = true;
+            this.ValiderEmplacementButton.UseVisualStyleBackColor = false;
             this.ValiderEmplacementButton.Click += new System.EventHandler(this.ValiderEmplacementButton_Click);
             // 
             // NbrArchiveInfoLabel
@@ -358,7 +378,7 @@
             // 
             // SuccesPanel
             // 
-            this.SuccesPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
+            this.SuccesPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.SuccesPanel.Controls.Add(this.label1);
             this.SuccesPanel.Location = new System.Drawing.Point(463, 12);
             this.SuccesPanel.Name = "SuccesPanel";
@@ -369,6 +389,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(18, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 25);

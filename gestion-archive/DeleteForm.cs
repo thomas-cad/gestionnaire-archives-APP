@@ -292,6 +292,8 @@ namespace gestion_archive
         {
             if (e.KeyCode.Equals(Keys.Enter))
             {
+                e.SuppressKeyPress = true; // Empêche la saisie de la touche "Entrée"
+
                 this.NewIdArchive();
             }
         }

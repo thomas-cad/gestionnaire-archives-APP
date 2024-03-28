@@ -28,8 +28,8 @@ namespace gestion_archive
             NbrArchiveInfoLabel.Text = nbr_archive.ToString(); //Affichage de 0 archives actives
             DataColumn dataColumn = new DataColumn("id", typeof(int)); //Cration colonne DataTable
             dt_id_archive.Columns.Add(dataColumn); //Ajout de la colonne
-            IdArchiveTextBox.Focus();//Focus dans l'id archive
             SuccesPanel.Hide();
+            IdEmplacementTextBox.Focus();//Focus dans l'id archive
         }
 
         /*
@@ -250,6 +250,7 @@ namespace gestion_archive
         {
             if (e.KeyCode.Equals(Keys.Enter))
             {
+                e.SuppressKeyPress = true; // Empêche la saisie de la touche "Entrée"
                 this.IdEmplacement();
             }
         }
@@ -258,6 +259,8 @@ namespace gestion_archive
         {
             if (e.KeyCode.Equals(Keys.Enter))
             {
+                e.SuppressKeyPress = true; // Empêche la saisie de la touche "Entrée"
+
                 if (IdArchiveTextBox.Text == "123456789") //Code de fin de tablette ==> Validation
                 {
                     this.SetEmplacement();
