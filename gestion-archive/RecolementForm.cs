@@ -341,6 +341,8 @@ namespace gestion_archive
             {
                 MessageBox.Show("Erreur : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            return check;
         }
     }
 }
