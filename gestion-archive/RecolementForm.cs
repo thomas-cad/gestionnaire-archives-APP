@@ -163,11 +163,13 @@ namespace gestion_archive
                     {
                         try
                         {
+                            Check_Emprunt(int.Parse(row["id"].ToString())); // Vérifie l'emprunt
+
                             new_emplacement.Parameters.Clear();
                             new_emplacement.Parameters.AddWithValue("@id_emplacement", id_emplacement);
                             new_emplacement.Parameters.AddWithValue("@id_archive", row["id"]);
 
-                            new_emplacement.ExecuteNonQuery();
+                            new_emplacement.ExecuteNonQuery(); 
                         }
                         catch (Exception ex)
                         {
@@ -288,6 +290,27 @@ namespace gestion_archive
                 else
                 {
                     validate = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Check_Emprunt (int id_archive)
+        {
+            try
+            {
+                var check_request = new NpgsqlCommand("SELECT COUNT (*) FROM emprunt WHERE id_archive = @id_archive AND date_retour IS NULL", conn); //Verifie si l'archive est empruntee
+                check_request.Parameters.AddWithValue("@id_archive", id_archive);
+
+                if ((long)check_request.ExecuteScalar() == 1)
+                {
+                    var set_retour = new NpgsqlCommand("UPDATE emprunt SET date_retour = CURRENT_DATE WHERE id_archive = @id_archive AND date_retour IS NULL"); //definie le retour
+                    set_retour.Parameters.AddWithValue("@id_archive", id_archive);
+                    set_retour.ExecuteNonQuery();
+
                 }
             }
             catch (Exception ex)
