@@ -307,10 +307,34 @@ namespace gestion_archive
 
                 if ((long)check_request.ExecuteScalar() == 1)
                 {
-                    var set_retour = new NpgsqlCommand("UPDATE emprunt SET date_retour = CURRENT_DATE WHERE id_archive = @id_archive AND date_retour IS NULL"); //definie le retour
+                    var set_retour = new NpgsqlCommand("UPDATE emprunt SET date_retour = CURRENT_DATE WHERE id_archive = @id_archive AND date_retour IS NULL", conn); //definie le retour
                     set_retour.Parameters.AddWithValue("@id_archive", id_archive);
                     set_retour.ExecuteNonQuery();
 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void bool Check_destruction (int id_archive)
+        {
+            bool check = false;
+
+            try
+            {
+                var check_destruction = new NpgsqlCommand("SELECT COUNT(*) FROM destruction WHERE id_archive = @id_archive", conn);
+                check_destruction.Parameters.AddWithValue("@id_archive", id_archive);
+
+                if ((long) check_destruction.ExecuteScalar() == 0)
+                {
+                    check = true;
+                }
+                else
+                {
+                    MessageBox.Show("Archive Detruite", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
