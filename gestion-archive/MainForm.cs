@@ -18,6 +18,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Collections.Specialized.BitVector32;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -30,6 +31,8 @@ namespace gestion_archive
         AddEmplacementForm addEmplacement;
         RecolementForm recolement;
         DeleteForm deleteForm;
+        EmpruntForm emprunter;
+        RendreForm rendre;
 
         public NpgsqlConnection conn;
 
@@ -115,6 +118,36 @@ namespace gestion_archive
                     recolementExpand = false;
                 }
             }
+        }
+        bool empruntExpand; 
+        private void empruntTransition_Tick(object sender, EventArgs e)
+        {
+            //Gestion du menu deroulant de emprunt
+
+            if (empruntExpand == false) //Augmenter la taille
+            {
+                empruntContainer.Height += 10;
+
+                if (empruntContainer.Height >= 160)
+                {
+                    empruntTransition.Stop();
+                    empruntExpand = true;
+                }
+            }
+            else //Diminuer la taille
+            {
+                empruntContainer.Height -= 10;
+                if (empruntContainer.Height <= 53)
+                {
+                    empruntTransition.Stop();
+                    empruntExpand = false;
+                }
+            }
+        }
+
+        private void button_emprunt_Click(object sender, EventArgs e)
+        {
+            empruntTransition.Start();
         }
 
         bool sidebarExpand = true; 
@@ -263,7 +296,51 @@ namespace gestion_archive
             recolement.Activate();
         }
 
-       
+        private void button_emprunterarchive_Click(object sender, EventArgs e)
+        {
+            // Afficher le form du recolement
+            if (emprunter == null)
+            {
+                emprunter = new EmpruntForm(conn);
+                emprunter.FormClosed += Emprunter_FormClosed;
+                emprunter.MdiParent = this;
+                emprunter.Dock = DockStyle.Fill;
+                emprunter.Show();
+            }
+            else
+            {
+                emprunter.Activate();
+            }
+        }
+
+        private void Emprunter_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            emprunter.Activate();
+        }
+
+        private void button_rendrearchive_Click(object sender, EventArgs e)
+        {
+            // Afficher le form du recolement
+            if (rendre == null)
+            {
+                rendre = new RendreForm(conn);
+                rendre.FormClosed += Rendre_FormClosed; ;
+                rendre.MdiParent = this;
+                rendre.Dock = DockStyle.Fill;
+                rendre.Show();
+            }
+            else
+            {
+                rendre.Activate();
+            }
+        }
+
+        private void Rendre_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            rendre.Activate(); 
+        }
+
+
         //BOUTON TELECHARGEMENT DU RECOLEMENT
         private void button_exportrecolement_Click(object sender, EventArgs e)
         {

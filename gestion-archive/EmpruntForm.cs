@@ -8,10 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 using data_base;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.ApplicationServices;
 using Npgsql;
+using ReaLTaiizor.Controls;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace gestion_archive
@@ -20,7 +22,9 @@ namespace gestion_archive
     {
         private NpgsqlConnection conn;
 
+        private int id_archive;
         private int id_agent;
+        private string raison; 
         public EmpruntForm (NpgsqlConnection conn_main_form)
         {
             InitializeComponent();
@@ -28,6 +32,7 @@ namespace gestion_archive
             conn = conn_main_form; //Recupere les informations de la BDD
 
             MajAgent();
+            ResetValues();
         }
 
         //Verifie l'id saisie dans la TextBox
@@ -81,26 +86,6 @@ namespace gestion_archive
             }
 
         }
-
-        //MAJ menu déroulant Agent
-        private void MajAgent()
-        {
-            //Requete Recherche agent
-            NpgsqlCommand agent_requete = new NpgsqlCommand("SELECT nom, prenom, id_agent FROM agent", conn);
-
-            //Prepare la requete
-            agent_requete.Prepare();
-
-            //Recuperation requete
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(agent_requete); //Craies un data adapter pour recuperer la requete
-            DataTable dt = new DataTable(); //Creation d'une data table pour stocker la requete
-            da.Fill(dt); //Stocke la requete dans la data table
-
-            foreach (DataRow row in dt.Rows)
-            {
-                AgentComboBox.Items.Add(row[1].ToString() + " " + row[0].ToString() + " : " + row[2].ToString());
-            }
-        }
         private void AgentComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -122,6 +107,134 @@ namespace gestion_archive
             catch
             {
                 id_agent = -1; //Desafecte l'id de l'agent
+            }
+        }
+
+
+        //MAJ menu déroulant Agent
+        private void MajAgent()
+        {
+            //Requete Recherche agent
+            NpgsqlCommand agent_requete = new NpgsqlCommand("SELECT nom, prenom, id_agent FROM agent", conn);
+
+            //Prepare la requete
+            agent_requete.Prepare();
+
+            //Recuperation requete
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(agent_requete); //Craies un data adapter pour recuperer la requete
+            DataTable dt = new DataTable(); //Creation d'une data table pour stocker la requete
+            da.Fill(dt); //Stocke la requete dans la data table
+
+            foreach (DataRow row in dt.Rows)
+            {
+                AgentComboBox.Items.Add(row[1].ToString() + " " + row[0].ToString() + " : " + row[2].ToString());
+            }
+        }
+
+        private void ResetValues()
+        {
+            //Vide les TextBox
+            id_agent = -1;
+            AgentComboBox.Text = string.Empty;
+            CoteTextBox.Text = string.Empty;
+            RaisonTextBox.Text = string.Empty;
+        }
+        private bool Checking()
+        {
+            bool check_id_archive = false;
+            bool check_agent = false;
+            bool check_raison = false;
+            bool check_emprunt = false; 
+
+            //Chcck l'id archive
+            if (CoteTextBox.Text == string.Empty)
+            {
+                MessageBox.Show("Id Archive invalide", "Id_Archive", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
+            else
+            {
+                id_archive = int.Parse(CoteTextBox.Text);
+                var check_idarchive = new NpgsqlCommand("SELECT COUNT(*) FROM archive WHERE id_archive = @id_archive",conn);
+                check_idarchive.Parameters.AddWithValue("@id_archive", id_archive);
+
+                if ((long)check_idarchive.ExecuteScalar() == 1)
+                {
+                    check_id_archive = true;
+                }
+                else
+                {
+                    check_id_archive = false;
+                    MessageBox.Show("L'id de l'archive n'existe pas", "Id Archive", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            // Check la raison
+            if (RaisonTextBox.Text == string.Empty)
+            {
+                MessageBox.Show("Raison Invalide", "Raison", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                raison = RaisonTextBox.Text;
+                check_raison = true;
+            }
+
+            //Check Agent
+            if (id_agent == -1)
+            {
+                MessageBox.Show("Agent invalide", "Agent", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                check_agent = true;
+            }
+
+            var checkemprunt = new NpgsqlCommand("SELECT COUNT(*) FROM emprunt WHERE date_retour = NULL AND id_archive = @id_archive", conn);
+            checkemprunt.Parameters.AddWithValue("@id_archive", id_archive);
+
+            if ((long)checkemprunt.ExecuteScalar() == 1)
+            {
+                try
+                {
+                    var set_retour = new NpgsqlCommand("UPDATE emprunt SET date_retour = CURRENT_DATE WHERE id_archive = @id_archive AND date_retour IS NULL",conn); //definie le retour
+                    set_retour.Parameters.AddWithValue("@id_archive", id_archive);
+                    set_retour.ExecuteNonQuery();
+                    MessageBox.Show("L'archive a été retournée", "Archive", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                catch (Exception ex)
+                {
+                    ResetValues();
+                }
+            }
+            return check_id_archive && check_agent && check_raison;
+        }   
+
+        private void emprunterButton_Click(object sender, EventArgs e)
+        {
+            if(Checking()) // Check les valeurs des champs
+            {
+                try
+                {
+                    var insert_requete = new NpgsqlCommand("INSERT INTO emprunt (id_agent, date_emprunt, id_archive, raison) VALUES (@id_agent, @date_emprunt, @id_archive, @raison)", conn);
+                    insert_requete.Parameters.AddWithValue("@id_agent", id_agent);
+                    insert_requete.Parameters.AddWithValue("@id_archive", id_archive);
+                    insert_requete.Parameters.AddWithValue("@raison", raison);
+                    insert_requete.Parameters.AddWithValue("@date_emprunt", DateTime.Now); 
+                    insert_requete.ExecuteNonQuery();
+
+                    var change_emp = new NpgsqlCommand("UPDATE archive SET id_emplacement = 20646 WHERE id_archive = @id_archive ");
+                    change_emp.Parameters.AddWithValue("@id_archive", id_archive); 
+
+                    ResetValues(); //Reset les valeurs des champs
+                    MessageBox.Show("Archive emprunté avec succès le " + DateTime.Now);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erreur", "Erreur : " + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ResetValues();
+                }
             }
         }
     }

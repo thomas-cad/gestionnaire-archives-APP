@@ -16,7 +16,7 @@ namespace gestion_archive
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EmpruntForm());
+            Application.Run(new MainForm());
         }
     }
 }
