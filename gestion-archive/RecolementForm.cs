@@ -88,7 +88,7 @@ namespace gestion_archive
             {
                 DataRow[] existe = dt_id_archive.Select("id = " + int.Parse(IdArchiveTextBox.Text)); //Recherche l'id dans la DataTable
 
-                if(existe.Length == 0) //Verifie que l'id n'a pas déja été saisi
+                if (existe.Length == 0 && Check_destruction(int.Parse(IdArchiveTextBox.Text))) //Verifie que l'id n'a pas déja été saisi et qu'elle n'a pas été détruite
                 {
                     var requete_arch_existe = new NpgsqlCommand("SELECT COUNT(*) FROM archive WHERE id_archive = @id_archive", conn);
                     requete_arch_existe.Parameters.AddWithValue("@id_archive", int.Parse(IdArchiveTextBox.Text));
@@ -319,7 +319,7 @@ namespace gestion_archive
             }
         }
 
-        private void bool Check_destruction (int id_archive)
+        private bool Check_destruction (int id_archive)
         {
             bool check = false;
 
