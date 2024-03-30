@@ -190,22 +190,23 @@ namespace gestion_archive
                 check_agent = true;
             }
 
-            var checkemprunt = new NpgsqlCommand("SELECT COUNT(*) FROM emprunt WHERE date_retour = NULL AND id_archive = @id_archive", conn);
+            var checkemprunt = new NpgsqlCommand("SELECT COUNT(*) FROM emprunt WHERE date_retour IS NULL AND id_archive = @id_archive", conn);
             checkemprunt.Parameters.AddWithValue("@id_archive", id_archive);
 
-            if ((long)checkemprunt.ExecuteScalar() == 1)
+            if ((long)checkemprunt.ExecuteScalar() > 0)
             {
                 try
                 {
                     var set_retour = new NpgsqlCommand("UPDATE emprunt SET date_retour = CURRENT_DATE WHERE id_archive = @id_archive AND date_retour IS NULL",conn); //definie le retour
                     set_retour.Parameters.AddWithValue("@id_archive", id_archive);
                     set_retour.ExecuteNonQuery();
-                    MessageBox.Show("L'archive a été retournée", "Archive", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("L'archive a été retournée", "Archive", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch (Exception ex)
                 {
                     ResetValues();
+                    MessageBox.Show(ex.Message);
                 }
             }
             return check_id_archive && check_agent && check_raison;
@@ -224,8 +225,9 @@ namespace gestion_archive
                     insert_requete.Parameters.AddWithValue("@date_emprunt", DateTime.Now); 
                     insert_requete.ExecuteNonQuery();
 
-                    var change_emp = new NpgsqlCommand("UPDATE archive SET id_emplacement = 20646 WHERE id_archive = @id_archive ");
+                    var change_emp = new NpgsqlCommand("UPDATE archive SET id_emplacement = 20646 WHERE id_archive = @id_archive",conn);
                     change_emp.Parameters.AddWithValue("@id_archive", id_archive); 
+                    change_emp.ExecuteNonQuery();
 
                     ResetValues(); //Reset les valeurs des champs
                     MessageBox.Show("Archive emprunté avec succès le " + DateTime.Now);

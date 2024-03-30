@@ -32,14 +32,14 @@
             ReaLTaiizor.Controls.BigLabel IdArchiveTitleLabel;
             ReaLTaiizor.Controls.BigLabel bigLabel2;
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.RaisonTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.AgentComboBox = new System.Windows.Forms.ComboBox();
             this.bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
             this.emprunterButton = new System.Windows.Forms.Button();
             this.CoteTextBox = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             IdArchiveTitleLabel = new ReaLTaiizor.Controls.BigLabel();
             bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
@@ -52,10 +52,9 @@
             bigLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(88)))));
             bigLabel1.Font = new System.Drawing.Font("Segoe UI", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             bigLabel1.ForeColor = System.Drawing.Color.White;
-            bigLabel1.Location = new System.Drawing.Point(324, 29);
-            bigLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            bigLabel1.Location = new System.Drawing.Point(162, 15);
             bigLabel1.Name = "bigLabel1";
-            bigLabel1.Size = new System.Drawing.Size(598, 71);
+            bigLabel1.Size = new System.Drawing.Size(307, 37);
             bigLabel1.TabIndex = 54;
             bigLabel1.Text = "Emprunter une archive";
             // 
@@ -65,10 +64,9 @@
             IdArchiveTitleLabel.BackColor = System.Drawing.Color.Transparent;
             IdArchiveTitleLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             IdArchiveTitleLabel.ForeColor = System.Drawing.Color.White;
-            IdArchiveTitleLabel.Location = new System.Drawing.Point(92, 178);
-            IdArchiveTitleLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            IdArchiveTitleLabel.Location = new System.Drawing.Point(46, 93);
             IdArchiveTitleLabel.Name = "IdArchiveTitleLabel";
-            IdArchiveTitleLabel.Size = new System.Drawing.Size(172, 45);
+            IdArchiveTitleLabel.Size = new System.Drawing.Size(87, 21);
             IdArchiveTitleLabel.TabIndex = 80;
             IdArchiveTitleLabel.Text = "Id Archive";
             // 
@@ -78,10 +76,9 @@
             bigLabel2.BackColor = System.Drawing.Color.Transparent;
             bigLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             bigLabel2.ForeColor = System.Drawing.Color.White;
-            bigLabel2.Location = new System.Drawing.Point(456, 358);
-            bigLabel2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            bigLabel2.Location = new System.Drawing.Point(228, 186);
             bigLabel2.Name = "bigLabel2";
-            bigLabel2.Size = new System.Drawing.Size(322, 45);
+            bigLabel2.Size = new System.Drawing.Size(164, 21);
             bigLabel2.TabIndex = 86;
             bigLabel2.Text = "Raison de l\'emprunt";
             // 
@@ -99,36 +96,53 @@
             this.panel1.Controls.Add(this.emprunterButton);
             this.panel1.Controls.Add(this.CoteTextBox);
             this.panel1.Controls.Add(IdArchiveTitleLabel);
-            this.panel1.Location = new System.Drawing.Point(72, 73);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(36, 38);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1244, 713);
+            this.panel1.Size = new System.Drawing.Size(622, 371);
             this.panel1.TabIndex = 53;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(29, 277);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(570, 5);
+            this.panel4.TabIndex = 86;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(29, 162);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(570, 5);
+            this.panel3.TabIndex = 86;
             // 
             // RaisonTextBox
             // 
-            this.RaisonTextBox.Location = new System.Drawing.Point(84, 432);
-            this.RaisonTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.RaisonTextBox.Location = new System.Drawing.Point(42, 225);
             this.RaisonTextBox.Name = "RaisonTextBox";
-            this.RaisonTextBox.Size = new System.Drawing.Size(1040, 31);
+            this.RaisonTextBox.Size = new System.Drawing.Size(522, 20);
             this.RaisonTextBox.TabIndex = 87;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(58, 121);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(29, 63);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1140, 10);
+            this.panel2.Size = new System.Drawing.Size(570, 5);
             this.panel2.TabIndex = 85;
             // 
             // AgentComboBox
             // 
             this.AgentComboBox.FormattingEnabled = true;
-            this.AgentComboBox.Location = new System.Drawing.Point(772, 226);
-            this.AgentComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.AgentComboBox.Location = new System.Drawing.Point(386, 118);
+            this.AgentComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AgentComboBox.Name = "AgentComboBox";
-            this.AgentComboBox.Size = new System.Drawing.Size(354, 33);
+            this.AgentComboBox.Size = new System.Drawing.Size(179, 21);
             this.AgentComboBox.TabIndex = 84;
             this.AgentComboBox.SelectedIndexChanged += new System.EventHandler(this.AgentComboBox_SelectedIndexChanged);
             this.AgentComboBox.TextChanged += new System.EventHandler(this.AgentComboBox_TextChanged);
@@ -141,20 +155,19 @@
             this.bigLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bigLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel3.ForeColor = System.Drawing.Color.White;
-            this.bigLabel3.Location = new System.Drawing.Point(776, 176);
-            this.bigLabel3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.bigLabel3.Location = new System.Drawing.Point(388, 92);
             this.bigLabel3.Name = "bigLabel3";
-            this.bigLabel3.Size = new System.Drawing.Size(111, 45);
+            this.bigLabel3.Size = new System.Drawing.Size(56, 21);
             this.bigLabel3.TabIndex = 83;
             this.bigLabel3.Text = "Agent";
             // 
             // emprunterButton
             // 
             this.emprunterButton.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emprunterButton.Location = new System.Drawing.Point(501, 584);
-            this.emprunterButton.Margin = new System.Windows.Forms.Padding(4);
+            this.emprunterButton.Location = new System.Drawing.Point(250, 304);
+            this.emprunterButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.emprunterButton.Name = "emprunterButton";
-            this.emprunterButton.Size = new System.Drawing.Size(244, 75);
+            this.emprunterButton.Size = new System.Drawing.Size(122, 39);
             this.emprunterButton.TabIndex = 82;
             this.emprunterButton.Text = "Emprunter";
             this.emprunterButton.UseVisualStyleBackColor = true;
@@ -162,38 +175,19 @@
             // 
             // CoteTextBox
             // 
-            this.CoteTextBox.Location = new System.Drawing.Point(86, 230);
-            this.CoteTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.CoteTextBox.Location = new System.Drawing.Point(43, 120);
             this.CoteTextBox.Name = "CoteTextBox";
-            this.CoteTextBox.Size = new System.Drawing.Size(396, 31);
+            this.CoteTextBox.Size = new System.Drawing.Size(200, 20);
             this.CoteTextBox.TabIndex = 81;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(58, 312);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1140, 10);
-            this.panel3.TabIndex = 86;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(58, 532);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1140, 10);
-            this.panel4.TabIndex = 86;
             // 
             // EmpruntForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1400, 916);
+            this.ClientSize = new System.Drawing.Size(702, 449);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EmpruntForm";
             this.Text = "EmpruntForm";
             this.panel1.ResumeLayout(false);

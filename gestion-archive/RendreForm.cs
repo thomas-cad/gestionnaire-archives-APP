@@ -22,7 +22,7 @@ namespace gestion_archive
     {
         private NpgsqlConnection conn;
 
-        private string id_archive;
+        private int id_archive;
         public RendreForm(NpgsqlConnection conn_main_form)
         {
             InitializeComponent();
@@ -36,7 +36,6 @@ namespace gestion_archive
             IdArchiveTextBox.Text = string.Empty;
         }
 
-        // Booléen pour indiquer si la ligne existe dans la table
         bool empruntExists = false;
         private bool Checking()
         {
@@ -48,46 +47,46 @@ namespace gestion_archive
             }
             else
             {
-                id_archive = IdArchiveTextBox.Text;
+                id_archive = int.Parse(IdArchiveTextBox.Text);
                 check_id_archive = true;
             }
 
-            string sql = "SELECT COUNT(*) FROM emprunt WHERE id_archive = @id_archive";
-
-            // Création de la commande avec la requête SQL et la connexion
-            using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
+            var check_emprunt = new NpgsqlCommand("SELECT COUNT(*) FROM emprunt WHERE id_archive = @id_archive AND date_retour IS NULL", conn);
+            check_emprunt.Parameters.AddWithValue("@id_archive", id_archive);
+            if ((long)check_emprunt.ExecuteScalar() > 0)
             {
-                // Ajout du paramètre id_archive à la commande
-                cmd.Parameters.AddWithValue("@id_archive", id_archive);
-
-                // Exécution de la commande et récupération du nombre de lignes correspondantes
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
-
-                // Vérification si une ligne a été trouvée
-                if (count > 0)
-                {
-                    empruntExists = true;
-                }
-                else
-                {
-                    MessageBox.Show("Archive inexistante ou deja emprunté", "Archive", MessageBoxButtons.OK, MessageBoxIcon.Error); 
-                }
+                empruntExists = true;
             }
+            else
+            {
+                MessageBox.Show("Archive inexistante ou deja emprunté", "Archive", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }      
 
             return check_id_archive && empruntExists;
         }
 
-        private void IdArchiveTextBox_TextChanged(object sender, EventArgs e)
+        private void boutton_rendre_Click(object sender, EventArgs e)
         {
-            if(Checking())
+            if (Checking())
             {
-                var insert_requete = new NpgsqlCommand("UPDATE FROM emprunt SET date_retour = CURRENT_DATE WHER WHERE id_archive = @id_archive)", conn);
-                insert_requete.Parameters.AddWithValue("@id_archive", id_archive);
-                insert_requete.ExecuteNonQuery();
-                ResetValues(); //Reset les valeurs des champs
-                MessageBox.Show("Archive rendu avec succès le " + DateTime.Now);
+                try
+                {
+                    var insert_requete = new NpgsqlCommand("UPDATE emprunt SET date_retour = CURRENT_DATE WHERE id_archive = @id_archive", conn);
+                    insert_requete.Parameters.AddWithValue("@id_archive", id_archive);
+                    insert_requete.ExecuteNonQuery();
+
+                    var change_emp = new NpgsqlCommand("UPDATE archive SET id_emplacement = NULL WHERE id_archive = @id_archive",conn);
+                    change_emp.Parameters.AddWithValue("@id_archive", id_archive);
+                    change_emp.ExecuteNonQuery();
+
+                    ResetValues(); //Reset les valeurs des champs
+                    MessageBox.Show("Archive rendu avec succès le " + DateTime.Now);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Un problème est survenu " + ex.Message); 
+                }
             }
         }
-       
     }
 }
