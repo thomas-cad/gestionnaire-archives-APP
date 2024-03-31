@@ -52,11 +52,19 @@
             this.button_dorecolement = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button_exportrecolement = new System.Windows.Forms.Button();
+            this.empruntContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.button_emprunt = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.button_emprunterarchive = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.button_rendrearchive = new System.Windows.Forms.Button();
             this.pnExit = new System.Windows.Forms.Panel();
             this.button_exit = new System.Windows.Forms.Button();
             this.toolTransition = new System.Windows.Forms.Timer(this.components);
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.recolementTransistion = new System.Windows.Forms.Timer(this.components);
+            this.empruntTransition = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.button_menu)).BeginInit();
             this.sidebar.SuspendLayout();
@@ -70,6 +78,10 @@
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.empruntContainer.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.pnExit.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,7 +94,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(722, 41);
+            this.panel1.Size = new System.Drawing.Size(740, 41);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -115,12 +127,13 @@
             this.sidebar.Controls.Add(this.pnArchives);
             this.sidebar.Controls.Add(this.toolContainer);
             this.sidebar.Controls.Add(this.recolementContainer);
+            this.sidebar.Controls.Add(this.empruntContainer);
             this.sidebar.Controls.Add(this.pnExit);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 41);
             this.sidebar.Margin = new System.Windows.Forms.Padding(2);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(60, 399);
+            this.sidebar.Size = new System.Drawing.Size(60, 368);
             this.sidebar.TabIndex = 1;
             // 
             // pnArchives
@@ -284,6 +297,7 @@
             // 
             // recolementContainer
             // 
+            this.recolementContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.recolementContainer.Controls.Add(this.panel2);
             this.recolementContainer.Controls.Add(this.panel6);
             this.recolementContainer.Controls.Add(this.panel7);
@@ -380,10 +394,106 @@
             this.button_exportrecolement.UseVisualStyleBackColor = false;
             this.button_exportrecolement.Click += new System.EventHandler(this.button_exportrecolement_Click);
             // 
+            // empruntContainer
+            // 
+            this.empruntContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.empruntContainer.Controls.Add(this.panel9);
+            this.empruntContainer.Controls.Add(this.panel10);
+            this.empruntContainer.Controls.Add(this.panel11);
+            this.empruntContainer.Location = new System.Drawing.Point(2, 205);
+            this.empruntContainer.Margin = new System.Windows.Forms.Padding(2, 10, 2, 2);
+            this.empruntContainer.Name = "empruntContainer";
+            this.empruntContainer.Size = new System.Drawing.Size(197, 53);
+            this.empruntContainer.TabIndex = 9;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.button_emprunt);
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Margin = new System.Windows.Forms.Padding(0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(197, 53);
+            this.panel9.TabIndex = 5;
+            // 
+            // button_emprunt
+            // 
+            this.button_emprunt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
+            this.button_emprunt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_emprunt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_emprunt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_emprunt.ForeColor = System.Drawing.Color.White;
+            this.button_emprunt.Image = ((System.Drawing.Image)(resources.GetObject("button_emprunt.Image")));
+            this.button_emprunt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_emprunt.Location = new System.Drawing.Point(-4, -17);
+            this.button_emprunt.Margin = new System.Windows.Forms.Padding(2);
+            this.button_emprunt.Name = "button_emprunt";
+            this.button_emprunt.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_emprunt.Size = new System.Drawing.Size(220, 84);
+            this.button_emprunt.TabIndex = 2;
+            this.button_emprunt.Text = "Emprunt";
+            this.button_emprunt.UseVisualStyleBackColor = false;
+            this.button_emprunt.Click += new System.EventHandler(this.button_emprunt_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.button_emprunterarchive);
+            this.panel10.Location = new System.Drawing.Point(0, 53);
+            this.panel10.Margin = new System.Windows.Forms.Padding(0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(197, 53);
+            this.panel10.TabIndex = 6;
+            // 
+            // button_emprunterarchive
+            // 
+            this.button_emprunterarchive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button_emprunterarchive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_emprunterarchive.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_emprunterarchive.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_emprunterarchive.ForeColor = System.Drawing.Color.White;
+            this.button_emprunterarchive.Image = global::gestion_archive.Properties.Resources.icon_exporter32;
+            this.button_emprunterarchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_emprunterarchive.Location = new System.Drawing.Point(-4, -17);
+            this.button_emprunterarchive.Margin = new System.Windows.Forms.Padding(2);
+            this.button_emprunterarchive.Name = "button_emprunterarchive";
+            this.button_emprunterarchive.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_emprunterarchive.Size = new System.Drawing.Size(220, 84);
+            this.button_emprunterarchive.TabIndex = 2;
+            this.button_emprunterarchive.Text = "               Emprunter une               archive";
+            this.button_emprunterarchive.UseVisualStyleBackColor = false;
+            this.button_emprunterarchive.Click += new System.EventHandler(this.button_emprunterarchive_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.button_rendrearchive);
+            this.panel11.Location = new System.Drawing.Point(0, 106);
+            this.panel11.Margin = new System.Windows.Forms.Padding(0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(197, 53);
+            this.panel11.TabIndex = 4;
+            // 
+            // button_rendrearchive
+            // 
+            this.button_rendrearchive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button_rendrearchive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_rendrearchive.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_rendrearchive.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_rendrearchive.ForeColor = System.Drawing.Color.White;
+            this.button_rendrearchive.Image = global::gestion_archive.Properties.Resources.icon_exporter32;
+            this.button_rendrearchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_rendrearchive.Location = new System.Drawing.Point(-4, -17);
+            this.button_rendrearchive.Margin = new System.Windows.Forms.Padding(2);
+            this.button_rendrearchive.Name = "button_rendrearchive";
+            this.button_rendrearchive.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_rendrearchive.Size = new System.Drawing.Size(220, 84);
+            this.button_rendrearchive.TabIndex = 2;
+            this.button_rendrearchive.Text = "                Rendre une                 archive";
+            this.button_rendrearchive.UseVisualStyleBackColor = false;
+            this.button_rendrearchive.Click += new System.EventHandler(this.button_rendrearchive_Click);
+            // 
             // pnExit
             // 
             this.pnExit.Controls.Add(this.button_exit);
-            this.pnExit.Location = new System.Drawing.Point(2, 205);
+            this.pnExit.Location = new System.Drawing.Point(2, 270);
             this.pnExit.Margin = new System.Windows.Forms.Padding(2, 10, 2, 2);
             this.pnExit.Name = "pnExit";
             this.pnExit.Size = new System.Drawing.Size(197, 53);
@@ -423,11 +533,16 @@
             this.recolementTransistion.Interval = 10;
             this.recolementTransistion.Tick += new System.EventHandler(this.recolementTransition_Tick);
             // 
+            // empruntTransition
+            // 
+            this.empruntTransition.Interval = 10;
+            this.empruntTransition.Tick += new System.EventHandler(this.empruntTransition_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 440);
+            this.ClientSize = new System.Drawing.Size(740, 409);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -452,6 +567,10 @@
             this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            this.empruntContainer.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
             this.pnExit.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -486,5 +605,13 @@
         private System.Windows.Forms.Timer recolementTransistion;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button_deletearchive;
+        private System.Windows.Forms.FlowLayoutPanel empruntContainer;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button button_emprunt;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button button_emprunterarchive;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button button_rendrearchive;
+        private System.Windows.Forms.Timer empruntTransition;
     }
 }
