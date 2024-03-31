@@ -86,5 +86,10 @@ namespace gestion_archive
             }
             
         }
+
+        private void AddEmplacementForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

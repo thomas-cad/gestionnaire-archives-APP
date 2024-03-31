@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace gestion_archive
 {
-    public partial class formArchives : Form
+    public partial class SearchArchiveForm : Form
     {
-        public formArchives()
+        public SearchArchiveForm()
         {
             InitializeComponent();
         }
@@ -20,6 +20,16 @@ namespace gestion_archive
         private void formArchives_Load(object sender, EventArgs e)
         {
             this.ControlBox = false; 
+        }
+
+        private void textbox_search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RechercherButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

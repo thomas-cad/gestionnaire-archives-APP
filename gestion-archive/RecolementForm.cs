@@ -28,8 +28,8 @@ namespace gestion_archive
             NbrArchiveInfoLabel.Text = nbr_archive.ToString(); //Affichage de 0 archives actives
             DataColumn dataColumn = new DataColumn("id", typeof(int)); //Cration colonne DataTable
             dt_id_archive.Columns.Add(dataColumn); //Ajout de la colonne
-            IdArchiveTextBox.Focus();//Focus dans l'id archive
             SuccesPanel.Hide();
+            IdEmplacementTextBox.Focus();//Focus dans l'id archive
         }
 
         /*
@@ -88,7 +88,7 @@ namespace gestion_archive
             {
                 DataRow[] existe = dt_id_archive.Select("id = " + int.Parse(IdArchiveTextBox.Text)); //Recherche l'id dans la DataTable
 
-                if(existe.Length == 0) //Verifie que l'id n'a pas déja été saisi
+                if (existe.Length == 0 && Check_destruction(int.Parse(IdArchiveTextBox.Text))) //Verifie que l'id n'a pas déja été saisi et qu'elle n'a pas été détruite
                 {
                     var requete_arch_existe = new NpgsqlCommand("SELECT COUNT(*) FROM archive WHERE id_archive = @id_archive", conn);
                     requete_arch_existe.Parameters.AddWithValue("@id_archive", int.Parse(IdArchiveTextBox.Text));
@@ -163,11 +163,13 @@ namespace gestion_archive
                     {
                         try
                         {
+                            Check_Emprunt(int.Parse(row["id"].ToString())); // Vérifie l'emprunt
+
                             new_emplacement.Parameters.Clear();
                             new_emplacement.Parameters.AddWithValue("@id_emplacement", id_emplacement);
                             new_emplacement.Parameters.AddWithValue("@id_archive", row["id"]);
 
-                            new_emplacement.ExecuteNonQuery();
+                            new_emplacement.ExecuteNonQuery(); 
                         }
                         catch (Exception ex)
                         {
@@ -250,6 +252,7 @@ namespace gestion_archive
         {
             if (e.KeyCode.Equals(Keys.Enter))
             {
+                e.SuppressKeyPress = true; // Empêche la saisie de la touche "Entrée"
                 this.IdEmplacement();
             }
         }
@@ -258,6 +261,8 @@ namespace gestion_archive
         {
             if (e.KeyCode.Equals(Keys.Enter))
             {
+                e.SuppressKeyPress = true; // Empêche la saisie de la touche "Entrée"
+
                 if (IdArchiveTextBox.Text == "123456789") //Code de fin de tablette ==> Validation
                 {
                     this.SetEmplacement();
@@ -291,6 +296,53 @@ namespace gestion_archive
             {
                 MessageBox.Show("Erreur : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Check_Emprunt (int id_archive)
+        {
+            try
+            {
+                var check_request = new NpgsqlCommand("SELECT COUNT (*) FROM emprunt WHERE id_archive = @id_archive AND date_retour IS NULL", conn); //Verifie si l'archive est empruntee
+                check_request.Parameters.AddWithValue("@id_archive", id_archive);
+
+                if ((long)check_request.ExecuteScalar() == 1)
+                {
+                    var set_retour = new NpgsqlCommand("UPDATE emprunt SET date_retour = CURRENT_DATE WHERE id_archive = @id_archive AND date_retour IS NULL", conn); //definie le retour
+                    set_retour.Parameters.AddWithValue("@id_archive", id_archive);
+                    set_retour.ExecuteNonQuery();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool Check_destruction (int id_archive)
+        {
+            bool check = false;
+
+            try
+            {
+                var check_destruction = new NpgsqlCommand("SELECT COUNT(*) FROM destruction WHERE id_archive = @id_archive", conn);
+                check_destruction.Parameters.AddWithValue("@id_archive", id_archive);
+
+                if ((long) check_destruction.ExecuteScalar() == 0)
+                {
+                    check = true;
+                }
+                else
+                {
+                    MessageBox.Show("Archive Detruite", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return check;
         }
     }
 }

@@ -184,11 +184,11 @@
     <Compile Include="RecolementForm.Designer.cs">
       <DependentUpon>RecolementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="formArchives.cs">
+    <Compile Include="SearchArchiveForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formArchives.Designer.cs">
-      <DependentUpon>formArchives.cs</DependentUpon>
+    <Compile Include="SearchArchiveForm.Designer.cs">
+      <DependentUpon>SearchArchiveForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AddArchiveForm.cs">
       <SubType>Form</SubType>
@@ -229,8 +229,8 @@
     <EmbeddedResource Include="RecolementForm.resx">
       <DependentUpon>RecolementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formArchives.resx">
-      <DependentUpon>formArchives.cs</DependentUpon>
+    <EmbeddedResource Include="SearchArchiveForm.resx">
+      <DependentUpon>SearchArchiveForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddArchiveForm.resx">
       <DependentUpon>AddArchiveForm.cs</DependentUpon>

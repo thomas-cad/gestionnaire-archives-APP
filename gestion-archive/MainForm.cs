@@ -26,7 +26,7 @@ namespace gestion_archive
 {
     public partial class MainForm : Form
     {
-        private formArchives archives; 
+        private SearchArchiveForm archives; 
         AddArchiveForm addArchive;
         AddEmplacementForm addEmplacement;
         RecolementForm recolement;
@@ -191,7 +191,7 @@ namespace gestion_archive
             // Afficher le form de Archives
             if (archives == null)
             {
-                archives = new formArchives();
+                archives = new SearchArchiveForm();
                 archives.FormClosed += Archives_FormClosed; 
                 archives.MdiParent = this;
                 archives.Dock = DockStyle.Fill;
@@ -356,7 +356,7 @@ namespace gestion_archive
             // Afficher le form de Archives
             if (archives == null)
             {
-                archives = new formArchives();
+                archives = new SearchArchiveForm();
                 archives.FormClosed += Archives_FormClosed;
                 archives.MdiParent = this;
                 archives.Dock = DockStyle.Fill;

@@ -168,7 +168,7 @@
             // 
             // toolContainer
             // 
-            this.toolContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.toolContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.toolContainer.Controls.Add(this.panel4);
             this.toolContainer.Controls.Add(this.panel3);
             this.toolContainer.Controls.Add(this.panel5);
@@ -181,6 +181,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.panel4.Controls.Add(this.button_outils);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
@@ -209,6 +210,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.panel3.Controls.Add(this.button_addarchive);
             this.panel3.Location = new System.Drawing.Point(0, 53);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
@@ -218,7 +220,7 @@
             // 
             // button_addarchive
             // 
-            this.button_addarchive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button_addarchive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.button_addarchive.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_addarchive.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_addarchive.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -237,6 +239,7 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.panel5.Controls.Add(this.button_addemplacement);
             this.panel5.Location = new System.Drawing.Point(0, 106);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
@@ -246,7 +249,7 @@
             // 
             // button_addemplacement
             // 
-            this.button_addemplacement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button_addemplacement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.button_addemplacement.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_addemplacement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_addemplacement.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -265,6 +268,7 @@
             // 
             // panel8
             // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.panel8.Controls.Add(this.button_deletearchive);
             this.panel8.Location = new System.Drawing.Point(0, 159);
             this.panel8.Margin = new System.Windows.Forms.Padding(0);
@@ -274,7 +278,7 @@
             // 
             // button_deletearchive
             // 
-            this.button_deletearchive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button_deletearchive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.button_deletearchive.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_deletearchive.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_deletearchive.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -287,7 +291,7 @@
             this.button_deletearchive.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button_deletearchive.Size = new System.Drawing.Size(220, 84);
             this.button_deletearchive.TabIndex = 2;
-            this.button_deletearchive.Text = "         Supprimer une           Archive";
+            this.button_deletearchive.Text = "Destruction";
             this.button_deletearchive.UseVisualStyleBackColor = false;
             this.button_deletearchive.Click += new System.EventHandler(this.button_deletearchive_Click);
             // 
@@ -305,6 +309,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.panel2.Controls.Add(this.button_recolement);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
@@ -333,6 +338,7 @@
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.panel6.Controls.Add(this.button_dorecolement);
             this.panel6.Location = new System.Drawing.Point(0, 53);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
@@ -342,7 +348,7 @@
             // 
             // button_dorecolement
             // 
-            this.button_dorecolement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button_dorecolement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.button_dorecolement.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_dorecolement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_dorecolement.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -361,6 +367,7 @@
             // 
             // panel7
             // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.panel7.Controls.Add(this.button_exportrecolement);
             this.panel7.Location = new System.Drawing.Point(0, 106);
             this.panel7.Margin = new System.Windows.Forms.Padding(0);
@@ -370,7 +377,7 @@
             // 
             // button_exportrecolement
             // 
-            this.button_exportrecolement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button_exportrecolement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.button_exportrecolement.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_exportrecolement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_exportrecolement.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

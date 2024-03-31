@@ -32,6 +32,25 @@ namespace gestion_archive
 
         private void button1_Click(object sender, EventArgs e)
         {
+            connection();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void TextBox_User_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Empêche la saisie de la touche "Entrée"
+                TextBox_Password.Focus();
+            }
+        }
+
+        private void connection()
+        {
             string user = TextBox_User.Text;
             string password = PasswordHasher.HashPassword(TextBox_Password.Text); //Hash of the password
 
@@ -64,9 +83,13 @@ namespace gestion_archive
                 }
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void TextBox_Password_KeyDown(object sender, KeyEventArgs e)
         {
-            Application.Exit();
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                e.SuppressKeyPress = true; // Empêche la saisie de la touche "Entrée"
+                connection();
+            }
         }
     }
 }

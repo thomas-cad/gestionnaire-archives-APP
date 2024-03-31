@@ -71,9 +71,10 @@
             IdEmplacementTitleLabel.BackColor = System.Drawing.Color.Transparent;
             IdEmplacementTitleLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             IdEmplacementTitleLabel.ForeColor = System.Drawing.Color.White;
-            IdEmplacementTitleLabel.Location = new System.Drawing.Point(2, 44);
+            IdEmplacementTitleLabel.Location = new System.Drawing.Point(3, 54);
+            IdEmplacementTitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             IdEmplacementTitleLabel.Name = "IdEmplacementTitleLabel";
-            IdEmplacementTitleLabel.Size = new System.Drawing.Size(134, 21);
+            IdEmplacementTitleLabel.Size = new System.Drawing.Size(164, 28);
             IdEmplacementTitleLabel.TabIndex = 46;
             IdEmplacementTitleLabel.Text = "Id Emplacement";
             // 
@@ -83,9 +84,10 @@
             LieuTitleLabel.BackColor = System.Drawing.Color.Transparent;
             LieuTitleLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             LieuTitleLabel.ForeColor = System.Drawing.Color.White;
-            LieuTitleLabel.Location = new System.Drawing.Point(354, 55);
+            LieuTitleLabel.Location = new System.Drawing.Point(472, 68);
+            LieuTitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             LieuTitleLabel.Name = "LieuTitleLabel";
-            LieuTitleLabel.Size = new System.Drawing.Size(46, 20);
+            LieuTitleLabel.Size = new System.Drawing.Size(57, 25);
             LieuTitleLabel.TabIndex = 49;
             LieuTitleLabel.Text = "Lieu :";
             // 
@@ -95,9 +97,10 @@
             EpiTileLabel.BackColor = System.Drawing.Color.Transparent;
             EpiTileLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             EpiTileLabel.ForeColor = System.Drawing.Color.White;
-            EpiTileLabel.Location = new System.Drawing.Point(354, 76);
+            EpiTileLabel.Location = new System.Drawing.Point(472, 94);
+            EpiTileLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             EpiTileLabel.Name = "EpiTileLabel";
-            EpiTileLabel.Size = new System.Drawing.Size(38, 20);
+            EpiTileLabel.Size = new System.Drawing.Size(48, 25);
             EpiTileLabel.TabIndex = 50;
             EpiTileLabel.Text = "Epi :";
             // 
@@ -107,9 +110,10 @@
             TabletteTitleLabel.BackColor = System.Drawing.Color.Transparent;
             TabletteTitleLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             TabletteTitleLabel.ForeColor = System.Drawing.Color.White;
-            TabletteTitleLabel.Location = new System.Drawing.Point(354, 116);
+            TabletteTitleLabel.Location = new System.Drawing.Point(472, 143);
+            TabletteTitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             TabletteTitleLabel.Name = "TabletteTitleLabel";
-            TabletteTitleLabel.Size = new System.Drawing.Size(74, 20);
+            TabletteTitleLabel.Size = new System.Drawing.Size(91, 25);
             TabletteTitleLabel.TabIndex = 52;
             TabletteTitleLabel.Text = "Tablette :";
             // 
@@ -119,9 +123,10 @@
             EtgaereTitleLabel.BackColor = System.Drawing.Color.Transparent;
             EtgaereTitleLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             EtgaereTitleLabel.ForeColor = System.Drawing.Color.White;
-            EtgaereTitleLabel.Location = new System.Drawing.Point(354, 96);
+            EtgaereTitleLabel.Location = new System.Drawing.Point(472, 118);
+            EtgaereTitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             EtgaereTitleLabel.Name = "EtgaereTitleLabel";
-            EtgaereTitleLabel.Size = new System.Drawing.Size(70, 20);
+            EtgaereTitleLabel.Size = new System.Drawing.Size(87, 25);
             EtgaereTitleLabel.TabIndex = 51;
             EtgaereTitleLabel.Text = "Etagere :";
             // 
@@ -131,9 +136,10 @@
             IdArchiveTitleLabel.BackColor = System.Drawing.Color.Transparent;
             IdArchiveTitleLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             IdArchiveTitleLabel.ForeColor = System.Drawing.Color.White;
-            IdArchiveTitleLabel.Location = new System.Drawing.Point(2, 171);
+            IdArchiveTitleLabel.Location = new System.Drawing.Point(3, 210);
+            IdArchiveTitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             IdArchiveTitleLabel.Name = "IdArchiveTitleLabel";
-            IdArchiveTitleLabel.Size = new System.Drawing.Size(87, 21);
+            IdArchiveTitleLabel.Size = new System.Drawing.Size(108, 28);
             IdArchiveTitleLabel.TabIndex = 57;
             IdArchiveTitleLabel.Text = "Id Archive";
             // 
@@ -143,9 +149,10 @@
             ArchivesEnCoursTitleLabel.BackColor = System.Drawing.Color.Transparent;
             ArchivesEnCoursTitleLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             ArchivesEnCoursTitleLabel.ForeColor = System.Drawing.Color.White;
-            ArchivesEnCoursTitleLabel.Location = new System.Drawing.Point(354, 207);
+            ArchivesEnCoursTitleLabel.Location = new System.Drawing.Point(472, 255);
+            ArchivesEnCoursTitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             ArchivesEnCoursTitleLabel.Name = "ArchivesEnCoursTitleLabel";
-            ArchivesEnCoursTitleLabel.Size = new System.Drawing.Size(199, 20);
+            ArchivesEnCoursTitleLabel.Size = new System.Drawing.Size(243, 25);
             ArchivesEnCoursTitleLabel.TabIndex = 60;
             ArchivesEnCoursTitleLabel.Text = "Nombre archives en cours :";
             // 
@@ -153,10 +160,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(5, 37);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Location = new System.Drawing.Point(7, 46);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(675, 4);
+            this.panel3.Size = new System.Drawing.Size(900, 5);
             this.panel3.TabIndex = 44;
             // 
             // RecolementTitleLabel
@@ -165,9 +172,10 @@
             this.RecolementTitleLabel.BackColor = System.Drawing.Color.Transparent;
             this.RecolementTitleLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecolementTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
-            this.RecolementTitleLabel.Location = new System.Drawing.Point(262, 7);
+            this.RecolementTitleLabel.Location = new System.Drawing.Point(336, 7);
+            this.RecolementTitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RecolementTitleLabel.Name = "RecolementTitleLabel";
-            this.RecolementTitleLabel.Size = new System.Drawing.Size(195, 45);
+            this.RecolementTitleLabel.Size = new System.Drawing.Size(245, 54);
             this.RecolementTitleLabel.TabIndex = 48;
             this.RecolementTitleLabel.Text = "Recolement";
             // 
@@ -178,8 +186,9 @@
             this.EmplacementTitleLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmplacementTitleLabel.ForeColor = System.Drawing.Color.White;
             this.EmplacementTitleLabel.Location = new System.Drawing.Point(1, 2);
+            this.EmplacementTitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EmplacementTitleLabel.Name = "EmplacementTitleLabel";
-            this.EmplacementTitleLabel.Size = new System.Drawing.Size(131, 25);
+            this.EmplacementTitleLabel.Size = new System.Drawing.Size(159, 31);
             this.EmplacementTitleLabel.TabIndex = 45;
             this.EmplacementTitleLabel.Text = "Emplacement";
             // 
@@ -187,10 +196,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(5, 160);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(7, 197);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(675, 4);
+            this.panel1.Size = new System.Drawing.Size(900, 5);
             this.panel1.TabIndex = 46;
             // 
             // ArchiveTitleLabel
@@ -199,39 +208,51 @@
             this.ArchiveTitleLabel.BackColor = System.Drawing.Color.Transparent;
             this.ArchiveTitleLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ArchiveTitleLabel.ForeColor = System.Drawing.Color.White;
-            this.ArchiveTitleLabel.Location = new System.Drawing.Point(1, 124);
+            this.ArchiveTitleLabel.Location = new System.Drawing.Point(1, 153);
+            this.ArchiveTitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ArchiveTitleLabel.Name = "ArchiveTitleLabel";
-            this.ArchiveTitleLabel.Size = new System.Drawing.Size(78, 25);
+            this.ArchiveTitleLabel.Size = new System.Drawing.Size(95, 31);
             this.ArchiveTitleLabel.TabIndex = 47;
             this.ArchiveTitleLabel.Text = "Archive";
             // 
             // AjouterButton
             // 
+            this.AjouterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.AjouterButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AjouterButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.AjouterButton.FlatAppearance.BorderSize = 0;
+            this.AjouterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AjouterButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AjouterButton.Location = new System.Drawing.Point(211, 197);
-            this.AjouterButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AjouterButton.ForeColor = System.Drawing.Color.White;
+            this.AjouterButton.Location = new System.Drawing.Point(281, 242);
+            this.AjouterButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AjouterButton.Name = "AjouterButton";
-            this.AjouterButton.Size = new System.Drawing.Size(122, 39);
+            this.AjouterButton.Size = new System.Drawing.Size(163, 48);
             this.AjouterButton.TabIndex = 59;
             this.AjouterButton.Text = "Ajouter";
-            this.AjouterButton.UseVisualStyleBackColor = true;
+            this.AjouterButton.UseVisualStyleBackColor = false;
             this.AjouterButton.Click += new System.EventHandler(this.AjouterButton_Click);
             // 
             // TerminerButton
             // 
+            this.TerminerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.TerminerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TerminerButton.FlatAppearance.BorderSize = 0;
+            this.TerminerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TerminerButton.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TerminerButton.Location = new System.Drawing.Point(270, 307);
-            this.TerminerButton.Margin = new System.Windows.Forms.Padding(2);
+            this.TerminerButton.ForeColor = System.Drawing.Color.White;
+            this.TerminerButton.Location = new System.Drawing.Point(360, 378);
+            this.TerminerButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TerminerButton.Name = "TerminerButton";
-            this.TerminerButton.Size = new System.Drawing.Size(122, 39);
+            this.TerminerButton.Size = new System.Drawing.Size(163, 48);
             this.TerminerButton.TabIndex = 62;
             this.TerminerButton.Text = "Terminer";
-            this.TerminerButton.UseVisualStyleBackColor = true;
+            this.TerminerButton.UseVisualStyleBackColor = false;
             this.TerminerButton.Click += new System.EventHandler(this.TerminerButton_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(88)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.panel2.Controls.Add(this.IdArchiveTextBox);
             this.panel2.Controls.Add(this.IdEmplacementTextBox);
             this.panel2.Controls.Add(this.AnnulerButton);
@@ -254,51 +275,63 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(IdEmplacementTitleLabel);
             this.panel2.Controls.Add(this.EmplacementTitleLabel);
-            this.panel2.Location = new System.Drawing.Point(9, 61);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(12, 75);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(697, 360);
+            this.panel2.Size = new System.Drawing.Size(929, 443);
             this.panel2.TabIndex = 63;
             // 
             // IdArchiveTextBox
             // 
-            this.IdArchiveTextBox.Location = new System.Drawing.Point(5, 197);
+            this.IdArchiveTextBox.Location = new System.Drawing.Point(7, 242);
+            this.IdArchiveTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IdArchiveTextBox.Name = "IdArchiveTextBox";
-            this.IdArchiveTextBox.Size = new System.Drawing.Size(200, 20);
+            this.IdArchiveTextBox.Size = new System.Drawing.Size(265, 22);
             this.IdArchiveTextBox.TabIndex = 72;
             this.IdArchiveTextBox.Enter += new System.EventHandler(this.IdArchiveTextBox_Enter);
             this.IdArchiveTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IdArchiveTextBox_KeyDown);
             // 
             // IdEmplacementTextBox
             // 
-            this.IdEmplacementTextBox.Location = new System.Drawing.Point(5, 70);
+            this.IdEmplacementTextBox.Location = new System.Drawing.Point(7, 86);
+            this.IdEmplacementTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IdEmplacementTextBox.Name = "IdEmplacementTextBox";
-            this.IdEmplacementTextBox.Size = new System.Drawing.Size(199, 20);
+            this.IdEmplacementTextBox.Size = new System.Drawing.Size(264, 22);
             this.IdEmplacementTextBox.TabIndex = 71;
             this.IdEmplacementTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IdEmplacementTextBox_KeyDown_1);
             // 
             // AnnulerButton
             // 
+            this.AnnulerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.AnnulerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AnnulerButton.FlatAppearance.BorderSize = 0;
+            this.AnnulerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AnnulerButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AnnulerButton.Location = new System.Drawing.Point(211, 240);
-            this.AnnulerButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AnnulerButton.ForeColor = System.Drawing.Color.White;
+            this.AnnulerButton.Location = new System.Drawing.Point(281, 295);
+            this.AnnulerButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AnnulerButton.Name = "AnnulerButton";
-            this.AnnulerButton.Size = new System.Drawing.Size(122, 39);
+            this.AnnulerButton.Size = new System.Drawing.Size(163, 48);
             this.AnnulerButton.TabIndex = 69;
             this.AnnulerButton.Text = "Annuler";
-            this.AnnulerButton.UseVisualStyleBackColor = true;
+            this.AnnulerButton.UseVisualStyleBackColor = false;
             this.AnnulerButton.Click += new System.EventHandler(this.AnnulerButton_Click);
             // 
             // ValiderEmplacementButton
             // 
+            this.ValiderEmplacementButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.ValiderEmplacementButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ValiderEmplacementButton.FlatAppearance.BorderSize = 0;
+            this.ValiderEmplacementButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ValiderEmplacementButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ValiderEmplacementButton.Location = new System.Drawing.Point(211, 70);
-            this.ValiderEmplacementButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ValiderEmplacementButton.ForeColor = System.Drawing.Color.White;
+            this.ValiderEmplacementButton.Location = new System.Drawing.Point(281, 86);
+            this.ValiderEmplacementButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ValiderEmplacementButton.Name = "ValiderEmplacementButton";
-            this.ValiderEmplacementButton.Size = new System.Drawing.Size(122, 39);
+            this.ValiderEmplacementButton.Size = new System.Drawing.Size(163, 48);
             this.ValiderEmplacementButton.TabIndex = 68;
             this.ValiderEmplacementButton.Text = "Valider";
-            this.ValiderEmplacementButton.UseVisualStyleBackColor = true;
+            this.ValiderEmplacementButton.UseVisualStyleBackColor = false;
             this.ValiderEmplacementButton.Click += new System.EventHandler(this.ValiderEmplacementButton_Click);
             // 
             // NbrArchiveInfoLabel
@@ -306,9 +339,10 @@
             this.NbrArchiveInfoLabel.AutoSize = true;
             this.NbrArchiveInfoLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NbrArchiveInfoLabel.ForeColor = System.Drawing.Color.White;
-            this.NbrArchiveInfoLabel.Location = new System.Drawing.Point(559, 207);
+            this.NbrArchiveInfoLabel.Location = new System.Drawing.Point(745, 255);
+            this.NbrArchiveInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NbrArchiveInfoLabel.Name = "NbrArchiveInfoLabel";
-            this.NbrArchiveInfoLabel.Size = new System.Drawing.Size(18, 20);
+            this.NbrArchiveInfoLabel.Size = new System.Drawing.Size(23, 25);
             this.NbrArchiveInfoLabel.TabIndex = 67;
             this.NbrArchiveInfoLabel.Text = "X";
             // 
@@ -317,9 +351,10 @@
             this.TabletteInfoLabel.AutoSize = true;
             this.TabletteInfoLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabletteInfoLabel.ForeColor = System.Drawing.Color.White;
-            this.TabletteInfoLabel.Location = new System.Drawing.Point(434, 116);
+            this.TabletteInfoLabel.Location = new System.Drawing.Point(579, 143);
+            this.TabletteInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TabletteInfoLabel.Name = "TabletteInfoLabel";
-            this.TabletteInfoLabel.Size = new System.Drawing.Size(18, 20);
+            this.TabletteInfoLabel.Size = new System.Drawing.Size(23, 25);
             this.TabletteInfoLabel.TabIndex = 66;
             this.TabletteInfoLabel.Text = "X";
             // 
@@ -328,9 +363,10 @@
             this.EtagereInfoLabel.AutoSize = true;
             this.EtagereInfoLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EtagereInfoLabel.ForeColor = System.Drawing.Color.White;
-            this.EtagereInfoLabel.Location = new System.Drawing.Point(430, 96);
+            this.EtagereInfoLabel.Location = new System.Drawing.Point(573, 118);
+            this.EtagereInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EtagereInfoLabel.Name = "EtagereInfoLabel";
-            this.EtagereInfoLabel.Size = new System.Drawing.Size(18, 20);
+            this.EtagereInfoLabel.Size = new System.Drawing.Size(23, 25);
             this.EtagereInfoLabel.TabIndex = 65;
             this.EtagereInfoLabel.Text = "X";
             // 
@@ -339,9 +375,10 @@
             this.EpiInfoLabel.AutoSize = true;
             this.EpiInfoLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EpiInfoLabel.ForeColor = System.Drawing.Color.White;
-            this.EpiInfoLabel.Location = new System.Drawing.Point(398, 77);
+            this.EpiInfoLabel.Location = new System.Drawing.Point(531, 95);
+            this.EpiInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EpiInfoLabel.Name = "EpiInfoLabel";
-            this.EpiInfoLabel.Size = new System.Drawing.Size(18, 20);
+            this.EpiInfoLabel.Size = new System.Drawing.Size(23, 25);
             this.EpiInfoLabel.TabIndex = 64;
             this.EpiInfoLabel.Text = "X";
             // 
@@ -350,42 +387,46 @@
             this.LieuInfoLabel.AutoSize = true;
             this.LieuInfoLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LieuInfoLabel.ForeColor = System.Drawing.Color.White;
-            this.LieuInfoLabel.Location = new System.Drawing.Point(405, 55);
+            this.LieuInfoLabel.Location = new System.Drawing.Point(540, 68);
+            this.LieuInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LieuInfoLabel.Name = "LieuInfoLabel";
-            this.LieuInfoLabel.Size = new System.Drawing.Size(18, 20);
+            this.LieuInfoLabel.Size = new System.Drawing.Size(23, 25);
             this.LieuInfoLabel.TabIndex = 63;
             this.LieuInfoLabel.Text = "X";
             // 
             // SuccesPanel
             // 
-            this.SuccesPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
+            this.SuccesPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.SuccesPanel.Controls.Add(this.label1);
-            this.SuccesPanel.Location = new System.Drawing.Point(463, 12);
+            this.SuccesPanel.Location = new System.Drawing.Point(617, 15);
+            this.SuccesPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SuccesPanel.Name = "SuccesPanel";
-            this.SuccesPanel.Size = new System.Drawing.Size(225, 39);
+            this.SuccesPanel.Size = new System.Drawing.Size(300, 48);
             this.SuccesPanel.TabIndex = 64;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(18, 5);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(41, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 25);
+            this.label1.Size = new System.Drawing.Size(228, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ajout Avec Succès";
             // 
             // RecolementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(712, 432);
+            this.ClientSize = new System.Drawing.Size(949, 532);
             this.Controls.Add(this.SuccesPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.RecolementTitleLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RecolementForm";
             this.Text = "Form1";
             this.panel2.ResumeLayout(false);
