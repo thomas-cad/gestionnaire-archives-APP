@@ -144,7 +144,6 @@ namespace gestion_archive
             bool check_id_archive = false;
             bool check_agent = false;
             bool check_raison = false;
-            bool check_emprunt = false; 
 
             //Chcck l'id archive
             if (CoteTextBox.Text == string.Empty)
@@ -190,6 +189,7 @@ namespace gestion_archive
                 check_agent = true;
             }
 
+            // Check si l'archive a deja été empruntée
             var checkemprunt = new NpgsqlCommand("SELECT COUNT(*) FROM emprunt WHERE date_retour IS NULL AND id_archive = @id_archive", conn);
             checkemprunt.Parameters.AddWithValue("@id_archive", id_archive);
 
@@ -199,7 +199,7 @@ namespace gestion_archive
                 {
                     var set_retour = new NpgsqlCommand("UPDATE emprunt SET date_retour = CURRENT_DATE WHERE id_archive = @id_archive AND date_retour IS NULL",conn); //definie le retour
                     set_retour.Parameters.AddWithValue("@id_archive", id_archive);
-                    set_retour.ExecuteNonQuery();
+                    set_retour.ExecuteNonQuery(); // Definie la date retour
                     MessageBox.Show("L'archive a été retournée", "Archive", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
@@ -230,7 +230,7 @@ namespace gestion_archive
                     change_emp.ExecuteNonQuery();
 
                     ResetValues(); //Reset les valeurs des champs
-                    MessageBox.Show("Archive emprunté avec succès le " + DateTime.Now);
+                    MessageBox.Show("Archive emprunté avec succès le " + DateTime.Now, "Archive", MessageBoxButtons.OK);
                 }
                 catch (Exception ex)
                 {
