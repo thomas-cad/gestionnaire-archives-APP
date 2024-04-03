@@ -202,6 +202,12 @@
     <Compile Include="ListingArchiveEmplacementForm.Designer.cs">
       <DependentUpon>ListingArchiveEmplacementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModifierLieuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierLieuForm.Designer.cs">
+      <DependentUpon>ModifierLieuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RecolementForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListingArchiveEmplacementForm.resx">
       <DependentUpon>ListingArchiveEmplacementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierLieuForm.resx">
+      <DependentUpon>ModifierLieuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecolementForm.resx">
       <DependentUpon>RecolementForm.cs</DependentUpon>
