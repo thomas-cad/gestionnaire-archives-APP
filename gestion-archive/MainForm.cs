@@ -26,7 +26,8 @@ namespace gestion_archive
 {
     public partial class MainForm : Form
     {
-        private SearchArchiveForm archives; 
+        SearchArchiveForm archives; 
+        SearchEmplacementForm emplacement;
         AddArchiveForm addArchive;
         AddEmplacementForm addEmplacement;
         RecolementForm recolement;
@@ -191,7 +192,7 @@ namespace gestion_archive
             // Afficher le form de Archives
             if (archives == null)
             {
-                archives = new SearchArchiveForm();
+                archives = new SearchArchiveForm(conn);
                 archives.FormClosed += Archives_FormClosed; 
                 archives.MdiParent = this;
                 archives.Dock = DockStyle.Fill;
@@ -206,6 +207,28 @@ namespace gestion_archive
         private void Archives_FormClosed(object sender, FormClosedEventArgs e)
         {
             archives = null;
+        }
+
+        private void button_emplacement_Click(object sender, EventArgs e)
+        {
+            // Afficher le form de Emplecement
+            if (emplacement == null)
+            {
+                emplacement = new SearchEmplacementForm();
+                emplacement.FormClosed += Emplacement_FormClosed; ;
+                emplacement.MdiParent = this;
+                emplacement.Dock = DockStyle.Fill;
+                emplacement.Show();
+            }
+            else
+            {
+                emplacement.Activate();
+            }
+        }
+
+        private void Emplacement_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            emplacement.Activate(); 
         }
 
         private void button_addarchive_Click(object sender, EventArgs e)
@@ -356,7 +379,7 @@ namespace gestion_archive
             // Afficher le form de Archives
             if (archives == null)
             {
-                archives = new SearchArchiveForm();
+                archives = new SearchArchiveForm(conn);
                 archives.FormClosed += Archives_FormClosed;
                 archives.MdiParent = this;
                 archives.Dock = DockStyle.Fill;

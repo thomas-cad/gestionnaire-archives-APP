@@ -159,52 +159,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="data_base.cs" />
-    <Compile Include="AddEmplacementForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="AddEmplacementForm.cs" />
     <Compile Include="AddEmplacementForm.Designer.cs">
       <DependentUpon>AddEmplacementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmpruntForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmpruntForm.Designer.cs">
-      <DependentUpon>EmpruntForm.cs</DependentUpon>
+    <Compile Include="DeleteArchiveForm.cs" />
+    <Compile Include="DeleteArchiveForm.Designer.cs">
+      <DependentUpon>DeleteArchiveForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ExportRecolement.cs" />
-    <Compile Include="DeleteForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeleteForm.Designer.cs">
-      <DependentUpon>DeleteForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InfoArchivesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InfoArchivesForm.Designer.cs">
-      <DependentUpon>InfoArchivesForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="RecolementForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RecolementForm.Designer.cs">
       <DependentUpon>RecolementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchArchiveForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="formArchives.cs" />
+    <Compile Include="formArchives.Designer.cs">
+      <DependentUpon>formArchives.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchArchiveForm.Designer.cs">
-      <DependentUpon>SearchArchiveForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddArchiveForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="AddArchiveForm.cs" />
     <Compile Include="AddArchiveForm.Designer.cs">
       <DependentUpon>AddArchiveForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="LogForm.cs" />
     <Compile Include="LogForm.Designer.cs">
       <DependentUpon>LogForm.cs</DependentUpon>
     </Compile>
@@ -217,35 +195,17 @@
     <Compile Include="password_ft.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RendreForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RendreForm.Designer.cs">
-      <DependentUpon>RendreForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SearchEmplacementForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SearchEmplacementForm.Designer.cs">
-      <DependentUpon>SearchEmplacementForm.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AddEmplacementForm.resx">
       <DependentUpon>AddEmplacementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteForm.resx">
-      <DependentUpon>DeleteForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmpruntForm.resx">
-      <DependentUpon>EmpruntForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InfoArchivesForm.resx">
-      <DependentUpon>InfoArchivesForm.cs</DependentUpon>
+    <EmbeddedResource Include="DeleteArchiveForm.resx">
+      <DependentUpon>DeleteArchiveForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecolementForm.resx">
       <DependentUpon>RecolementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SearchArchiveForm.resx">
-      <DependentUpon>SearchArchiveForm.cs</DependentUpon>
+    <EmbeddedResource Include="formArchives.resx">
+      <DependentUpon>formArchives.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddArchiveForm.resx">
       <DependentUpon>AddArchiveForm.cs</DependentUpon>
@@ -266,12 +226,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RendreForm.resx">
-      <DependentUpon>RendreForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SearchEmplacementForm.resx">
-      <DependentUpon>SearchEmplacementForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -296,16 +250,13 @@
     <None Include="Properties\image\Icon_User.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\image\icon_exporter32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\image\icon_plus32.png" />
+    <None Include="Properties\image\icon_add32.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\image\icon_moins32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\image\icon_loupe32.png" />
+    <None Include="Properties\image\icon_exporter32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
