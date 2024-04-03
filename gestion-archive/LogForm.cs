@@ -52,9 +52,9 @@ namespace gestion_archive
         private void connection()
         {
             string user = TextBox_User.Text;
-            string password = PasswordHasher.HashPassword(TextBox_Password.Text); //Hash of the password
+            string password = PasswordHasher.HashPassword(TextBox_Password.Text); //Hash du mp
 
-            //Try the connection to the DB
+            //Connection BDD
             using (var conn = Data_base.GetDBConnection("user"))
                 try
                 {
@@ -64,7 +64,7 @@ namespace gestion_archive
                     command.Parameters.AddWithValue("@user", user);
                     command.Parameters.AddWithValue("@password", password);
 
-                    long count = (long)command.ExecuteScalar(); //Execute the SQL command
+                    long count = (long)command.ExecuteScalar(); //Execute SQL
 
                     if (count == 1)
                     {
@@ -73,13 +73,13 @@ namespace gestion_archive
                     }
                     else
                     {
-                        MessageBox.Show("Connection Denied");
+                        MessageBox.Show("Connection refusée");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);//Show error message
-                    Application.Exit(); //Close the application
+                    MessageBox.Show(ex.Message);//Message d'erreur
+                    Application.Exit(); //Ferme l'app
                 }
         }
 

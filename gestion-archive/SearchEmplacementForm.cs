@@ -241,7 +241,7 @@ namespace gestion_archive
             return check_lieu && check_epi && check_etagere && check_tablette;
         }
 
-        private void SetIdAgent(string lieuId)
+        private void SetIdLieu(string lieuId)
         {
             try
             {
@@ -267,12 +267,12 @@ namespace gestion_archive
 
         private void LieuComboBox_TextChanged(object sender, EventArgs e)
         {
-            SetIdAgent(LieuComboBox.Text);
+            SetIdLieu(LieuComboBox.Text);
         }
 
         private void LieuComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
-            SetIdAgent(LieuComboBox.SelectedItem.ToString());
+            SetIdLieu(LieuComboBox.SelectedItem.ToString());
         }
 
         private void LieuComboBox_Leave(object sender, EventArgs e)
