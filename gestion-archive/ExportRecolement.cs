@@ -1,4 +1,4 @@
-﻿using iText.Kernel.Exceptions;
+using iText.Kernel.Exceptions;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
@@ -19,19 +19,19 @@ namespace ExportRecolment
     {
         public void Download(NpgsqlConnection conn)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            SaveFileDialog saveFileDialog = new SaveFileDialog(); //Crée une nouvelle fenetre de dialogue pour l'enregistrement des fichiers
 
-            // Définition des propriétés de la boîte de dialogue pour l'enregistrement de fichier
-            saveFileDialog.Title = "Enregistrer le recolement";
-            saveFileDialog.Filter = "Fichiers pdf (*.pdf)|*.pdf";
+            // Définition des propriétés du fichier
+            saveFileDialog.Title = "Enregistrer le recolement"; //Titre fenêtre
+            saveFileDialog.Filter = "Fichiers pdf (*.pdf)|*.pdf"; //Formats disponibles
 
             // Afficher la boîte de dialogue et vérifier si l'utilisateur a appuyé sur le bouton OK
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            if (saveFileDialog.ShowDialog() == DialogResult.OK) //L'utilisateur valide l'enregistrement
             {
                 // Utiliser le chemin d'accès au fichier pour enregistrer les données, si nécessaire
-                string selectedFilePath = saveFileDialog.FileName;
-                CreateRecolement(selectedFilePath, conn);
-                MessageBox.Show($"Récolement généré à l'emplacement : {selectedFilePath}");
+                string selectedFilePath = saveFileDialog.FileName; //Récupère le chemin choisi par l'utilisateur
+                CreateRecolement(selectedFilePath, conn); //Appelle méthode la création du récolement à exporter
+                MessageBox.Show($"Récolement généré à l'emplacement : {selectedFilePath}"); //Message que l'opération a réussi à l'utilisateur
             }
         }
         private void CreateRecolement(string FilePath, NpgsqlConnection conn)
