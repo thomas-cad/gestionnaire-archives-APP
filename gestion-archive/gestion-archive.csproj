@@ -184,11 +184,17 @@
     <Compile Include="InfoArchivesForm.Designer.cs">
       <DependentUpon>InfoArchivesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListArchive.cs">
+    <Compile Include="InfoEmplacement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListArchive.Designer.cs">
-      <DependentUpon>ListArchive.cs</DependentUpon>
+    <Compile Include="InfoEmplacement.Designer.cs">
+      <DependentUpon>InfoEmplacement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListingArchiveEmplacementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListingArchiveEmplacementForm.Designer.cs">
+      <DependentUpon>ListingArchiveEmplacementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RecolementForm.cs">
       <SubType>Form</SubType>
@@ -247,8 +253,11 @@
     <EmbeddedResource Include="InfoArchivesForm.resx">
       <DependentUpon>InfoArchivesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListArchive.resx">
-      <DependentUpon>ListArchive.cs</DependentUpon>
+    <EmbeddedResource Include="InfoEmplacement.resx">
+      <DependentUpon>InfoEmplacement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListingArchiveEmplacementForm.resx">
+      <DependentUpon>ListingArchiveEmplacementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecolementForm.resx">
       <DependentUpon>RecolementForm.cs</DependentUpon>
