@@ -33,6 +33,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnArchives = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.toolContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -46,29 +48,33 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.pnExit = new System.Windows.Forms.Panel();
-            this.pnArchives = new System.Windows.Forms.Panel();
             this.toolTransition = new System.Windows.Forms.Timer(this.components);
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.recolementTransistion = new System.Windows.Forms.Timer(this.components);
             this.empruntTransition = new System.Windows.Forms.Timer(this.components);
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.button_emplacement = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.button_archives = new System.Windows.Forms.Button();
-            this.button_outils = new System.Windows.Forms.Button();
-            this.button_addarchive = new System.Windows.Forms.Button();
-            this.button_addemplacement = new System.Windows.Forms.Button();
-            this.button_deletearchive = new System.Windows.Forms.Button();
+            this.button_emplacement = new System.Windows.Forms.Button();
             this.button_recolement = new System.Windows.Forms.Button();
             this.button_dorecolement = new System.Windows.Forms.Button();
             this.button_exportrecolement = new System.Windows.Forms.Button();
             this.button_emprunt = new System.Windows.Forms.Button();
             this.button_emprunterarchive = new System.Windows.Forms.Button();
             this.button_rendrearchive = new System.Windows.Forms.Button();
+            this.button_historiqueemprunt = new System.Windows.Forms.Button();
             this.button_exit = new System.Windows.Forms.Button();
             this.button_menu = new System.Windows.Forms.PictureBox();
+            this.button_outils = new System.Windows.Forms.Button();
+            this.button_addarchive = new System.Windows.Forms.Button();
+            this.button_addemplacement = new System.Windows.Forms.Button();
+            this.button_deletearchive = new System.Windows.Forms.Button();
+            this.button_modifierlieu = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.sidebar.SuspendLayout();
+            this.pnArchives.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.toolContainer.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -82,9 +88,9 @@
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.pnExit.SuspendLayout();
-            this.pnArchives.SuspendLayout();
-            this.panel12.SuspendLayout();
+            this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.button_menu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,7 +101,7 @@
             this.panel1.Controls.Add(this.button_menu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(722, 41);
             this.panel1.TabIndex = 0;
@@ -122,10 +128,28 @@
             this.sidebar.Controls.Add(this.pnExit);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 41);
-            this.sidebar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sidebar.Margin = new System.Windows.Forms.Padding(2);
             this.sidebar.Name = "sidebar";
             this.sidebar.Size = new System.Drawing.Size(60, 368);
             this.sidebar.TabIndex = 1;
+            // 
+            // pnArchives
+            // 
+            this.pnArchives.Controls.Add(this.button_archives);
+            this.pnArchives.Location = new System.Drawing.Point(2, 10);
+            this.pnArchives.Margin = new System.Windows.Forms.Padding(2, 10, 2, 2);
+            this.pnArchives.Name = "pnArchives";
+            this.pnArchives.Size = new System.Drawing.Size(197, 53);
+            this.pnArchives.TabIndex = 3;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.button_emplacement);
+            this.panel12.Location = new System.Drawing.Point(2, 75);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2, 10, 2, 2);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(197, 53);
+            this.panel12.TabIndex = 4;
             // 
             // toolContainer
             // 
@@ -134,6 +158,7 @@
             this.toolContainer.Controls.Add(this.panel3);
             this.toolContainer.Controls.Add(this.panel5);
             this.toolContainer.Controls.Add(this.panel8);
+            this.toolContainer.Controls.Add(this.panel14);
             this.toolContainer.Location = new System.Drawing.Point(2, 140);
             this.toolContainer.Margin = new System.Windows.Forms.Padding(2, 10, 2, 2);
             this.toolContainer.Name = "toolContainer";
@@ -228,6 +253,7 @@
             this.empruntContainer.Controls.Add(this.panel9);
             this.empruntContainer.Controls.Add(this.panel10);
             this.empruntContainer.Controls.Add(this.panel11);
+            this.empruntContainer.Controls.Add(this.panel13);
             this.empruntContainer.Location = new System.Drawing.Point(2, 270);
             this.empruntContainer.Margin = new System.Windows.Forms.Padding(2, 10, 2, 2);
             this.empruntContainer.Name = "empruntContainer";
@@ -261,6 +287,15 @@
             this.panel11.Size = new System.Drawing.Size(197, 53);
             this.panel11.TabIndex = 4;
             // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.button_historiqueemprunt);
+            this.panel13.Location = new System.Drawing.Point(0, 159);
+            this.panel13.Margin = new System.Windows.Forms.Padding(0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(197, 53);
+            this.panel13.TabIndex = 5;
+            // 
             // pnExit
             // 
             this.pnExit.Controls.Add(this.button_exit);
@@ -269,15 +304,6 @@
             this.pnExit.Name = "pnExit";
             this.pnExit.Size = new System.Drawing.Size(197, 53);
             this.pnExit.TabIndex = 8;
-            // 
-            // pnArchives
-            // 
-            this.pnArchives.Controls.Add(this.button_archives);
-            this.pnArchives.Location = new System.Drawing.Point(2, 10);
-            this.pnArchives.Margin = new System.Windows.Forms.Padding(2, 10, 2, 2);
-            this.pnArchives.Name = "pnArchives";
-            this.pnArchives.Size = new System.Drawing.Size(197, 53);
-            this.pnArchives.TabIndex = 3;
             // 
             // toolTransition
             // 
@@ -299,14 +325,36 @@
             this.empruntTransition.Interval = 10;
             this.empruntTransition.Tick += new System.EventHandler(this.empruntTransition_Tick);
             // 
-            // panel12
+            // panel14
             // 
-            this.panel12.Controls.Add(this.button_emplacement);
-            this.panel12.Location = new System.Drawing.Point(2, 75);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2, 10, 2, 2);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(197, 53);
-            this.panel12.TabIndex = 4;
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.panel14.Controls.Add(this.button_modifierlieu);
+            this.panel14.Location = new System.Drawing.Point(0, 212);
+            this.panel14.Margin = new System.Windows.Forms.Padding(0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(197, 53);
+            this.panel14.TabIndex = 8;
+            // 
+            // button_archives
+            // 
+            this.button_archives.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
+            this.button_archives.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_archives.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_archives.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button_archives.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_archives.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_archives.ForeColor = System.Drawing.Color.White;
+            this.button_archives.Image = ((System.Drawing.Image)(resources.GetObject("button_archives.Image")));
+            this.button_archives.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_archives.Location = new System.Drawing.Point(-4, -17);
+            this.button_archives.Margin = new System.Windows.Forms.Padding(2);
+            this.button_archives.Name = "button_archives";
+            this.button_archives.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_archives.Size = new System.Drawing.Size(220, 84);
+            this.button_archives.TabIndex = 2;
+            this.button_archives.Text = "Archives";
+            this.button_archives.UseVisualStyleBackColor = false;
+            this.button_archives.Click += new System.EventHandler(this.button_archives_Click);
             // 
             // button_emplacement
             // 
@@ -329,26 +377,170 @@
             this.button_emplacement.UseVisualStyleBackColor = false;
             this.button_emplacement.Click += new System.EventHandler(this.button_emplacement_Click);
             // 
-            // button_archives
+            // button_recolement
             // 
-            this.button_archives.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
-            this.button_archives.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_archives.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button_archives.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button_archives.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_archives.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_archives.ForeColor = System.Drawing.Color.White;
-            this.button_archives.Image = ((System.Drawing.Image)(resources.GetObject("button_archives.Image")));
-            this.button_archives.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_archives.Location = new System.Drawing.Point(-4, -17);
-            this.button_archives.Margin = new System.Windows.Forms.Padding(2);
-            this.button_archives.Name = "button_archives";
-            this.button_archives.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_archives.Size = new System.Drawing.Size(220, 84);
-            this.button_archives.TabIndex = 2;
-            this.button_archives.Text = "Archives";
-            this.button_archives.UseVisualStyleBackColor = false;
-            this.button_archives.Click += new System.EventHandler(this.button_archives_Click);
+            this.button_recolement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
+            this.button_recolement.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_recolement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_recolement.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_recolement.ForeColor = System.Drawing.Color.White;
+            this.button_recolement.Image = global::gestion_archive.Properties.Resources.plan_daction;
+            this.button_recolement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_recolement.Location = new System.Drawing.Point(-4, -17);
+            this.button_recolement.Margin = new System.Windows.Forms.Padding(2);
+            this.button_recolement.Name = "button_recolement";
+            this.button_recolement.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_recolement.Size = new System.Drawing.Size(220, 84);
+            this.button_recolement.TabIndex = 2;
+            this.button_recolement.Text = "Recolement";
+            this.button_recolement.UseVisualStyleBackColor = false;
+            this.button_recolement.Click += new System.EventHandler(this.button_recolement_Click);
+            // 
+            // button_dorecolement
+            // 
+            this.button_dorecolement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.button_dorecolement.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_dorecolement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_dorecolement.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_dorecolement.ForeColor = System.Drawing.Color.White;
+            this.button_dorecolement.Image = global::gestion_archive.Properties.Resources.plan_daction;
+            this.button_dorecolement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_dorecolement.Location = new System.Drawing.Point(-4, -17);
+            this.button_dorecolement.Margin = new System.Windows.Forms.Padding(2);
+            this.button_dorecolement.Name = "button_dorecolement";
+            this.button_dorecolement.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_dorecolement.Size = new System.Drawing.Size(220, 84);
+            this.button_dorecolement.TabIndex = 2;
+            this.button_dorecolement.Text = "Recolement";
+            this.button_dorecolement.UseVisualStyleBackColor = false;
+            this.button_dorecolement.Click += new System.EventHandler(this.button_dorecolement_Click);
+            // 
+            // button_exportrecolement
+            // 
+            this.button_exportrecolement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.button_exportrecolement.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_exportrecolement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_exportrecolement.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_exportrecolement.ForeColor = System.Drawing.Color.White;
+            this.button_exportrecolement.Image = global::gestion_archive.Properties.Resources.icon_exporter32;
+            this.button_exportrecolement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_exportrecolement.Location = new System.Drawing.Point(-4, -17);
+            this.button_exportrecolement.Margin = new System.Windows.Forms.Padding(2);
+            this.button_exportrecolement.Name = "button_exportrecolement";
+            this.button_exportrecolement.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_exportrecolement.Size = new System.Drawing.Size(220, 84);
+            this.button_exportrecolement.TabIndex = 2;
+            this.button_exportrecolement.Text = "              Exporter un                recolement";
+            this.button_exportrecolement.UseVisualStyleBackColor = false;
+            this.button_exportrecolement.Click += new System.EventHandler(this.button_exportrecolement_Click);
+            // 
+            // button_emprunt
+            // 
+            this.button_emprunt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
+            this.button_emprunt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_emprunt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_emprunt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_emprunt.ForeColor = System.Drawing.Color.White;
+            this.button_emprunt.Image = global::gestion_archive.Properties.Resources.icon_emprunt;
+            this.button_emprunt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_emprunt.Location = new System.Drawing.Point(-4, -17);
+            this.button_emprunt.Margin = new System.Windows.Forms.Padding(2);
+            this.button_emprunt.Name = "button_emprunt";
+            this.button_emprunt.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_emprunt.Size = new System.Drawing.Size(220, 84);
+            this.button_emprunt.TabIndex = 2;
+            this.button_emprunt.Text = "Emprunt";
+            this.button_emprunt.UseVisualStyleBackColor = false;
+            this.button_emprunt.Click += new System.EventHandler(this.button_emprunt_Click);
+            // 
+            // button_emprunterarchive
+            // 
+            this.button_emprunterarchive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.button_emprunterarchive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_emprunterarchive.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_emprunterarchive.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_emprunterarchive.ForeColor = System.Drawing.Color.White;
+            this.button_emprunterarchive.Image = global::gestion_archive.Properties.Resources.fleche_emprunt1;
+            this.button_emprunterarchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_emprunterarchive.Location = new System.Drawing.Point(-4, -17);
+            this.button_emprunterarchive.Margin = new System.Windows.Forms.Padding(2);
+            this.button_emprunterarchive.Name = "button_emprunterarchive";
+            this.button_emprunterarchive.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_emprunterarchive.Size = new System.Drawing.Size(220, 84);
+            this.button_emprunterarchive.TabIndex = 2;
+            this.button_emprunterarchive.Text = "               Emprunter une               archive";
+            this.button_emprunterarchive.UseVisualStyleBackColor = false;
+            this.button_emprunterarchive.Click += new System.EventHandler(this.button_emprunterarchive_Click);
+            // 
+            // button_rendrearchive
+            // 
+            this.button_rendrearchive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.button_rendrearchive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_rendrearchive.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_rendrearchive.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_rendrearchive.ForeColor = System.Drawing.Color.White;
+            this.button_rendrearchive.Image = global::gestion_archive.Properties.Resources.fleche_rendre;
+            this.button_rendrearchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_rendrearchive.Location = new System.Drawing.Point(-4, -17);
+            this.button_rendrearchive.Margin = new System.Windows.Forms.Padding(2);
+            this.button_rendrearchive.Name = "button_rendrearchive";
+            this.button_rendrearchive.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_rendrearchive.Size = new System.Drawing.Size(220, 84);
+            this.button_rendrearchive.TabIndex = 2;
+            this.button_rendrearchive.Text = "                Rendre une                 archive";
+            this.button_rendrearchive.UseVisualStyleBackColor = false;
+            this.button_rendrearchive.Click += new System.EventHandler(this.button_rendrearchive_Click);
+            // 
+            // button_historiqueemprunt
+            // 
+            this.button_historiqueemprunt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.button_historiqueemprunt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_historiqueemprunt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_historiqueemprunt.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_historiqueemprunt.ForeColor = System.Drawing.Color.White;
+            this.button_historiqueemprunt.Image = global::gestion_archive.Properties.Resources.icon_historique;
+            this.button_historiqueemprunt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_historiqueemprunt.Location = new System.Drawing.Point(-4, -17);
+            this.button_historiqueemprunt.Margin = new System.Windows.Forms.Padding(2);
+            this.button_historiqueemprunt.Name = "button_historiqueemprunt";
+            this.button_historiqueemprunt.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_historiqueemprunt.Size = new System.Drawing.Size(220, 84);
+            this.button_historiqueemprunt.TabIndex = 2;
+            this.button_historiqueemprunt.Text = "                Historique                  des emprunts";
+            this.button_historiqueemprunt.UseVisualStyleBackColor = false;
+            this.button_historiqueemprunt.Click += new System.EventHandler(this.button_historiqueemprunt_Click);
+            // 
+            // button_exit
+            // 
+            this.button_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
+            this.button_exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_exit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_exit.ForeColor = System.Drawing.Color.White;
+            this.button_exit.Image = ((System.Drawing.Image)(resources.GetObject("button_exit.Image")));
+            this.button_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_exit.Location = new System.Drawing.Point(-4, -17);
+            this.button_exit.Margin = new System.Windows.Forms.Padding(2);
+            this.button_exit.Name = "button_exit";
+            this.button_exit.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_exit.Size = new System.Drawing.Size(220, 84);
+            this.button_exit.TabIndex = 2;
+            this.button_exit.Text = "Quitter";
+            this.button_exit.UseVisualStyleBackColor = false;
+            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
+            // 
+            // button_menu
+            // 
+            this.button_menu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_menu.Image = ((System.Drawing.Image)(resources.GetObject("button_menu.Image")));
+            this.button_menu.Location = new System.Drawing.Point(12, 6);
+            this.button_menu.Margin = new System.Windows.Forms.Padding(2);
+            this.button_menu.Name = "button_menu";
+            this.button_menu.Size = new System.Drawing.Size(31, 26);
+            this.button_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.button_menu.TabIndex = 1;
+            this.button_menu.TabStop = false;
+            this.button_menu.Click += new System.EventHandler(this.button_menu_Click);
             // 
             // button_outils
             // 
@@ -426,151 +618,24 @@
             this.button_deletearchive.UseVisualStyleBackColor = false;
             this.button_deletearchive.Click += new System.EventHandler(this.button_deletearchive_Click);
             // 
-            // button_recolement
+            // button_modifierlieu
             // 
-            this.button_recolement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
-            this.button_recolement.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_recolement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_recolement.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_recolement.ForeColor = System.Drawing.Color.White;
-            this.button_recolement.Image = ((System.Drawing.Image)(resources.GetObject("button_recolement.Image")));
-            this.button_recolement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_recolement.Location = new System.Drawing.Point(-4, -17);
-            this.button_recolement.Margin = new System.Windows.Forms.Padding(2);
-            this.button_recolement.Name = "button_recolement";
-            this.button_recolement.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_recolement.Size = new System.Drawing.Size(220, 84);
-            this.button_recolement.TabIndex = 2;
-            this.button_recolement.Text = "Recolement";
-            this.button_recolement.UseVisualStyleBackColor = false;
-            this.button_recolement.Click += new System.EventHandler(this.button_recolement_Click);
-            // 
-            // button_dorecolement
-            // 
-            this.button_dorecolement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
-            this.button_dorecolement.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_dorecolement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_dorecolement.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_dorecolement.ForeColor = System.Drawing.Color.White;
-            this.button_dorecolement.Image = global::gestion_archive.Properties.Resources.icon_exporter32;
-            this.button_dorecolement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_dorecolement.Location = new System.Drawing.Point(-4, -17);
-            this.button_dorecolement.Margin = new System.Windows.Forms.Padding(2);
-            this.button_dorecolement.Name = "button_dorecolement";
-            this.button_dorecolement.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_dorecolement.Size = new System.Drawing.Size(220, 84);
-            this.button_dorecolement.TabIndex = 2;
-            this.button_dorecolement.Text = "Recolement";
-            this.button_dorecolement.UseVisualStyleBackColor = false;
-            this.button_dorecolement.Click += new System.EventHandler(this.button_dorecolement_Click);
-            // 
-            // button_exportrecolement
-            // 
-            this.button_exportrecolement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
-            this.button_exportrecolement.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_exportrecolement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_exportrecolement.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_exportrecolement.ForeColor = System.Drawing.Color.White;
-            this.button_exportrecolement.Image = global::gestion_archive.Properties.Resources.icon_exporter32;
-            this.button_exportrecolement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_exportrecolement.Location = new System.Drawing.Point(-4, -17);
-            this.button_exportrecolement.Margin = new System.Windows.Forms.Padding(2);
-            this.button_exportrecolement.Name = "button_exportrecolement";
-            this.button_exportrecolement.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_exportrecolement.Size = new System.Drawing.Size(220, 84);
-            this.button_exportrecolement.TabIndex = 2;
-            this.button_exportrecolement.Text = "              Exporter un                recolement";
-            this.button_exportrecolement.UseVisualStyleBackColor = false;
-            this.button_exportrecolement.Click += new System.EventHandler(this.button_exportrecolement_Click);
-            // 
-            // button_emprunt
-            // 
-            this.button_emprunt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
-            this.button_emprunt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_emprunt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_emprunt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_emprunt.ForeColor = System.Drawing.Color.White;
-            this.button_emprunt.Image = ((System.Drawing.Image)(resources.GetObject("button_emprunt.Image")));
-            this.button_emprunt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_emprunt.Location = new System.Drawing.Point(-4, -17);
-            this.button_emprunt.Margin = new System.Windows.Forms.Padding(2);
-            this.button_emprunt.Name = "button_emprunt";
-            this.button_emprunt.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_emprunt.Size = new System.Drawing.Size(220, 84);
-            this.button_emprunt.TabIndex = 2;
-            this.button_emprunt.Text = "Emprunt";
-            this.button_emprunt.UseVisualStyleBackColor = false;
-            this.button_emprunt.Click += new System.EventHandler(this.button_emprunt_Click);
-            // 
-            // button_emprunterarchive
-            // 
-            this.button_emprunterarchive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
-            this.button_emprunterarchive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_emprunterarchive.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_emprunterarchive.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_emprunterarchive.ForeColor = System.Drawing.Color.White;
-            this.button_emprunterarchive.Image = global::gestion_archive.Properties.Resources.icon_exporter32;
-            this.button_emprunterarchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_emprunterarchive.Location = new System.Drawing.Point(-4, -17);
-            this.button_emprunterarchive.Margin = new System.Windows.Forms.Padding(2);
-            this.button_emprunterarchive.Name = "button_emprunterarchive";
-            this.button_emprunterarchive.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_emprunterarchive.Size = new System.Drawing.Size(220, 84);
-            this.button_emprunterarchive.TabIndex = 2;
-            this.button_emprunterarchive.Text = "               Emprunter une               archive";
-            this.button_emprunterarchive.UseVisualStyleBackColor = false;
-            this.button_emprunterarchive.Click += new System.EventHandler(this.button_emprunterarchive_Click);
-            // 
-            // button_rendrearchive
-            // 
-            this.button_rendrearchive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
-            this.button_rendrearchive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_rendrearchive.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_rendrearchive.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_rendrearchive.ForeColor = System.Drawing.Color.White;
-            this.button_rendrearchive.Image = global::gestion_archive.Properties.Resources.icon_exporter32;
-            this.button_rendrearchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_rendrearchive.Location = new System.Drawing.Point(-4, -17);
-            this.button_rendrearchive.Margin = new System.Windows.Forms.Padding(2);
-            this.button_rendrearchive.Name = "button_rendrearchive";
-            this.button_rendrearchive.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_rendrearchive.Size = new System.Drawing.Size(220, 84);
-            this.button_rendrearchive.TabIndex = 2;
-            this.button_rendrearchive.Text = "                Rendre une                 archive";
-            this.button_rendrearchive.UseVisualStyleBackColor = false;
-            this.button_rendrearchive.Click += new System.EventHandler(this.button_rendrearchive_Click);
-            // 
-            // button_exit
-            // 
-            this.button_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
-            this.button_exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_exit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_exit.ForeColor = System.Drawing.Color.White;
-            this.button_exit.Image = ((System.Drawing.Image)(resources.GetObject("button_exit.Image")));
-            this.button_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_exit.Location = new System.Drawing.Point(-4, -17);
-            this.button_exit.Margin = new System.Windows.Forms.Padding(2);
-            this.button_exit.Name = "button_exit";
-            this.button_exit.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_exit.Size = new System.Drawing.Size(220, 84);
-            this.button_exit.TabIndex = 2;
-            this.button_exit.Text = "Quitter";
-            this.button_exit.UseVisualStyleBackColor = false;
-            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
-            // 
-            // button_menu
-            // 
-            this.button_menu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_menu.Image = ((System.Drawing.Image)(resources.GetObject("button_menu.Image")));
-            this.button_menu.Location = new System.Drawing.Point(12, 6);
-            this.button_menu.Margin = new System.Windows.Forms.Padding(2);
-            this.button_menu.Name = "button_menu";
-            this.button_menu.Size = new System.Drawing.Size(31, 26);
-            this.button_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.button_menu.TabIndex = 1;
-            this.button_menu.TabStop = false;
-            this.button_menu.Click += new System.EventHandler(this.button_menu_Click);
+            this.button_modifierlieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.button_modifierlieu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_modifierlieu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_modifierlieu.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_modifierlieu.ForeColor = System.Drawing.Color.White;
+            this.button_modifierlieu.Image = global::gestion_archive.Properties.Resources.plan;
+            this.button_modifierlieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_modifierlieu.Location = new System.Drawing.Point(-4, -17);
+            this.button_modifierlieu.Margin = new System.Windows.Forms.Padding(2);
+            this.button_modifierlieu.Name = "button_modifierlieu";
+            this.button_modifierlieu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_modifierlieu.Size = new System.Drawing.Size(220, 84);
+            this.button_modifierlieu.TabIndex = 2;
+            this.button_modifierlieu.Text = "  Modifier un lieu";
+            this.button_modifierlieu.UseVisualStyleBackColor = false;
+            this.button_modifierlieu.Click += new System.EventHandler(this.button_modifierlieu_Click);
             // 
             // MainForm
             // 
@@ -581,7 +646,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Archive Gestion";
@@ -590,6 +655,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.sidebar.ResumeLayout(false);
+            this.pnArchives.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
             this.toolContainer.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -603,9 +670,9 @@
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
             this.pnExit.ResumeLayout(false);
-            this.pnArchives.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.button_menu)).EndInit();
             this.ResumeLayout(false);
 
@@ -650,5 +717,9 @@
         private System.Windows.Forms.Timer empruntTransition;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Button button_emplacement;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Button button_historiqueemprunt;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Button button_modifierlieu;
     }
 }

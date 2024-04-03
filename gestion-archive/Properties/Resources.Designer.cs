@@ -63,6 +63,46 @@ namespace gestion_archive.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fleche_emprunt {
+            get {
+                object obj = ResourceManager.GetObject("fleche_emprunt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fleche_emprunt1 {
+            get {
+                object obj = ResourceManager.GetObject("fleche_emprunt1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fleche_rendre {
+            get {
+                object obj = ResourceManager.GetObject("fleche_rendre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_emprunt {
+            get {
+                object obj = ResourceManager.GetObject("icon_emprunt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_exporter32 {
             get {
                 object obj = ResourceManager.GetObject("icon_exporter32", resourceCulture);
@@ -76,6 +116,16 @@ namespace gestion_archive.Properties {
         internal static System.Drawing.Bitmap icon_exporter321 {
             get {
                 object obj = ResourceManager.GetObject("icon_exporter321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_historique {
+            get {
+                object obj = ResourceManager.GetObject("icon_historique", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +186,26 @@ namespace gestion_archive.Properties {
         internal static System.Drawing.Bitmap Logo_App {
             get {
                 object obj = ResourceManager.GetObject("Logo_App", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plan {
+            get {
+                object obj = ResourceManager.GetObject("plan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plan_daction {
+            get {
+                object obj = ResourceManager.GetObject("plan-daction", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

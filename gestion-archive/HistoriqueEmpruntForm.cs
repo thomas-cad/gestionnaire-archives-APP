@@ -1,51 +1,34 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.Design;
-using data_base;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.ApplicationServices;
-using Npgsql;
-using ReaLTaiizor.Controls;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace gestion_archive
 {
-    public partial class SearchArchiveForm : Form
+    public partial class HistoriqueEmpruntForm : Form
     {
+
         private NpgsqlConnection conn;
-
-        InfoArchivesForm archives;
-        private int id_archive; 
-
-        public SearchArchiveForm(NpgsqlConnection conn_main_form)
+        public HistoriqueEmpruntForm(NpgsqlConnection conn_main)
         {
             InitializeComponent();
-
-            conn = conn_main_form; //Recupere les informations de la BDD
-
+            conn = conn_main;
         }
 
-        private void formArchives_Load(object sender, EventArgs e)
-        {
-            this.ControlBox = false;
-
-        }
+        int id_archive; 
 
         private bool Checking()
         {
             bool check_id_archive = false;
 
             // Verifie si le user a bien entré une valeur dans la textbox et affecte cette valeur a la variable
-            if (textBoxIdArchive.Text == string.Empty)
+            if (IdArchiveTextBox.Text == string.Empty)
             {
                 MessageBox.Show("Id invalide", "ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -53,9 +36,10 @@ namespace gestion_archive
             {
                 try
                 {
-                    id_archive = int.Parse(textBoxIdArchive.Text); // Convertis la chaine de caractère en entier  
+
+                    id_archive = int.Parse(IdArchiveTextBox.Text); // Convertis la chaine de caractère en entier  
                 }
-                catch
+                catch 
                 {
                     MessageBox.Show("Id invalide", "ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -74,37 +58,49 @@ namespace gestion_archive
             return check_id_archive;
         }
 
+        private void SetTableArchive(int id_archive)
+        {
+            var requete_table_archive = new NpgsqlCommand(@"
+                    SELECT 
+                    id_emprunt,
+                    id_agent,
+                    date_emprunt,
+                    date_retour,
+                    raison
+                    FROM emprunt
+                    WHERE 
+	                id_archive = @id_archive
+                    ",
+            conn);
+            requete_table_archive.Parameters.AddWithValue("@id_archive", id_archive);
+
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(requete_table_archive); //Craies un data adapter pour recuperer la requete
+            DataTable dt_table_archive = new DataTable();
+            da.Fill(dt_table_archive); //Stocke la requete dans la data table
+
+            //Vide data table grid view
+            ArchiveDataGridView.DataSource = null;
+            ArchiveDataGridView.Rows.Clear();
+
+            //Remplie data table grid view
+            ArchiveDataGridView.DataSource = dt_table_archive;
+        }
+
+
         private void RechercherButton_Click(object sender, EventArgs e)
         {
             if (Checking())
             {
-                // Afficher le form de InfoArchive
-                if (archives == null)
-                {
-                    archives = new InfoArchivesForm(conn, id_archive, this);
-                    archives.FormClosed += Archives_FormClosed; ;
-                    archives.MdiParent = this.MdiParent;
-                    archives.Dock = DockStyle.Fill;
-                    archives.Show();
-                }
-                else
-                {
-                    archives.Activate();
-                }
+                SetTableArchive(id_archive);
             }
         }
 
-        private void Archives_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            archives.Activate();
-        }
-
-        private void textBoxIdArchive_KeyDown(object sender, KeyEventArgs e)
+        private void IdArchiveTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 e.SuppressKeyPress = true; // Empêche la saisie de la touche "Entrée"
-                RechercherButton.PerformClick(); 
+                RechercherButton.PerformClick();
             }
         }
     }
