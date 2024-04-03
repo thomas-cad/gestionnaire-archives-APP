@@ -1,10 +1,12 @@
-﻿using Npgsql;
+﻿using iText.Kernel.Events;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -61,16 +63,23 @@ namespace gestion_archive
         private void SetTableArchive(int id_archive)
         {
             var requete_table_archive = new NpgsqlCommand(@"
-                    SELECT 
-                    id_emprunt,
-                    id_agent,
-                    date_emprunt,
-                    date_retour,
-                    raison
-                    FROM emprunt
-                    WHERE 
-	                id_archive = @id_archive
-                    ",
+            SELECT 
+            e.id_emprunt,
+            e.id_agent,
+            a.nom AS agent_nom,
+            a.prenom AS agent_prenom,
+            b.nom AS service_nom,
+            e.date_emprunt,
+            e.date_retour,
+            e.raison
+            FROM 
+            emprunt e
+            INNER JOIN 
+            agent a ON e.id_agent = a.id_agent
+            INNER JOIN 
+            service b ON a.id_service = b.id_service
+            WHERE 
+            e.id_archive = @id_archive",
             conn);
             requete_table_archive.Parameters.AddWithValue("@id_archive", id_archive);
 

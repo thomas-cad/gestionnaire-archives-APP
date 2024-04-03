@@ -15,6 +15,10 @@ namespace gestion_archive
     public partial class SearchEmplacementForm : Form
     {
         NpgsqlConnection conn;
+
+        ListingArchiveEmplacementForm listArchive;
+        InfoEmplacement infoEmplacement; 
+
         int id_emplacement = -1;
         int id_lieu = -1;
         int epi;
@@ -88,9 +92,25 @@ namespace gestion_archive
             SetIdEmplacement();
             if (id_emplacement != -1)//verifie que l'id saisie est valide
             {
-                ListingArchiveEmplacementForm listArchive = new ListingArchiveEmplacementForm(conn, id_emplacement, this);
-                listArchive.Show();
+                if (listArchive == null)
+                {
+                    listArchive = new ListingArchiveEmplacementForm(conn, id_emplacement, this);
+                    listArchive.FormClosed += ListArchive_FormClosed; ;
+                    listArchive.MdiParent = this.MdiParent;
+                    listArchive.Dock = DockStyle.Fill;
+                    listArchive.Show();
+                }
+                else
+                {
+                    listArchive.Activate();
+                }
+
             }
+        }
+
+        private void ListArchive_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            listArchive = null;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -98,9 +118,24 @@ namespace gestion_archive
             SetIdEmplacement();
             if (id_emplacement != -1)//verifie que l'id saisie est valide
             {
-                InfoEmplacement infoEmplacement = new InfoEmplacement(conn, id_emplacement, this);
-                infoEmplacement.Show();
+                if (infoEmplacement == null)
+                {
+                    infoEmplacement = new InfoEmplacement(conn, id_emplacement, this);
+                    infoEmplacement.FormClosed += InfoEmplacement_FormClosed; ; ;
+                    infoEmplacement.MdiParent = this.MdiParent;
+                    infoEmplacement.Dock = DockStyle.Fill;
+                    infoEmplacement.Show();
+                }
+                else
+                {
+                    infoEmplacement.Activate();
+                }
             }
+        }
+
+        private void InfoEmplacement_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            infoEmplacement = null; 
         }
 
         private void SetLieux()
