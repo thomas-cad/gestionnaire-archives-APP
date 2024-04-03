@@ -190,6 +190,12 @@
     <Compile Include="InfoArchivesForm.Designer.cs">
       <DependentUpon>InfoArchivesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModifierLieuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierLieuForm.Designer.cs">
+      <DependentUpon>ModifierLieuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RecolementForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InfoArchivesForm.resx">
       <DependentUpon>InfoArchivesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierLieuForm.resx">
+      <DependentUpon>ModifierLieuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecolementForm.resx">
       <DependentUpon>RecolementForm.cs</DependentUpon>
@@ -315,6 +324,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\image\icon_loupe32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\image\icon_emprunt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\image\fleche_emprunt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\image\fleche_rendre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\image\icon_historique.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\image\plan-daction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\image\plan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

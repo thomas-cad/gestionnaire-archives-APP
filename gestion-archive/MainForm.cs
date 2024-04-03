@@ -35,6 +35,7 @@ namespace gestion_archive
         EmpruntForm emprunter;
         RendreForm rendre;
         HistoriqueEmpruntForm historiqueEmprunt;
+        ModifierLieuForm modifierLieu;
 
         public NpgsqlConnection conn;
 
@@ -74,7 +75,7 @@ namespace gestion_archive
             {
                 toolContainer.Height += 10;
 
-                if (toolContainer.Height >= 212)
+                if (toolContainer.Height >= 265)
                 {
                     toolTransition.Stop();
                     toolExpand = true;
@@ -234,11 +235,11 @@ namespace gestion_archive
 
         private void button_addarchive_Click(object sender, EventArgs e)
         {
-            // Afficher le form de Archives
+            // Afficher le form de AddArchives
             if (addArchive == null)
             {
                 addArchive = new AddArchiveForm(conn);
-                addArchive.FormClosed += Outil1_FormClosed; 
+                addArchive.FormClosed += AddArchive_FormClosed; ; 
                 addArchive.MdiParent = this;
                 addArchive.Dock = DockStyle.Fill;
                 addArchive.Show();
@@ -249,9 +250,9 @@ namespace gestion_archive
             }
         }
 
-        private void Outil1_FormClosed(object sender, FormClosedEventArgs e)
+        private void AddArchive_FormClosed(object sender, FormClosedEventArgs e)
         {
-            addArchive.Activate(); 
+            addArchive.Activate();
         }
 
         private void button_addemplacement_Click(object sender, EventArgs e)
@@ -278,7 +279,7 @@ namespace gestion_archive
 
         private void button_deletearchive_Click(object sender, EventArgs e)
         {
-            // Afficher le form de addEmplacement
+            // Afficher le form de deleteemplacement
             if (deleteForm == null)
             {
                 deleteForm = new DeleteForm(conn);
@@ -296,6 +297,28 @@ namespace gestion_archive
         private void DeleteRecolement_FormClosed(object sender, FormClosedEventArgs e)
         {
             deleteForm.Activate();  
+        }
+
+        private void button_modifierlieu_Click(object sender, EventArgs e)
+        {
+            // Afficher le form pour modifier un lieu
+            if (modifierLieu == null)
+            {
+                modifierLieu = new ModifierLieuForm();
+                modifierLieu.FormClosed += ModifierLieu_FormClosed; ;
+                modifierLieu.MdiParent = this;
+                modifierLieu.Dock = DockStyle.Fill;
+                modifierLieu.Show();
+            }
+            else
+            {
+                modifierLieu.Activate();
+            }
+        }
+
+        private void ModifierLieu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            modifierLieu.Activate();   
         }
 
         private void button_dorecolement_Click(object sender, EventArgs e)
