@@ -304,7 +304,7 @@ namespace gestion_archive
             // Afficher le form pour modifier un lieu
             if (modifierLieu == null)
             {
-                modifierLieu = new ModifierLieuForm();
+                modifierLieu = new ModifierLieuForm(conn);
                 modifierLieu.FormClosed += ModifierLieu_FormClosed; ;
                 modifierLieu.MdiParent = this;
                 modifierLieu.Dock = DockStyle.Fill;

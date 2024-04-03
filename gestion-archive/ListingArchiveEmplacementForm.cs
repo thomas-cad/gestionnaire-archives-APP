@@ -110,12 +110,19 @@ namespace gestion_archive
             if (e.RowIndex >= 0) //verifie qu'on ne clique pas sur l'entete
             {
                 // Récupére la valeur de la seconde colonne de la ligne cliquée
-                int selectedValue = Convert.ToInt32(ArchiveDataGridView.Rows[e.RowIndex].Cells[1].Value);
+                try
+                {
+                    int selectedValue = Convert.ToInt32(ArchiveDataGridView.Rows[e.RowIndex].Cells[1].Value);
 
-                InfoArchivesForm infoForm = new InfoArchivesForm(conn, selectedValue, this);
+                    InfoArchivesForm infoForm = new InfoArchivesForm(conn, selectedValue, this);
 
-                // Affiche InfoArchivesForm
-                infoForm.Show();
+                    // Affiche InfoArchivesForm
+                    infoForm.Show();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Impossible d'ouvrir l'archive" + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
