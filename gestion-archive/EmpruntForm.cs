@@ -144,6 +144,7 @@ namespace gestion_archive
             bool check_id_archive = false;
             bool check_agent = false;
             bool check_raison = false;
+            bool check = false;
 
             //Chcck l'id archive
             if (CoteTextBox.Text == string.Empty)
@@ -209,7 +210,27 @@ namespace gestion_archive
                     MessageBox.Show(ex.Message);
                 }
             }
-            return check_id_archive && check_agent && check_raison;
+
+            try
+            {
+                var check_destruction = new NpgsqlCommand("SELECT COUNT(*) FROM destruction WHERE id_archive = @id_archive", conn);
+                check_destruction.Parameters.AddWithValue("@id_archive", id_archive);
+
+                if ((long)check_destruction.ExecuteScalar() == 0)
+                {
+                    check = true;
+                }
+                else
+                {
+                    MessageBox.Show("Archive Detruite", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return check_id_archive && check_agent && check_raison && check;
         }   
 
         private void emprunterButton_Click(object sender, EventArgs e)

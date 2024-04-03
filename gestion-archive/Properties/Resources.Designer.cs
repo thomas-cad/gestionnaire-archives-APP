@@ -83,6 +83,16 @@ namespace gestion_archive.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_loupe32 {
+            get {
+                object obj = ResourceManager.GetObject("icon_loupe32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_moins32 {
             get {
                 object obj = ResourceManager.GetObject("icon_moins32", resourceCulture);
