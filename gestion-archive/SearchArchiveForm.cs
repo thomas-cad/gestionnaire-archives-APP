@@ -81,7 +81,7 @@ namespace gestion_archive
                 // Afficher le form de InfoArchive
                 if (archives == null)
                 {
-                    archives = new InfoArchivesForm(conn, id_archive);
+                    archives = new InfoArchivesForm(conn, id_archive, this);
                     archives.FormClosed += Archives_FormClosed; ;
                     archives.MdiParent = this.MdiParent;
                     archives.Dock = DockStyle.Fill;
