@@ -31,8 +31,8 @@
             ReaLTaiizor.Controls.BigLabel bigLabel1;
             ReaLTaiizor.Controls.BigLabel IdArchiveTitleLabel;
             this.panel1 = new System.Windows.Forms.Panel();
+            this.RendreButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.boutton_rendre = new System.Windows.Forms.Button();
             this.IdArchiveTextBox = new System.Windows.Forms.TextBox();
             bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             IdArchiveTitleLabel = new ReaLTaiizor.Controls.BigLabel();
@@ -42,7 +42,7 @@
             // bigLabel1
             // 
             bigLabel1.AutoSize = true;
-            bigLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(88)))));
+            bigLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             bigLabel1.Font = new System.Drawing.Font("Segoe UI", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             bigLabel1.ForeColor = System.Drawing.Color.White;
             bigLabel1.Location = new System.Drawing.Point(102, 10);
@@ -65,10 +65,10 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(88)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
+            this.panel1.Controls.Add(this.RendreButton);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(bigLabel1);
-            this.panel1.Controls.Add(this.boutton_rendre);
             this.panel1.Controls.Add(this.IdArchiveTextBox);
             this.panel1.Controls.Add(IdArchiveTitleLabel);
             this.panel1.Location = new System.Drawing.Point(33, 30);
@@ -76,6 +76,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(459, 214);
             this.panel1.TabIndex = 0;
+            // 
+            // RendreButton
+            // 
+            this.RendreButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.RendreButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RendreButton.FlatAppearance.BorderSize = 0;
+            this.RendreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RendreButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RendreButton.ForeColor = System.Drawing.Color.White;
+            this.RendreButton.Location = new System.Drawing.Point(150, 151);
+            this.RendreButton.Margin = new System.Windows.Forms.Padding(2);
+            this.RendreButton.Name = "RendreButton";
+            this.RendreButton.Size = new System.Drawing.Size(160, 41);
+            this.RendreButton.TabIndex = 89;
+            this.RendreButton.Text = "Rendre";
+            this.RendreButton.UseVisualStyleBackColor = false;
+            this.RendreButton.Click += new System.EventHandler(this.RendreButton_Click);
             // 
             // panel2
             // 
@@ -86,24 +103,13 @@
             this.panel2.Size = new System.Drawing.Size(428, 6);
             this.panel2.TabIndex = 86;
             // 
-            // boutton_rendre
-            // 
-            this.boutton_rendre.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boutton_rendre.Location = new System.Drawing.Point(172, 150);
-            this.boutton_rendre.Margin = new System.Windows.Forms.Padding(2);
-            this.boutton_rendre.Name = "boutton_rendre";
-            this.boutton_rendre.Size = new System.Drawing.Size(122, 39);
-            this.boutton_rendre.TabIndex = 82;
-            this.boutton_rendre.Text = "Rendre";
-            this.boutton_rendre.UseVisualStyleBackColor = true;
-            this.boutton_rendre.Click += new System.EventHandler(this.boutton_rendre_Click);
-            // 
             // IdArchiveTextBox
             // 
             this.IdArchiveTextBox.Location = new System.Drawing.Point(108, 108);
             this.IdArchiveTextBox.Name = "IdArchiveTextBox";
             this.IdArchiveTextBox.Size = new System.Drawing.Size(251, 20);
             this.IdArchiveTextBox.TabIndex = 81;
+            this.IdArchiveTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IdArchiveTextBox_KeyDown);
             // 
             // RendreForm
             // 
@@ -125,7 +131,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox IdArchiveTextBox;
-        private System.Windows.Forms.Button boutton_rendre;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button RendreButton;
     }
 }

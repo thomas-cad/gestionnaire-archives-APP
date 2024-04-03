@@ -93,6 +93,18 @@
             ArchivesEnCoursTitleLabel.TabIndex = 80;
             ArchivesEnCoursTitleLabel.Text = "Nombre archives en cours :";
             // 
+            // bigLabel2
+            // 
+            bigLabel2.AutoSize = true;
+            bigLabel2.BackColor = System.Drawing.Color.Transparent;
+            bigLabel2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            bigLabel2.ForeColor = System.Drawing.Color.White;
+            bigLabel2.Location = new System.Drawing.Point(105, 0);
+            bigLabel2.Name = "bigLabel2";
+            bigLabel2.Size = new System.Drawing.Size(192, 28);
+            bigLabel2.TabIndex = 74;
+            bigLabel2.Text = "Archives à détruire";
+            // 
             // DeleteDataView
             // 
             this.DeleteDataView.AllowUserToAddRows = false;
@@ -106,6 +118,7 @@
             this.DeleteDataView.ReadOnly = true;
             this.DeleteDataView.Size = new System.Drawing.Size(361, 388);
             this.DeleteDataView.TabIndex = 0;
+            this.DeleteDataView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeleteDataView_CellContentClick);
             // 
             // panel1
             // 
@@ -284,18 +297,6 @@
             this.bigLabel8.Size = new System.Drawing.Size(194, 45);
             this.bigLabel8.TabIndex = 44;
             this.bigLabel8.Text = "Destruction";
-            // 
-            // bigLabel2
-            // 
-            bigLabel2.AutoSize = true;
-            bigLabel2.BackColor = System.Drawing.Color.Transparent;
-            bigLabel2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            bigLabel2.ForeColor = System.Drawing.Color.White;
-            bigLabel2.Location = new System.Drawing.Point(105, 0);
-            bigLabel2.Name = "bigLabel2";
-            bigLabel2.Size = new System.Drawing.Size(192, 28);
-            bigLabel2.TabIndex = 74;
-            bigLabel2.Text = "Archives à détruire";
             // 
             // DeleteForm
             // 

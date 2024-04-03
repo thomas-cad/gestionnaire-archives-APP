@@ -49,7 +49,11 @@ namespace gestion_archive
             }
             else
             {
-                id_archive = int.Parse(IdArchiveTextBox.Text); // Convertis la chaine de caractère en entier
+                try
+                {
+                    id_archive = int.Parse(IdArchiveTextBox.Text); // Convertis la chaine de caractère en entier*
+                }
+                catch { MessageBox.Show("Id Archive invalide", "Id_Archive", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 check_id_archive = true;
             }
 
@@ -68,7 +72,7 @@ namespace gestion_archive
             return check_id_archive && empruntExists;
         }
 
-        private void boutton_rendre_Click(object sender, EventArgs e)
+        private void RendreButton_Click(object sender, EventArgs e)
         {
             if (Checking())
             {
@@ -78,17 +82,26 @@ namespace gestion_archive
                     insert_requete.Parameters.AddWithValue("@id_archive", id_archive);
                     insert_requete.ExecuteNonQuery(); // Set la date retour dans la base pour l'archive corrspondante
 
-                    var change_emp = new NpgsqlCommand("UPDATE archive SET id_emplacement = NULL WHERE id_archive = @id_archive",conn);
+                    var change_emp = new NpgsqlCommand("UPDATE archive SET id_emplacement = NULL WHERE id_archive = @id_archive", conn);
                     change_emp.Parameters.AddWithValue("@id_archive", id_archive);
                     change_emp.ExecuteNonQuery();// Set l'emplacement de l'archive a NULL
 
                     ResetValues(); //Reset les valeurs des champs
                     MessageBox.Show("Archive rendue avec succès le " + DateTime.Now, "Archive", MessageBoxButtons.OK);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Un problème est survenu " + ex.Message); 
+                    MessageBox.Show("Un problème est survenu " + ex.Message);
                 }
+            }
+        }
+
+        private void IdArchiveTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Empêche la saisie de la touche "Entrée"
+                RendreButton.PerformClick();
             }
         }
     }

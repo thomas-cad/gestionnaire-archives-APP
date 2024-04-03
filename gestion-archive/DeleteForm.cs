@@ -297,5 +297,10 @@ namespace gestion_archive
                 this.NewIdArchive();
             }
         }
+
+        private void DeleteDataView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

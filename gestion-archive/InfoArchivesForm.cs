@@ -223,7 +223,24 @@ namespace gestion_archive
             check_emprunt.Parameters.AddWithValue("@id_archive", id_archive);
             if ((long)check_emprunt.ExecuteScalar() > 0)
             {
-                labelemprunt.Text = "Oui"; 
+                //Recupère l'id de l'agent
+                var check_idagent = new NpgsqlCommand("SELECT id_agent FROM emprunt WHERE id_archive = @id_archive AND date_retour IS NULL", conn);
+                check_idagent.Parameters.AddWithValue("@id_archive", id_archive);
+                int idagent = Convert.ToInt32(check_idagent.ExecuteScalar()); 
+
+                //Recupère le nom prenom de l'agent
+                var check_agent = new NpgsqlCommand("SELECT CONCAT (nom,' ', prenom, ' : ', id_agent) FROM agent WHERE id_agent = @id_agent", conn);
+                check_agent.Parameters.AddWithValue("@id_agent", idagent);
+                object result = check_agent.ExecuteScalar();
+                string agent = result.ToString();
+
+                //Recupère la date d'emprunt
+                var check_date = new NpgsqlCommand("SELECT date_emprunt FROM emprunt WHERE id_archive = @id_archive AND date_retour IS NULL", conn);
+                check_date.Parameters.AddWithValue("@id_archive", id_archive);
+                DateTime dateemprunt = Convert.ToDateTime(check_date.ExecuteScalar());
+                string date = dateemprunt.ToShortDateString();
+
+                labelemprunt.Text = "Oui par " + agent + " le " + date; 
             }
             else
             {
@@ -239,7 +256,23 @@ namespace gestion_archive
             }
             else
             {
-                labeldetruit.Text = "Oui";
+                //Recupère l'id de l'agent
+                var check_idagent = new NpgsqlCommand("SELECT id_agent FROM destruction WHERE id_archive = @id_archive", conn);
+                check_idagent.Parameters.AddWithValue("@id_archive", id_archive);
+                int idagent = Convert.ToInt32(check_idagent.ExecuteScalar());
+
+                //Recupère le nom prenom de l'agent
+                var check_agent = new NpgsqlCommand("SELECT CONCAT (nom,' ', prenom, ' : ', id_agent) FROM agent WHERE id_agent = @id_agent", conn);
+                check_agent.Parameters.AddWithValue("@id_agent", idagent);
+                object result = check_agent.ExecuteScalar();
+                string agent = result.ToString();
+
+                //Recupère la date d'emprunt
+                var check_date = new NpgsqlCommand("SELECT date FROM destruction WHERE id_archive = @id_archive", conn);
+                check_date.Parameters.AddWithValue("@id_archive", id_archive);
+                DateTime datedestruction = Convert.ToDateTime(check_date.ExecuteScalar());
+                string date = datedestruction.ToShortDateString();
+                labeldetruit.Text = "Oui par " + agent + " le " + date;
             }   
         }
         //Gerer la suppression d'une archive
@@ -496,11 +529,6 @@ namespace gestion_archive
                 change.ExecuteNonQuery();
                 labeltemps_conservation.Text = nouvelleValeur;
             }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

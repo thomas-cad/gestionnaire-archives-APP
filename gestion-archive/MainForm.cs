@@ -34,6 +34,7 @@ namespace gestion_archive
         DeleteForm deleteForm;
         EmpruntForm emprunter;
         RendreForm rendre;
+        HistoriqueEmpruntForm historiqueEmprunt;
 
         public NpgsqlConnection conn;
 
@@ -129,7 +130,7 @@ namespace gestion_archive
             {
                 empruntContainer.Height += 10;
 
-                if (empruntContainer.Height >= 160)
+                if (empruntContainer.Height >= 210)
                 {
                     empruntTransition.Stop();
                     empruntExpand = true;
@@ -343,7 +344,7 @@ namespace gestion_archive
 
         private void button_rendrearchive_Click(object sender, EventArgs e)
         {
-            // Afficher le form du recolement
+            // Afficher le form pour rendre une archive
             if (rendre == null)
             {
                 rendre = new RendreForm(conn);
@@ -361,6 +362,28 @@ namespace gestion_archive
         private void Rendre_FormClosed(object sender, FormClosedEventArgs e)
         {
             rendre.Activate(); 
+        }
+
+        private void button_historiqueemprunt_Click(object sender, EventArgs e)
+        {
+            // Afficher le form pour emprunter une archive
+            if (historiqueEmprunt == null)
+            {
+                historiqueEmprunt = new HistoriqueEmpruntForm(conn);
+                historiqueEmprunt.FormClosed += HistoriqueEmprunt_FormClosed; ;
+                historiqueEmprunt.MdiParent = this;
+                historiqueEmprunt.Dock = DockStyle.Fill;
+                historiqueEmprunt.Show();
+            }
+            else
+            {
+                historiqueEmprunt.Activate();
+            }
+        }
+
+        private void HistoriqueEmprunt_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            historiqueEmprunt.Activate(); 
         }
 
 

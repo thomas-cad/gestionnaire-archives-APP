@@ -154,7 +154,12 @@ namespace gestion_archive
             }
             else
             {
-                id_archive = int.Parse(CoteTextBox.Text);
+                try
+                {
+                    id_archive = int.Parse(CoteTextBox.Text);
+                }
+                catch {MessageBox.Show("Id Archive invalide", "Id_Archive", MessageBoxButtons.OK, MessageBoxIcon.Error);}
+
                 var check_idarchive = new NpgsqlCommand("SELECT COUNT(*) FROM archive WHERE id_archive = @id_archive",conn);
                 check_idarchive.Parameters.AddWithValue("@id_archive", id_archive);
 
@@ -233,9 +238,9 @@ namespace gestion_archive
             return check_id_archive && check_agent && check_raison && check;
         }   
 
-        private void emprunterButton_Click(object sender, EventArgs e)
+        private void RechercherButton_Click(object sender, EventArgs e)
         {
-            if(Checking()) // Check les valeurs des champs
+            if (Checking()) // Check les valeurs des champs
             {
                 try
                 {
@@ -243,11 +248,11 @@ namespace gestion_archive
                     insert_requete.Parameters.AddWithValue("@id_agent", id_agent);
                     insert_requete.Parameters.AddWithValue("@id_archive", id_archive);
                     insert_requete.Parameters.AddWithValue("@raison", raison);
-                    insert_requete.Parameters.AddWithValue("@date_emprunt", DateTime.Now); 
+                    insert_requete.Parameters.AddWithValue("@date_emprunt", DateTime.Now);
                     insert_requete.ExecuteNonQuery();
 
-                    var change_emp = new NpgsqlCommand("UPDATE archive SET id_emplacement = 20646 WHERE id_archive = @id_archive",conn);
-                    change_emp.Parameters.AddWithValue("@id_archive", id_archive); 
+                    var change_emp = new NpgsqlCommand("UPDATE archive SET id_emplacement = 20646 WHERE id_archive = @id_archive", conn);
+                    change_emp.Parameters.AddWithValue("@id_archive", id_archive);
                     change_emp.ExecuteNonQuery();
 
                     ResetValues(); //Reset les valeurs des champs
@@ -258,6 +263,15 @@ namespace gestion_archive
                     MessageBox.Show("Erreur", "Erreur : " + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ResetValues();
                 }
+            }
+        }
+
+        private void RaisonTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Empêche la saisie de la touche "Entrée"
+                RechercherButton.PerformClick();
             }
         }
     }
