@@ -214,7 +214,7 @@ namespace gestion_archive
             // Afficher le form de Emplecement
             if (emplacement == null)
             {
-                emplacement = new SearchEmplacementForm();
+                emplacement = new SearchEmplacementForm(conn);
                 emplacement.FormClosed += Emplacement_FormClosed; ;
                 emplacement.MdiParent = this;
                 emplacement.Dock = DockStyle.Fill;

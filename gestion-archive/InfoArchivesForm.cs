@@ -21,32 +21,23 @@ namespace gestion_archive
     public partial class InfoArchivesForm : Form
     {
         private NpgsqlConnection conn;
-        int id_archive; 
+        int id_archive;
+        Form previous_form;
 
         SearchArchiveForm archives;
-        public InfoArchivesForm(NpgsqlConnection conn_main_form, int id_archive_partage)
+        public InfoArchivesForm(NpgsqlConnection conn_main_form, int id_archive_partage, Form call_form)
         {
             InitializeComponent();
 
+            previous_form = call_form;
             conn = conn_main_form; //Recupere les informations de la BDD
             id_archive = id_archive_partage; // Recupère l'id_archive du form precedent
         }
 
         private void ReturnButton_Click(object sender, EventArgs e)
         {
-            // Afficher le form de Archives
-            if (archives == null)
-            {
-                archives = new SearchArchiveForm(conn);
-                archives.FormClosed += Archives_FormClosed; ; ;
-                archives.MdiParent = this.MdiParent;
-                archives.Dock = DockStyle.Fill;
-                archives.Show();
-            }
-            else
-            {
-                archives.Activate();
-            }
+            previous_form.Show();
+            this.Close();
         }
 
         private void Archives_FormClosed(object sender, FormClosedEventArgs e)
