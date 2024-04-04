@@ -47,6 +47,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.ArchiveTitleLabel = new ReaLTaiizor.Controls.BigLabel();
             this.bigLabel8 = new ReaLTaiizor.Controls.BigLabel();
+            this.panel5 = new System.Windows.Forms.Panel();
             bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             IdArchiveTitleLabel = new ReaLTaiizor.Controls.BigLabel();
             ArchivesEnCoursTitleLabel = new ReaLTaiizor.Controls.BigLabel();
@@ -55,6 +56,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // bigLabel1
@@ -63,9 +65,10 @@
             bigLabel1.BackColor = System.Drawing.Color.Transparent;
             bigLabel1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             bigLabel1.ForeColor = System.Drawing.Color.White;
-            bigLabel1.Location = new System.Drawing.Point(88, 13);
+            bigLabel1.Location = new System.Drawing.Point(176, 25);
+            bigLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             bigLabel1.Name = "bigLabel1";
-            bigLabel1.Size = new System.Drawing.Size(192, 28);
+            bigLabel1.Size = new System.Drawing.Size(379, 54);
             bigLabel1.TabIndex = 51;
             bigLabel1.Text = "Archives à détruire";
             // 
@@ -75,9 +78,10 @@
             IdArchiveTitleLabel.BackColor = System.Drawing.Color.Transparent;
             IdArchiveTitleLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             IdArchiveTitleLabel.ForeColor = System.Drawing.Color.White;
-            IdArchiveTitleLabel.Location = new System.Drawing.Point(3, 52);
+            IdArchiveTitleLabel.Location = new System.Drawing.Point(6, 100);
+            IdArchiveTitleLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             IdArchiveTitleLabel.Name = "IdArchiveTitleLabel";
-            IdArchiveTitleLabel.Size = new System.Drawing.Size(87, 21);
+            IdArchiveTitleLabel.Size = new System.Drawing.Size(172, 45);
             IdArchiveTitleLabel.TabIndex = 75;
             IdArchiveTitleLabel.Text = "Id Archive";
             // 
@@ -87,9 +91,10 @@
             ArchivesEnCoursTitleLabel.BackColor = System.Drawing.Color.Transparent;
             ArchivesEnCoursTitleLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             ArchivesEnCoursTitleLabel.ForeColor = System.Drawing.Color.White;
-            ArchivesEnCoursTitleLabel.Location = new System.Drawing.Point(3, 185);
+            ArchivesEnCoursTitleLabel.Location = new System.Drawing.Point(6, 356);
+            ArchivesEnCoursTitleLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             ArchivesEnCoursTitleLabel.Name = "ArchivesEnCoursTitleLabel";
-            ArchivesEnCoursTitleLabel.Size = new System.Drawing.Size(199, 20);
+            ArchivesEnCoursTitleLabel.Size = new System.Drawing.Size(392, 40);
             ArchivesEnCoursTitleLabel.TabIndex = 80;
             ArchivesEnCoursTitleLabel.Text = "Nombre archives en cours :";
             // 
@@ -99,9 +104,10 @@
             bigLabel2.BackColor = System.Drawing.Color.Transparent;
             bigLabel2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             bigLabel2.ForeColor = System.Drawing.Color.White;
-            bigLabel2.Location = new System.Drawing.Point(105, 0);
+            bigLabel2.Location = new System.Drawing.Point(210, 0);
+            bigLabel2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             bigLabel2.Name = "bigLabel2";
-            bigLabel2.Size = new System.Drawing.Size(192, 28);
+            bigLabel2.Size = new System.Drawing.Size(379, 54);
             bigLabel2.TabIndex = 74;
             bigLabel2.Text = "Archives à détruire";
             // 
@@ -113,10 +119,12 @@
             this.DeleteDataView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.DeleteDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DeleteDataView.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DeleteDataView.Location = new System.Drawing.Point(13, 38);
+            this.DeleteDataView.Location = new System.Drawing.Point(26, 73);
+            this.DeleteDataView.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.DeleteDataView.Name = "DeleteDataView";
             this.DeleteDataView.ReadOnly = true;
-            this.DeleteDataView.Size = new System.Drawing.Size(361, 388);
+            this.DeleteDataView.RowHeadersWidth = 82;
+            this.DeleteDataView.Size = new System.Drawing.Size(722, 746);
             this.DeleteDataView.TabIndex = 0;
             this.DeleteDataView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeleteDataView_CellContentClick);
             // 
@@ -125,9 +133,10 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.panel1.Controls.Add(bigLabel2);
             this.panel1.Controls.Add(this.DeleteDataView);
-            this.panel1.Location = new System.Drawing.Point(12, 73);
+            this.panel1.Location = new System.Drawing.Point(12, 127);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(390, 436);
+            this.panel1.Size = new System.Drawing.Size(780, 838);
             this.panel1.TabIndex = 3;
             // 
             // panel2
@@ -135,9 +144,10 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.panel2.Controls.Add(this.NbDeleteLabel);
             this.panel2.Controls.Add(bigLabel1);
-            this.panel2.Location = new System.Drawing.Point(411, 73);
+            this.panel2.Location = new System.Drawing.Point(810, 127);
+            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(377, 63);
+            this.panel2.Size = new System.Drawing.Size(754, 121);
             this.panel2.TabIndex = 4;
             // 
             // NbDeleteLabel
@@ -145,9 +155,10 @@
             this.NbDeleteLabel.AutoSize = true;
             this.NbDeleteLabel.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NbDeleteLabel.ForeColor = System.Drawing.Color.White;
-            this.NbDeleteLabel.Location = new System.Drawing.Point(57, 13);
+            this.NbDeleteLabel.Location = new System.Drawing.Point(114, 25);
+            this.NbDeleteLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.NbDeleteLabel.Name = "NbDeleteLabel";
-            this.NbDeleteLabel.Size = new System.Drawing.Size(25, 28);
+            this.NbDeleteLabel.Size = new System.Drawing.Size(49, 54);
             this.NbDeleteLabel.TabIndex = 73;
             this.NbDeleteLabel.Text = "X";
             // 
@@ -165,18 +176,19 @@
             this.panel3.Controls.Add(IdArchiveTitleLabel);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.ArchiveTitleLabel);
-            this.panel3.Location = new System.Drawing.Point(411, 144);
+            this.panel3.Location = new System.Drawing.Point(810, 264);
+            this.panel3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(377, 365);
+            this.panel3.Size = new System.Drawing.Size(754, 702);
             this.panel3.TabIndex = 5;
             // 
             // AgentComboBox
             // 
             this.AgentComboBox.FormattingEnabled = true;
-            this.AgentComboBox.Location = new System.Drawing.Point(8, 252);
-            this.AgentComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.AgentComboBox.Location = new System.Drawing.Point(16, 485);
+            this.AgentComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AgentComboBox.Name = "AgentComboBox";
-            this.AgentComboBox.Size = new System.Drawing.Size(179, 21);
+            this.AgentComboBox.Size = new System.Drawing.Size(354, 33);
             this.AgentComboBox.TabIndex = 83;
             this.AgentComboBox.SelectedIndexChanged += new System.EventHandler(this.AgentComboBox_SelectedIndexChanged);
             this.AgentComboBox.TextChanged += new System.EventHandler(this.AgentComboBox_TextChanged);
@@ -189,9 +201,10 @@
             this.bigLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bigLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel3.ForeColor = System.Drawing.Color.White;
-            this.bigLabel3.Location = new System.Drawing.Point(3, 218);
+            this.bigLabel3.Location = new System.Drawing.Point(6, 419);
+            this.bigLabel3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.bigLabel3.Name = "bigLabel3";
-            this.bigLabel3.Size = new System.Drawing.Size(56, 21);
+            this.bigLabel3.Size = new System.Drawing.Size(111, 45);
             this.bigLabel3.TabIndex = 82;
             this.bigLabel3.Text = "Agent";
             // 
@@ -200,17 +213,19 @@
             this.NbrArchiveInfoLabel.AutoSize = true;
             this.NbrArchiveInfoLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NbrArchiveInfoLabel.ForeColor = System.Drawing.Color.White;
-            this.NbrArchiveInfoLabel.Location = new System.Drawing.Point(208, 185);
+            this.NbrArchiveInfoLabel.Location = new System.Drawing.Point(416, 356);
+            this.NbrArchiveInfoLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.NbrArchiveInfoLabel.Name = "NbrArchiveInfoLabel";
-            this.NbrArchiveInfoLabel.Size = new System.Drawing.Size(18, 20);
+            this.NbrArchiveInfoLabel.Size = new System.Drawing.Size(36, 41);
             this.NbrArchiveInfoLabel.TabIndex = 81;
             this.NbrArchiveInfoLabel.Text = "X";
             // 
             // IdArchiveTextBox
             // 
-            this.IdArchiveTextBox.Location = new System.Drawing.Point(6, 78);
+            this.IdArchiveTextBox.Location = new System.Drawing.Point(12, 150);
+            this.IdArchiveTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.IdArchiveTextBox.Name = "IdArchiveTextBox";
-            this.IdArchiveTextBox.Size = new System.Drawing.Size(200, 20);
+            this.IdArchiveTextBox.Size = new System.Drawing.Size(396, 31);
             this.IdArchiveTextBox.TabIndex = 79;
             this.IdArchiveTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IdArchiveTextBox_KeyDown);
             // 
@@ -221,10 +236,10 @@
             this.AnnulerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AnnulerButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AnnulerButton.ForeColor = System.Drawing.Color.White;
-            this.AnnulerButton.Location = new System.Drawing.Point(212, 121);
-            this.AnnulerButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AnnulerButton.Location = new System.Drawing.Point(424, 233);
+            this.AnnulerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AnnulerButton.Name = "AnnulerButton";
-            this.AnnulerButton.Size = new System.Drawing.Size(122, 39);
+            this.AnnulerButton.Size = new System.Drawing.Size(244, 75);
             this.AnnulerButton.TabIndex = 78;
             this.AnnulerButton.Text = "Annuler";
             this.AnnulerButton.UseVisualStyleBackColor = false;
@@ -238,10 +253,10 @@
             this.TerminerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TerminerButton.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TerminerButton.ForeColor = System.Drawing.Color.White;
-            this.TerminerButton.Location = new System.Drawing.Point(136, 305);
-            this.TerminerButton.Margin = new System.Windows.Forms.Padding(2);
+            this.TerminerButton.Location = new System.Drawing.Point(272, 587);
+            this.TerminerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TerminerButton.Name = "TerminerButton";
-            this.TerminerButton.Size = new System.Drawing.Size(122, 39);
+            this.TerminerButton.Size = new System.Drawing.Size(244, 75);
             this.TerminerButton.TabIndex = 77;
             this.TerminerButton.Text = "Terminer";
             this.TerminerButton.UseVisualStyleBackColor = false;
@@ -255,10 +270,10 @@
             this.AjouterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AjouterButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AjouterButton.ForeColor = System.Drawing.Color.White;
-            this.AjouterButton.Location = new System.Drawing.Point(212, 78);
-            this.AjouterButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AjouterButton.Location = new System.Drawing.Point(424, 150);
+            this.AjouterButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AjouterButton.Name = "AjouterButton";
-            this.AjouterButton.Size = new System.Drawing.Size(122, 39);
+            this.AjouterButton.Size = new System.Drawing.Size(244, 75);
             this.AjouterButton.TabIndex = 76;
             this.AjouterButton.Text = "Ajouter";
             this.AjouterButton.UseVisualStyleBackColor = false;
@@ -268,10 +283,10 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.ForeColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(6, 41);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Location = new System.Drawing.Point(12, 79);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(360, 4);
+            this.panel4.Size = new System.Drawing.Size(720, 8);
             this.panel4.TabIndex = 73;
             // 
             // ArchiveTitleLabel
@@ -280,9 +295,10 @@
             this.ArchiveTitleLabel.BackColor = System.Drawing.Color.Transparent;
             this.ArchiveTitleLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ArchiveTitleLabel.ForeColor = System.Drawing.Color.White;
-            this.ArchiveTitleLabel.Location = new System.Drawing.Point(2, 5);
+            this.ArchiveTitleLabel.Location = new System.Drawing.Point(4, 10);
+            this.ArchiveTitleLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ArchiveTitleLabel.Name = "ArchiveTitleLabel";
-            this.ArchiveTitleLabel.Size = new System.Drawing.Size(107, 25);
+            this.ArchiveTitleLabel.Size = new System.Drawing.Size(206, 50);
             this.ArchiveTitleLabel.TabIndex = 74;
             this.ArchiveTitleLabel.Text = "Supprimer";
             // 
@@ -292,24 +308,36 @@
             this.bigLabel8.BackColor = System.Drawing.Color.Transparent;
             this.bigLabel8.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
-            this.bigLabel8.Location = new System.Drawing.Point(320, 9);
+            this.bigLabel8.Location = new System.Drawing.Point(628, 4);
+            this.bigLabel8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.bigLabel8.Name = "bigLabel8";
-            this.bigLabel8.Size = new System.Drawing.Size(194, 45);
+            this.bigLabel8.Size = new System.Drawing.Size(388, 86);
             this.bigLabel8.TabIndex = 44;
             this.bigLabel8.Text = "Destruction";
             // 
+            // panel5
+            // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel5.Controls.Add(this.bigLabel8);
+            this.panel5.Controls.Add(this.panel3);
+            this.panel5.Controls.Add(this.panel1);
+            this.panel5.Controls.Add(this.panel2);
+            this.panel5.Location = new System.Drawing.Point(12, 13);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1588, 991);
+            this.panel5.TabIndex = 45;
+            // 
             // DeleteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 545);
-            this.Controls.Add(this.bigLabel8);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1646, 1048);
+            this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "DeleteForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.DeleteForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DeleteDataView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -317,8 +345,9 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -339,5 +368,6 @@
         private System.Windows.Forms.ComboBox AgentComboBox;
         private ReaLTaiizor.Controls.BigLabel bigLabel3;
         private ReaLTaiizor.Controls.BigLabel bigLabel8;
+        private System.Windows.Forms.Panel panel5;
     }
 }

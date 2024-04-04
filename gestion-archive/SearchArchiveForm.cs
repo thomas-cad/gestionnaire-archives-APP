@@ -33,11 +33,20 @@ namespace gestion_archive
             conn = conn_main_form; //Recupere les informations de la BDD
 
         }
-
         private void formArchives_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
+            CentrerPanneau(); 
+        }
 
+        private void CentrerPanneau()
+        {
+            // Calculer les coordonnées x et y pour centrer le panneau
+            int x = (this.ClientSize.Width - panel1.Size.Width) / 2;
+            int y = (this.ClientSize.Height - panel1.Size.Height) / 2;
+
+            // Positionner le panneau au centre
+            panel1.Location = new System.Drawing.Point(x, y);
         }
 
         private bool Checking()

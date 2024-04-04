@@ -150,5 +150,20 @@ namespace gestion_archive
                 MessageBox.Show("Le lieu est invalide", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void ModifierLieuForm_Load(object sender, EventArgs e)
+        {
+            CentrerPanneau(); 
+        }
+
+        private void CentrerPanneau()
+        {
+            // Calculer les coordonnées x et y pour centrer le panneau
+            int x = (this.ClientSize.Width - panel1.Size.Width) / 2;
+            int y = (this.ClientSize.Height - panel1.Size.Height) / 2;
+
+            // Positionner le panneau au centre
+            panel1.Location = new System.Drawing.Point(x, y);
+        }
     }
 }

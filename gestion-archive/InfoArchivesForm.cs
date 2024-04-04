@@ -60,9 +60,21 @@ namespace gestion_archive
             labeldetruit.Text = string.Empty; 
         }
 
+        private void CentrerPanneau()
+        {
+            // Calculer les coordonnées x et y pour centrer le panneau
+            int x = (this.ClientSize.Width - panel1.Size.Width) / 2;
+            int y = (this.ClientSize.Height - panel1.Size.Height) / 2;
+
+            // Positionner le panneau au centre
+            panel1.Location = new System.Drawing.Point(x, y);
+        }
+
         // Gerer l'affichage des archives
         private void InfoArchivesForm_Load(object sender, EventArgs e)
         {
+            CentrerPanneau(); 
+
             ResetValues();
 
             //Definie le label de archive avec sa valeur

@@ -302,5 +302,20 @@ namespace gestion_archive
         {
 
         }
+
+        private void DeleteForm_Load(object sender, EventArgs e)
+        {
+            CentrerPanneau(); 
+        }
+
+        private void CentrerPanneau()
+        {
+            // Calculer les coordonnées x et y pour centrer le panneau
+            int x = (this.ClientSize.Width - panel5.Size.Width) / 2;
+            int y = (this.ClientSize.Height - panel5.Size.Height) / 2;
+
+            // Positionner le panneau au centre
+            panel5.Location = new System.Drawing.Point(x, y);
+        }
     }
 }

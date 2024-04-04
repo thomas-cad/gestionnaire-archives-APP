@@ -131,5 +131,20 @@ namespace gestion_archive
             previsous_form.Show();
             this.Close();
         }
+
+        private void ListingArchiveEmplacementForm_Load(object sender, EventArgs e)
+        {
+            CentrerPanneau(); 
+        }
+
+        private void CentrerPanneau()
+        {
+            // Calculer les coordonnées x et y pour centrer le panneau
+            int x = (this.ClientSize.Width - panel2.Size.Width) / 2;
+            int y = (this.ClientSize.Height - panel2.Size.Height) / 2;
+
+            // Positionner le panneau au centre
+            panel1.Location = new System.Drawing.Point(x, y);
+        }
     }
 }

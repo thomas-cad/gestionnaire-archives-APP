@@ -36,7 +36,16 @@ namespace gestion_archive
             IdArchiveTextBox.Text = string.Empty; // Vide la textbox de id archive
         }
 
-        
+        private void CentrerPanneau()
+        {
+            // Calculer les coordonnées x et y pour centrer le panneau
+            int x = (this.ClientSize.Width - panel1.Size.Width) / 2;
+            int y = (this.ClientSize.Height - panel1.Size.Height) / 2;
+
+            // Positionner le panneau au centre
+            panel1.Location = new System.Drawing.Point(x, y);
+        }
+
         private bool Checking()
         {
             bool empruntExists = false;
@@ -103,6 +112,11 @@ namespace gestion_archive
                 e.SuppressKeyPress = true; // Empêche la saisie de la touche "Entrée"
                 RendreButton.PerformClick();
             }
+        }
+
+        private void RendreForm_Load(object sender, EventArgs e)
+        {
+            CentrerPanneau(); 
         }
     }
 }

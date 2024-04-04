@@ -42,9 +42,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(19, 64);
+            this.panel2.Location = new System.Drawing.Point(38, 123);
+            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(464, 4);
+            this.panel2.Size = new System.Drawing.Size(928, 8);
             this.panel2.TabIndex = 48;
             // 
             // titre_label
@@ -53,14 +54,16 @@
             this.titre_label.BackColor = System.Drawing.Color.Transparent;
             this.titre_label.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titre_label.ForeColor = System.Drawing.Color.White;
-            this.titre_label.Location = new System.Drawing.Point(144, 16);
+            this.titre_label.Location = new System.Drawing.Point(288, 31);
+            this.titre_label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.titre_label.Name = "titre_label";
-            this.titre_label.Size = new System.Drawing.Size(221, 45);
+            this.titre_label.Size = new System.Drawing.Size(441, 86);
             this.titre_label.TabIndex = 0;
             this.titre_label.Text = "Modifier Lieu";
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.panel1.Controls.Add(this.SupprimerButton);
             this.panel1.Controls.Add(this.LieuComboBox);
@@ -70,10 +73,11 @@
             this.panel1.Controls.Add(this.titre_label);
             this.panel1.Controls.Add(this.ModifierButton);
             this.panel1.EdgeColor = System.Drawing.SystemColors.Control;
-            this.panel1.Location = new System.Drawing.Point(44, 12);
+            this.panel1.Location = new System.Drawing.Point(88, 23);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(504, 302);
+            this.panel1.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel1.Size = new System.Drawing.Size(1008, 581);
             this.panel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.panel1.TabIndex = 5;
             this.panel1.Text = "panel1";
@@ -86,10 +90,10 @@
             this.SupprimerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SupprimerButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SupprimerButton.ForeColor = System.Drawing.Color.White;
-            this.SupprimerButton.Location = new System.Drawing.Point(136, 247);
-            this.SupprimerButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SupprimerButton.Location = new System.Drawing.Point(272, 475);
+            this.SupprimerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SupprimerButton.Name = "SupprimerButton";
-            this.SupprimerButton.Size = new System.Drawing.Size(242, 41);
+            this.SupprimerButton.Size = new System.Drawing.Size(484, 79);
             this.SupprimerButton.TabIndex = 52;
             this.SupprimerButton.Text = "Supprimer";
             this.SupprimerButton.UseVisualStyleBackColor = false;
@@ -98,10 +102,10 @@
             // LieuComboBox
             // 
             this.LieuComboBox.FormattingEnabled = true;
-            this.LieuComboBox.Location = new System.Drawing.Point(103, 115);
-            this.LieuComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.LieuComboBox.Location = new System.Drawing.Point(206, 221);
+            this.LieuComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LieuComboBox.Name = "LieuComboBox";
-            this.LieuComboBox.Size = new System.Drawing.Size(326, 21);
+            this.LieuComboBox.Size = new System.Drawing.Size(648, 33);
             this.LieuComboBox.TabIndex = 51;
             this.LieuComboBox.SelectedIndexChanged += new System.EventHandler(this.LieuComboBox_SelectedIndexChanged);
             this.LieuComboBox.TextChanged += new System.EventHandler(this.LieuComboBox_TextChanged);
@@ -114,9 +118,10 @@
             this.bigLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bigLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel2.ForeColor = System.Drawing.Color.White;
-            this.bigLabel2.Location = new System.Drawing.Point(98, 86);
+            this.bigLabel2.Location = new System.Drawing.Point(196, 165);
+            this.bigLabel2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.bigLabel2.Name = "bigLabel2";
-            this.bigLabel2.Size = new System.Drawing.Size(49, 25);
+            this.bigLabel2.Size = new System.Drawing.Size(96, 51);
             this.bigLabel2.TabIndex = 50;
             this.bigLabel2.Text = "Lieu";
             // 
@@ -128,10 +133,10 @@
             this.AjouterEpisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AjouterEpisButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AjouterEpisButton.ForeColor = System.Drawing.Color.White;
-            this.AjouterEpisButton.Location = new System.Drawing.Point(136, 202);
-            this.AjouterEpisButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AjouterEpisButton.Location = new System.Drawing.Point(272, 388);
+            this.AjouterEpisButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AjouterEpisButton.Name = "AjouterEpisButton";
-            this.AjouterEpisButton.Size = new System.Drawing.Size(242, 41);
+            this.AjouterEpisButton.Size = new System.Drawing.Size(484, 79);
             this.AjouterEpisButton.TabIndex = 49;
             this.AjouterEpisButton.Text = "Ajouter des épis";
             this.AjouterEpisButton.UseVisualStyleBackColor = false;
@@ -145,10 +150,10 @@
             this.ModifierButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ModifierButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModifierButton.ForeColor = System.Drawing.Color.White;
-            this.ModifierButton.Location = new System.Drawing.Point(136, 157);
-            this.ModifierButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ModifierButton.Location = new System.Drawing.Point(272, 302);
+            this.ModifierButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ModifierButton.Name = "ModifierButton";
-            this.ModifierButton.Size = new System.Drawing.Size(242, 41);
+            this.ModifierButton.Size = new System.Drawing.Size(484, 79);
             this.ModifierButton.TabIndex = 45;
             this.ModifierButton.Text = "Modifier";
             this.ModifierButton.UseVisualStyleBackColor = false;
@@ -156,13 +161,15 @@
             // 
             // ModifierLieuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 326);
+            this.ClientSize = new System.Drawing.Size(1184, 627);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "ModifierLieuForm";
             this.Text = "ModifierLieuForm";
+            this.Load += new System.EventHandler(this.ModifierLieuForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
