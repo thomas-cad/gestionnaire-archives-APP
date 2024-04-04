@@ -30,14 +30,14 @@
         {
             this.titre_label = new ReaLTaiizor.Controls.BigLabel();
             this.panel1 = new ReaLTaiizor.Controls.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
-            this.textBoxIdArchive = new System.Windows.Forms.TextBox();
-            this.RechercherButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxCote = new System.Windows.Forms.TextBox();
+            this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.button_recherchercote = new System.Windows.Forms.Button();
+            this.textBoxIdArchive = new System.Windows.Forms.TextBox();
+            this.RechercherButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,14 +68,36 @@
             this.panel1.Controls.Add(this.titre_label);
             this.panel1.Controls.Add(this.RechercherButton);
             this.panel1.EdgeColor = System.Drawing.SystemColors.Control;
-            this.panel1.Location = new System.Drawing.Point(156, 79);
+            this.panel1.Location = new System.Drawing.Point(354, 176);
             this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(1000, 423);
+            this.panel1.Size = new System.Drawing.Size(1000, 721);
             this.panel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.panel1.TabIndex = 3;
             this.panel1.Text = "panel1";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(38, 421);
+            this.panel3.Margin = new System.Windows.Forms.Padding(6);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(928, 19);
+            this.panel3.TabIndex = 52;
+            // 
+            // bigLabel2
+            // 
+            this.bigLabel2.AutoSize = true;
+            this.bigLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel2.ForeColor = System.Drawing.Color.White;
+            this.bigLabel2.Location = new System.Drawing.Point(188, 465);
+            this.bigLabel2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.bigLabel2.Name = "bigLabel2";
+            this.bigLabel2.Size = new System.Drawing.Size(105, 51);
+            this.bigLabel2.TabIndex = 51;
+            this.bigLabel2.Text = "Cote";
             // 
             // panel2
             // 
@@ -85,6 +107,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(928, 19);
             this.panel2.TabIndex = 48;
+            // 
+            // textBoxCote
+            // 
+            this.textBoxCote.Location = new System.Drawing.Point(198, 521);
+            this.textBoxCote.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxCote.Name = "textBoxCote";
+            this.textBoxCote.Size = new System.Drawing.Size(610, 31);
+            this.textBoxCote.TabIndex = 50;
             // 
             // bigLabel1
             // 
@@ -98,6 +128,23 @@
             this.bigLabel1.Size = new System.Drawing.Size(204, 51);
             this.bigLabel1.TabIndex = 47;
             this.bigLabel1.Text = "Id Archive";
+            // 
+            // button_recherchercote
+            // 
+            this.button_recherchercote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.button_recherchercote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_recherchercote.FlatAppearance.BorderSize = 0;
+            this.button_recherchercote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_recherchercote.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_recherchercote.ForeColor = System.Drawing.Color.White;
+            this.button_recherchercote.Location = new System.Drawing.Point(342, 586);
+            this.button_recherchercote.Margin = new System.Windows.Forms.Padding(4);
+            this.button_recherchercote.Name = "button_recherchercote";
+            this.button_recherchercote.Size = new System.Drawing.Size(320, 79);
+            this.button_recherchercote.TabIndex = 49;
+            this.button_recherchercote.Text = "Rechercher";
+            this.button_recherchercote.UseVisualStyleBackColor = false;
+            this.button_recherchercote.Click += new System.EventHandler(this.button_recherchercote_Click);
             // 
             // textBoxIdArchive
             // 
@@ -124,59 +171,12 @@
             this.RechercherButton.UseVisualStyleBackColor = false;
             this.RechercherButton.Click += new System.EventHandler(this.RechercherButton_Click);
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(38, 421);
-            this.panel3.Margin = new System.Windows.Forms.Padding(6);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(928, 19);
-            this.panel3.TabIndex = 52;
-            // 
-            // bigLabel2
-            // 
-            this.bigLabel2.AutoSize = true;
-            this.bigLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel2.ForeColor = System.Drawing.Color.White;
-            this.bigLabel2.Location = new System.Drawing.Point(188, 465);
-            this.bigLabel2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.bigLabel2.Name = "bigLabel2";
-            this.bigLabel2.Size = new System.Drawing.Size(105, 51);
-            this.bigLabel2.TabIndex = 51;
-            this.bigLabel2.Text = "Cote";
-            // 
-            // textBoxCote
-            // 
-            this.textBoxCote.Location = new System.Drawing.Point(198, 521);
-            this.textBoxCote.Margin = new System.Windows.Forms.Padding(6);
-            this.textBoxCote.Name = "textBoxCote";
-            this.textBoxCote.Size = new System.Drawing.Size(610, 31);
-            this.textBoxCote.TabIndex = 50;
-            // 
-            // button_recherchercote
-            // 
-            this.button_recherchercote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
-            this.button_recherchercote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_recherchercote.FlatAppearance.BorderSize = 0;
-            this.button_recherchercote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_recherchercote.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_recherchercote.ForeColor = System.Drawing.Color.White;
-            this.button_recherchercote.Location = new System.Drawing.Point(342, 586);
-            this.button_recherchercote.Margin = new System.Windows.Forms.Padding(4);
-            this.button_recherchercote.Name = "button_recherchercote";
-            this.button_recherchercote.Size = new System.Drawing.Size(320, 79);
-            this.button_recherchercote.TabIndex = 49;
-            this.button_recherchercote.Text = "Rechercher";
-            this.button_recherchercote.UseVisualStyleBackColor = false;
-            this.button_recherchercote.Click += new System.EventHandler(this.button_recherchercote_Click);
-            // 
             // SearchArchiveForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1310, 633);
+            this.ClientSize = new System.Drawing.Size(1741, 1055);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
