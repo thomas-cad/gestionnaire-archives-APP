@@ -109,22 +109,21 @@ namespace gestion_archive
                 object result = check_cote.ExecuteScalar();
                 if (result != null) 
                 { 
-                    id_archive = (int)result; 
+                    id_archive = (int)result;
+                    var check_emprunt = new NpgsqlCommand("SELECT COUNT(*) FROM archive WHERE id_archive = @id_archive", conn);
+                    check_emprunt.Parameters.AddWithValue("@id_archive", id_archive);
+                    if ((long)check_emprunt.ExecuteScalar() > 0)
+                    {
+                        check_id_archive = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Archive inexistante", "Archive", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Cote inexistante", "Cote", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                var check_emprunt = new NpgsqlCommand("SELECT COUNT(*) FROM archive WHERE id_archive = @id_archive", conn);
-                check_emprunt.Parameters.AddWithValue("@id_archive", id_archive);
-                if ((long)check_emprunt.ExecuteScalar() > 0)
-                {
-                    check_id_archive = true;
-                }
-                else
-                {
-                    MessageBox.Show("Archive inexistante", "Archive", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             return check_id_archive;

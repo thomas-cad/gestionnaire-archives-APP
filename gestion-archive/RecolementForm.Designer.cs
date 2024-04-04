@@ -174,7 +174,7 @@
             this.RecolementTitleLabel.BackColor = System.Drawing.Color.Transparent;
             this.RecolementTitleLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecolementTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
-            this.RecolementTitleLabel.Location = new System.Drawing.Point(470, 3);
+            this.RecolementTitleLabel.Location = new System.Drawing.Point(485, 3);
             this.RecolementTitleLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.RecolementTitleLabel.Name = "RecolementTitleLabel";
             this.RecolementTitleLabel.Size = new System.Drawing.Size(393, 86);
@@ -286,7 +286,7 @@
             // IdArchiveTextBox
             // 
             this.IdArchiveTextBox.Location = new System.Drawing.Point(10, 378);
-            this.IdArchiveTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.IdArchiveTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.IdArchiveTextBox.Name = "IdArchiveTextBox";
             this.IdArchiveTextBox.Size = new System.Drawing.Size(396, 31);
             this.IdArchiveTextBox.TabIndex = 72;
@@ -296,7 +296,7 @@
             // IdEmplacementTextBox
             // 
             this.IdEmplacementTextBox.Location = new System.Drawing.Point(10, 134);
-            this.IdEmplacementTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.IdEmplacementTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.IdEmplacementTextBox.Name = "IdEmplacementTextBox";
             this.IdEmplacementTextBox.Size = new System.Drawing.Size(394, 31);
             this.IdEmplacementTextBox.TabIndex = 71;
@@ -401,7 +401,7 @@
             this.SuccesPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
             this.SuccesPanel.Controls.Add(this.label1);
             this.SuccesPanel.Location = new System.Drawing.Point(919, 14);
-            this.SuccesPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.SuccesPanel.Margin = new System.Windows.Forms.Padding(6);
             this.SuccesPanel.Name = "SuccesPanel";
             this.SuccesPanel.Size = new System.Drawing.Size(450, 75);
             this.SuccesPanel.TabIndex = 64;
@@ -424,7 +424,7 @@
             this.panel4.Controls.Add(this.SuccesPanel);
             this.panel4.Controls.Add(this.RecolementTitleLabel);
             this.panel4.Controls.Add(this.panel2);
-            this.panel4.Location = new System.Drawing.Point(7, 9);
+            this.panel4.Location = new System.Drawing.Point(20, -43);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1427, 822);
             this.panel4.TabIndex = 65;
@@ -434,7 +434,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1844, 1079);
+            this.ClientSize = new System.Drawing.Size(1697, 912);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);

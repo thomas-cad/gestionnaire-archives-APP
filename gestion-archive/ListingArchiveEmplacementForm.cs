@@ -144,7 +144,7 @@ namespace gestion_archive
             int y = (this.ClientSize.Height - panel2.Size.Height) / 2;
 
             // Positionner le panneau au centre
-            panel1.Location = new System.Drawing.Point(x, y);
+            panel2.Location = new System.Drawing.Point(x, y);
         }
     }
 }
