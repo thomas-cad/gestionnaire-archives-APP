@@ -168,35 +168,34 @@ namespace gestion_archive
             empruntTransition.Start();
         }
 
-        bool sidebarExpand = true; 
+        bool sidebarExpand = true;
         private void sidebarTransition_Tick(object sender, EventArgs e)
         {
-            //Gestion du menu deroulant principal 
+            // Gestion du menu déroulant principal 
 
-            if (sidebarExpand == false) //Diminuer la taille
+            if (sidebarExpand == false) // Si la barre latérale est rétractée
             {
-                sidebar.Width -= 10;
-                if (sidebar.Width <= 60)
+                sidebar.Width -= 10; // Réduire la largeur de la barre latérale
+                if (sidebar.Width <= 60) // Si la largeur est réduite à 60 pixels
                 {
-                    sidebarExpand = true;
-                    sidebarTransition.Stop();
+                    sidebarExpand = true; // Mettre à jour l'état de la barre latérale (étendue)
+                    sidebarTransition.Stop(); // Arrêter le timer de transition
                 }
             }
-            else //Augmenter la taille
+            else // Si la barre latérale est étendue
             {
-                sidebar.Width += 10;
-                if (sidebar.Width >= 190)
+                sidebar.Width += 10; // Augmenter la largeur de la barre latérale
+                if (sidebar.Width >= 190) // Si la largeur atteint 190 pixels
                 {
-                    sidebarExpand = false;
-                    sidebarTransition.Stop();
+                    sidebarExpand = false; // Mettre à jour l'état de la barre latérale (rétractée)
+                    sidebarTransition.Stop(); // Arrêter le timer de transition
                 }
-
             }
         }
 
         private void button_menu_Click(object sender, EventArgs e)
         {
-            sidebarTransition.Start();
+            sidebarTransition.Start(); // Démarrer le timer de transition lorsqu'un bouton de menu est cliqué
         }
 
         private void button_exit_Click(object sender, EventArgs e)

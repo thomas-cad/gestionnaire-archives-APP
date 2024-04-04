@@ -16,6 +16,7 @@ namespace gestion_archive
     {
         NpgsqlConnection conn;
         int id_lieu = -1; //on testera à chaque fois si la valeur n'est pas -1
+        EditLieuForm editLieuForm;
         public ModifierLieuForm(NpgsqlConnection conn_main)
         {
             InitializeComponent();
@@ -142,13 +143,28 @@ namespace gestion_archive
         {
             if (id_lieu != -1)
             {
-                EditLieuForm editLieuForm = new EditLieuForm(conn, id_lieu, this);
-                editLieuForm.Show();
+                if (editLieuForm == null)
+                {
+                    editLieuForm = new EditLieuForm(conn,id_lieu,this);
+                    editLieuForm.FormClosed += EditLieuForm_FormClosed; ; ;
+                    editLieuForm.MdiParent = this.MdiParent;
+                    editLieuForm.Dock = DockStyle.Fill;
+                    editLieuForm.Show();
+                }
+                else
+                {
+                    editLieuForm.Activate();
+                }
             }
             else
             {
                 MessageBox.Show("Le lieu est invalide", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void EditLieuForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            editLieuForm = null; 
         }
 
         private void ModifierLieuForm_Load(object sender, EventArgs e)
