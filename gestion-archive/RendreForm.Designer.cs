@@ -45,9 +45,10 @@
             bigLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             bigLabel1.Font = new System.Drawing.Font("Segoe UI", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             bigLabel1.ForeColor = System.Drawing.Color.White;
-            bigLabel1.Location = new System.Drawing.Point(102, 10);
+            bigLabel1.Location = new System.Drawing.Point(204, 19);
+            bigLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             bigLabel1.Name = "bigLabel1";
-            bigLabel1.Size = new System.Drawing.Size(262, 37);
+            bigLabel1.Size = new System.Drawing.Size(510, 71);
             bigLabel1.TabIndex = 52;
             bigLabel1.Text = "Rendre une archive";
             // 
@@ -57,9 +58,10 @@
             IdArchiveTitleLabel.BackColor = System.Drawing.Color.Transparent;
             IdArchiveTitleLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             IdArchiveTitleLabel.ForeColor = System.Drawing.Color.White;
-            IdArchiveTitleLabel.Location = new System.Drawing.Point(110, 79);
+            IdArchiveTitleLabel.Location = new System.Drawing.Point(220, 152);
+            IdArchiveTitleLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             IdArchiveTitleLabel.Name = "IdArchiveTitleLabel";
-            IdArchiveTitleLabel.Size = new System.Drawing.Size(87, 21);
+            IdArchiveTitleLabel.Size = new System.Drawing.Size(172, 45);
             IdArchiveTitleLabel.TabIndex = 80;
             IdArchiveTitleLabel.Text = "Id Archive";
             // 
@@ -71,10 +73,10 @@
             this.panel1.Controls.Add(bigLabel1);
             this.panel1.Controls.Add(this.IdArchiveTextBox);
             this.panel1.Controls.Add(IdArchiveTitleLabel);
-            this.panel1.Location = new System.Drawing.Point(33, 30);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(66, 58);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(459, 214);
+            this.panel1.Size = new System.Drawing.Size(918, 412);
             this.panel1.TabIndex = 0;
             // 
             // RendreButton
@@ -85,10 +87,10 @@
             this.RendreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RendreButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RendreButton.ForeColor = System.Drawing.Color.White;
-            this.RendreButton.Location = new System.Drawing.Point(150, 151);
-            this.RendreButton.Margin = new System.Windows.Forms.Padding(2);
+            this.RendreButton.Location = new System.Drawing.Point(300, 290);
+            this.RendreButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RendreButton.Name = "RendreButton";
-            this.RendreButton.Size = new System.Drawing.Size(160, 41);
+            this.RendreButton.Size = new System.Drawing.Size(320, 79);
             this.RendreButton.TabIndex = 89;
             this.RendreButton.Text = "Rendre";
             this.RendreButton.UseVisualStyleBackColor = false;
@@ -97,30 +99,32 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(18, 61);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(36, 117);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(428, 6);
+            this.panel2.Size = new System.Drawing.Size(856, 12);
             this.panel2.TabIndex = 86;
             // 
             // IdArchiveTextBox
             // 
-            this.IdArchiveTextBox.Location = new System.Drawing.Point(108, 108);
+            this.IdArchiveTextBox.Location = new System.Drawing.Point(216, 208);
+            this.IdArchiveTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.IdArchiveTextBox.Name = "IdArchiveTextBox";
-            this.IdArchiveTextBox.Size = new System.Drawing.Size(251, 20);
+            this.IdArchiveTextBox.Size = new System.Drawing.Size(498, 31);
             this.IdArchiveTextBox.TabIndex = 81;
             this.IdArchiveTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IdArchiveTextBox_KeyDown);
             // 
             // RendreForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 276);
+            this.ClientSize = new System.Drawing.Size(1064, 531);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RendreForm";
             this.Text = "RendreForm";
+            this.Load += new System.EventHandler(this.RendreForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

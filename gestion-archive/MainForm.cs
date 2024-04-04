@@ -58,9 +58,24 @@ namespace gestion_archive
                 this.Close(); //Ferme l'application si la connection echoue
             }
         }
+     
+
 
         bool toolExpand = false; 
 
+        private void CloseAll()
+        {
+            //Recupère le nombre de forms ouverts
+            int nb_open = (int)System.Windows.Forms.Application.OpenForms.Count;
+
+            for (int i = 0;  i < nb_open; i++)
+            {
+                if(System.Windows.Forms.Application.OpenForms[i] != this)//Verifie qu'il ne s'agit pas du main
+                {
+                    System.Windows.Forms.Application.OpenForms[i].Close(); //Ferme les formes
+                }
+            }
+        }
 
         private void button_outils_Click(object sender, EventArgs e)
         {
@@ -191,31 +206,50 @@ namespace gestion_archive
 
         private void button_archives_Click(object sender, EventArgs e)
         {
-            // Afficher le form de Archives
+
+            // Vérifie si la variable 'archives' est nulle, ce qui indique que le formulaire des archives n'a pas encore été créé.
             if (archives == null)
             {
+                // Fermer tous les formulaires enfants du formulaire principal.
+                CloseAll();
+
+                // Créer une nouvelle instance de SearchArchiveForm en lui passant la connexion en tant que paramètre.
                 archives = new SearchArchiveForm(conn);
-                archives.FormClosed += Archives_FormClosed; 
+
+                // Associer un gestionnaire d'événements à l'événement FormClosed du formulaire des archives.
+                archives.FormClosed += Archives_FormClosed;
+
+                // Définir le formulaire des archives comme parent MDI (Interface utilisateur multi-document) du formulaire principal.
                 archives.MdiParent = this;
+
+                // Remplir toute la zone du formulaire parent.
                 archives.Dock = DockStyle.Fill;
+
+                // Afficher le formulaire des archives.
                 archives.Show();
             }
             else
             {
+                // Si la variable 'archives' n'est pas nulle, cela signifie que le formulaire des archives a déjà été créé.
+                // Activer simplement le formulaire des archives pour le mettre au premier plan.
                 archives.Activate();
             }
         }
 
+        // Méthode appelée lorsque le formulaire des archives est fermé.
         private void Archives_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // Définir la variable 'archives' sur null, indiquant que le formulaire des archives a été fermé.
             archives = null;
         }
+
 
         private void button_emplacement_Click(object sender, EventArgs e)
         {
             // Afficher le form de Emplecement
             if (emplacement == null)
             {
+                CloseAll();
                 emplacement = new SearchEmplacementForm(conn);
                 emplacement.FormClosed += Emplacement_FormClosed; ;
                 emplacement.MdiParent = this;
@@ -230,7 +264,7 @@ namespace gestion_archive
 
         private void Emplacement_FormClosed(object sender, FormClosedEventArgs e)
         {
-            emplacement.Activate(); 
+            emplacement = null;  
         }
 
         private void button_addarchive_Click(object sender, EventArgs e)
@@ -238,6 +272,7 @@ namespace gestion_archive
             // Afficher le form de AddArchives
             if (addArchive == null)
             {
+                CloseAll();
                 addArchive = new AddArchiveForm(conn);
                 addArchive.FormClosed += AddArchive_FormClosed; ; 
                 addArchive.MdiParent = this;
@@ -252,7 +287,7 @@ namespace gestion_archive
 
         private void AddArchive_FormClosed(object sender, FormClosedEventArgs e)
         {
-            addArchive.Activate();
+            addArchive = null; 
         }
 
         private void button_addemplacement_Click(object sender, EventArgs e)
@@ -260,6 +295,7 @@ namespace gestion_archive
             // Afficher le form de addEmplacement
             if (addEmplacement == null)
             {
+                CloseAll();
                 addEmplacement = new AddEmplacementForm(conn);
                 addEmplacement.FormClosed += AddEmplacement_FormClosed; ;
                 addEmplacement.MdiParent = this;
@@ -274,7 +310,7 @@ namespace gestion_archive
 
         private void AddEmplacement_FormClosed(object sender, FormClosedEventArgs e)
         {
-            addEmplacement.Activate(); 
+            addEmplacement = null; 
         }
 
         private void button_deletearchive_Click(object sender, EventArgs e)
@@ -282,6 +318,7 @@ namespace gestion_archive
             // Afficher le form de deleteemplacement
             if (deleteForm == null)
             {
+                CloseAll();
                 deleteForm = new DeleteForm(conn);
                 deleteForm.FormClosed += DeleteRecolement_FormClosed;
                 deleteForm.MdiParent = this;
@@ -296,7 +333,7 @@ namespace gestion_archive
 
         private void DeleteRecolement_FormClosed(object sender, FormClosedEventArgs e)
         {
-            deleteForm.Activate();  
+            deleteForm = null; 
         }
 
         private void button_modifierlieu_Click(object sender, EventArgs e)
@@ -304,6 +341,7 @@ namespace gestion_archive
             // Afficher le form pour modifier un lieu
             if (modifierLieu == null)
             {
+                CloseAll();
                 modifierLieu = new ModifierLieuForm(conn);
                 modifierLieu.FormClosed += ModifierLieu_FormClosed; ;
                 modifierLieu.MdiParent = this;
@@ -318,7 +356,7 @@ namespace gestion_archive
 
         private void ModifierLieu_FormClosed(object sender, FormClosedEventArgs e)
         {
-            modifierLieu.Activate();   
+            modifierLieu = null;   
         }
 
         private void button_dorecolement_Click(object sender, EventArgs e)
@@ -326,6 +364,7 @@ namespace gestion_archive
             // Afficher le form du recolement
             if (recolement == null)
             {
+                CloseAll();
                 recolement = new RecolementForm(conn);
                 recolement.FormClosed += Recolement_FormClosed; 
                 recolement.MdiParent = this;
@@ -340,7 +379,7 @@ namespace gestion_archive
 
         private void Recolement_FormClosed(object sender, FormClosedEventArgs e)
         {
-            recolement.Activate();
+            recolement = null; 
         }
 
         private void button_emprunterarchive_Click(object sender, EventArgs e)
@@ -348,6 +387,7 @@ namespace gestion_archive
             // Afficher le form du recolement
             if (emprunter == null)
             {
+                CloseAll();
                 emprunter = new EmpruntForm(conn);
                 emprunter.FormClosed += Emprunter_FormClosed;
                 emprunter.MdiParent = this;
@@ -362,7 +402,7 @@ namespace gestion_archive
 
         private void Emprunter_FormClosed(object sender, FormClosedEventArgs e)
         {
-            emprunter.Activate();
+            emprunter = null;
         }
 
         private void button_rendrearchive_Click(object sender, EventArgs e)
@@ -370,6 +410,7 @@ namespace gestion_archive
             // Afficher le form pour rendre une archive
             if (rendre == null)
             {
+                CloseAll();
                 rendre = new RendreForm(conn);
                 rendre.FormClosed += Rendre_FormClosed; ;
                 rendre.MdiParent = this;
@@ -384,7 +425,7 @@ namespace gestion_archive
 
         private void Rendre_FormClosed(object sender, FormClosedEventArgs e)
         {
-            rendre.Activate(); 
+            rendre = null;
         }
 
         private void button_historiqueemprunt_Click(object sender, EventArgs e)
@@ -392,6 +433,7 @@ namespace gestion_archive
             // Afficher le form pour emprunter une archive
             if (historiqueEmprunt == null)
             {
+                CloseAll();
                 historiqueEmprunt = new HistoriqueEmpruntForm(conn);
                 historiqueEmprunt.FormClosed += HistoriqueEmprunt_FormClosed; ;
                 historiqueEmprunt.MdiParent = this;
@@ -406,7 +448,7 @@ namespace gestion_archive
 
         private void HistoriqueEmprunt_FormClosed(object sender, FormClosedEventArgs e)
         {
-            historiqueEmprunt.Activate(); 
+            historiqueEmprunt = null;   
         }
 
 
@@ -425,6 +467,7 @@ namespace gestion_archive
             // Afficher le form de Archives
             if (archives == null)
             {
+                CloseAll();
                 archives = new SearchArchiveForm(conn);
                 archives.FormClosed += Archives_FormClosed;
                 archives.MdiParent = this;

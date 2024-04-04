@@ -56,6 +56,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(124)))), ((int)(((byte)(162)))));
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.bigLabel2);
@@ -68,10 +69,10 @@
             this.panel1.Controls.Add(this.RechercherButton);
             this.panel1.EdgeColor = System.Drawing.SystemColors.Control;
             this.panel1.Location = new System.Drawing.Point(156, 79);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.panel1.Size = new System.Drawing.Size(1000, 721);
+            this.panel1.Padding = new System.Windows.Forms.Padding(10);
+            this.panel1.Size = new System.Drawing.Size(1000, 423);
             this.panel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.panel1.TabIndex = 3;
             this.panel1.Text = "panel1";
@@ -80,7 +81,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(38, 123);
-            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel2.Margin = new System.Windows.Forms.Padding(6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(928, 19);
             this.panel2.TabIndex = 48;
@@ -101,7 +102,7 @@
             // textBoxIdArchive
             // 
             this.textBoxIdArchive.Location = new System.Drawing.Point(198, 223);
-            this.textBoxIdArchive.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBoxIdArchive.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxIdArchive.Name = "textBoxIdArchive";
             this.textBoxIdArchive.Size = new System.Drawing.Size(610, 31);
             this.textBoxIdArchive.TabIndex = 46;
@@ -115,7 +116,7 @@
             this.RechercherButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RechercherButton.ForeColor = System.Drawing.Color.White;
             this.RechercherButton.Location = new System.Drawing.Point(342, 288);
-            this.RechercherButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RechercherButton.Margin = new System.Windows.Forms.Padding(4);
             this.RechercherButton.Name = "RechercherButton";
             this.RechercherButton.Size = new System.Drawing.Size(320, 79);
             this.RechercherButton.TabIndex = 45;
@@ -175,10 +176,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1454, 949);
+            this.ClientSize = new System.Drawing.Size(1310, 633);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "SearchArchiveForm";
             this.Text = "formArchives";
             this.Load += new System.EventHandler(this.formArchives_Load);
