@@ -31,15 +31,6 @@ namespace gestion_archive
             conn = conn_main;
             SetLieux();
         }
-        private void CentrerPanneau()
-        {
-            // Calculer les coordonnées x et y pour centrer le panneau
-            int x = (this.ClientSize.Width - panel1.Size.Width) / 2;
-            int y = (this.ClientSize.Height - panel1.Size.Height) / 2;
-
-            // Positionner le panneau au centre
-            panel1.Location = new System.Drawing.Point(x, y);
-        }
         private int GetIdEmplacement()
         {
             int id = -1;
@@ -337,6 +328,15 @@ namespace gestion_archive
         private void SearchEmplacementForm_Load(object sender, EventArgs e)
         {
             CentrerPanneau(); 
+        }
+        private void CentrerPanneau()
+        {
+            // Calculer les coordonnées x et y pour centrer le panneau
+            int x = (this.ClientSize.Width - panel1.Size.Width) / 2;
+            int y = (this.ClientSize.Height - panel1.Size.Height) / 2;
+
+            // Positionner le panneau au centre
+            panel1.Location = new System.Drawing.Point(x, y);
         }
     }
 }

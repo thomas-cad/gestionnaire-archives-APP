@@ -20,11 +20,6 @@ namespace gestion_archive
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -51,6 +46,7 @@ namespace gestion_archive
 
         private void connection()
         {
+
             string user = TextBox_User.Text;
             string password = PasswordHasher.HashPassword(TextBox_Password.Text); //Hash du mp
 
@@ -81,6 +77,14 @@ namespace gestion_archive
                     MessageBox.Show(ex.Message);//Message d'erreur
                     Application.Exit(); //Ferme l'app
                 }
+                finally
+                {
+                    conn.Close(); // Fermer la connexion dans tous les cas
+                }
+
+                // Permet le cas ou l'utilisateur entrée est mauvais
+                TextBox_User.Clear(); // Efface la chaine de caratère dans la textbox
+                TextBox_Password.Clear(); // Efface la chaine de caratère dans la textbox
         }
 
         private void TextBox_Password_KeyDown(object sender, KeyEventArgs e)
