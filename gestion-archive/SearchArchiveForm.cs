@@ -24,14 +24,15 @@ namespace gestion_archive
         private NpgsqlConnection conn;
 
         InfoArchivesForm archives;
-        private int id_archive; 
+        private int id_archive;
+        string cote; 
 
         public SearchArchiveForm(NpgsqlConnection conn_main_form)
         {
             InitializeComponent();
 
             conn = conn_main_form; //Recupere les informations de la BDD
-
+            id_archive = 0; 
         }
         private void formArchives_Load(object sender, EventArgs e)
         {
@@ -49,7 +50,7 @@ namespace gestion_archive
             panel1.Location = new System.Drawing.Point(x, y);
         }
 
-        private bool Checking()
+        private bool Checkingidarchive()
         {
             bool check_id_archive = false;
 
@@ -83,9 +84,56 @@ namespace gestion_archive
             return check_id_archive;
         }
 
+        private bool Checkingcote()
+        {
+            bool check_id_archive = false;
+
+            // Verifie si le user a bien entré une valeur dans la textbox et affecte cette valeur a la variable
+            if (textBoxCote.Text == string.Empty)
+            {
+                MessageBox.Show("Cote Invalide", "Cote", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+                     cote = textBoxCote.Text; 
+                }
+                catch
+                {
+                    MessageBox.Show("Cote invalide", "Cote", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                var check_cote = new NpgsqlCommand("SELECT id_archive FROM archive WHERE cote = @cote", conn);
+                check_cote.Parameters.AddWithValue("@cote", cote);
+                object result = check_cote.ExecuteScalar();
+                if (result != null) 
+                { 
+                    id_archive = (int)result; 
+                }
+                else
+                {
+                    MessageBox.Show("Cote inexistante", "Cote", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                var check_emprunt = new NpgsqlCommand("SELECT COUNT(*) FROM archive WHERE id_archive = @id_archive", conn);
+                check_emprunt.Parameters.AddWithValue("@id_archive", id_archive);
+                if ((long)check_emprunt.ExecuteScalar() > 0)
+                {
+                    check_id_archive = true;
+                }
+                else
+                {
+                    MessageBox.Show("Archive inexistante", "Archive", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            return check_id_archive;
+        }
+
         private void RechercherButton_Click(object sender, EventArgs e)
         {
-            if (Checking())
+            id_archive = 0; // Reset l'id archive
+            if (Checkingidarchive())
             {
                 // Afficher le form de InfoArchive
                 if (archives == null)
@@ -105,15 +153,28 @@ namespace gestion_archive
 
         private void Archives_FormClosed(object sender, FormClosedEventArgs e)
         {
-            archives.Activate();
+            archives = null; // On met la variable associée a archive a null
         }
 
-        private void textBoxIdArchive_KeyDown(object sender, KeyEventArgs e)
+        private void button_recherchercote_Click(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            id_archive = 0; // Reset l'id archive
+            if (Checkingcote())
             {
-                e.SuppressKeyPress = true; // Empêche la saisie de la touche "Entrée"
-                RechercherButton.PerformClick(); 
+                archives = null; //On met la variable associée a archive a null
+                // Afficher le form de InfoArchive
+                if (archives == null)
+                {
+                    archives = new InfoArchivesForm(conn, id_archive, this);
+                    archives.FormClosed += Archives_FormClosed; ;
+                    archives.MdiParent = this.MdiParent;
+                    archives.Dock = DockStyle.Fill;
+                    archives.Show();
+                }
+                else
+                {
+                    archives.Activate();
+                }
             }
         }
     }
