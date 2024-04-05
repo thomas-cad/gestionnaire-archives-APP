@@ -15,6 +15,7 @@ using Microsoft.VisualBasic.ApplicationServices;
 using Npgsql;
 using ReaLTaiizor.Controls;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static ReaLTaiizor.Manager.MaterialSkinManager;
 
 namespace gestion_archive
 {
@@ -316,12 +317,16 @@ namespace gestion_archive
             // Vérifier si une valeur a été saisie
             if (!string.IsNullOrEmpty(nouvelleValeur))
             {
-                //Cherche la cote associée a l'archive
-                var change = new NpgsqlCommand("UPDATE archive SET cote = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
-                change.Parameters.AddWithValue("@id_archive", id_archive);
-                change.Parameters.AddWithValue("@nouvelleValeur", nouvelleValeur);
-                change.ExecuteNonQuery();
-                labelcote.Text = nouvelleValeur;
+                try
+                {
+                    //Cherche la cote associée a l'archive
+                    var change = new NpgsqlCommand("UPDATE archive SET cote = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
+                    change.Parameters.AddWithValue("@id_archive", id_archive);
+                    change.Parameters.AddWithValue("@nouvelleValeur", nouvelleValeur);
+                    change.ExecuteNonQuery();
+                    labelcote.Text = nouvelleValeur;
+                }
+                catch { MessageBox.Show("Cote invalide", "Cote", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
 
@@ -333,13 +338,17 @@ namespace gestion_archive
             // Vérifier si une valeur a été saisie
             if (!string.IsNullOrEmpty(nouvelleValeur))
             {
-                //Cherche la cote associée a l'archive
-                var change = new NpgsqlCommand("UPDATE archive SET id_emplacement = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
-                change.Parameters.AddWithValue("@id_archive", id_archive);
-                int valeur = int.Parse(nouvelleValeur);
-                change.Parameters.AddWithValue("@nouvelleValeur", valeur);
-                change.ExecuteNonQuery();
-                labelid_emplacement.Text = nouvelleValeur;
+                try
+                {
+                    //Cherche la cote associée a l'archive
+                    var change = new NpgsqlCommand("UPDATE archive SET id_emplacement = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
+                    change.Parameters.AddWithValue("@id_archive", id_archive);
+                    int valeur = int.Parse(nouvelleValeur);
+                    change.Parameters.AddWithValue("@nouvelleValeur", valeur);
+                    change.ExecuteNonQuery();
+                    labelid_emplacement.Text = nouvelleValeur;
+                }
+                catch { MessageBox.Show("Id emplacement invalide", "Emplacement", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
 
@@ -351,13 +360,17 @@ namespace gestion_archive
             // Vérifier si une valeur a été saisie
             if (!string.IsNullOrEmpty(nouvelleValeur))
             {
-                //Cherche la cote associée a l'archive
-                var change = new NpgsqlCommand("UPDATE archive SET id_service = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
-                change.Parameters.AddWithValue("@id_archive", id_archive);
-                int valeur = int.Parse(nouvelleValeur);
-                change.Parameters.AddWithValue("@nouvelleValeur", valeur);
-                change.ExecuteNonQuery();
-                labelid_service.Text = nouvelleValeur;
+                try
+                {
+                    //Cherche la cote associée a l'archive
+                    var change = new NpgsqlCommand("UPDATE archive SET id_service = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
+                    change.Parameters.AddWithValue("@id_archive", id_archive);
+                    int valeur = int.Parse(nouvelleValeur);
+                    change.Parameters.AddWithValue("@nouvelleValeur", valeur);
+                    change.ExecuteNonQuery();
+                    labelid_service.Text = nouvelleValeur;
+                }
+                catch { MessageBox.Show("Id service invalide", "Service", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
 
@@ -369,13 +382,17 @@ namespace gestion_archive
             // Vérifier si une valeur a été saisie
             if (!string.IsNullOrEmpty(nouvelleValeur))
             {
-                //Cherche la cote associée a l'archive
-                var change = new NpgsqlCommand("UPDATE archive SET id_agent = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
-                change.Parameters.AddWithValue("@id_archive", id_archive);
-                int valeur = int.Parse(nouvelleValeur);
-                change.Parameters.AddWithValue("@nouvelleValeur", valeur);
-                change.ExecuteNonQuery();
-                labelid_agent.Text = nouvelleValeur;
+                try
+                {
+                    //Cherche la cote associée a l'archive
+                    var change = new NpgsqlCommand("UPDATE archive SET id_agent = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
+                    change.Parameters.AddWithValue("@id_archive", id_archive);
+                    int valeur = int.Parse(nouvelleValeur);
+                    change.Parameters.AddWithValue("@nouvelleValeur", valeur);
+                    change.ExecuteNonQuery();
+                    labelid_agent.Text = nouvelleValeur;
+                }
+                catch { MessageBox.Show("Id agent invalide", "Agent", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
 
@@ -387,13 +404,17 @@ namespace gestion_archive
             // Vérifier si une valeur a été saisie
             if (!string.IsNullOrEmpty(nouvelleValeur))
             {
-                //Cherche la cote associée a l'archive
-                var change = new NpgsqlCommand("UPDATE archive SET metrage_lineaire = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
-                change.Parameters.AddWithValue("@id_archive", id_archive);
-                float valeur = float.Parse(nouvelleValeur);
-                change.Parameters.AddWithValue("@nouvelleValeur", valeur);
-                change.ExecuteNonQuery();
-                labelmetragelineaire.Text = nouvelleValeur;
+                try
+                {
+                    //Cherche la cote associée a l'archive
+                    var change = new NpgsqlCommand("UPDATE archive SET metrage_lineaire = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
+                    change.Parameters.AddWithValue("@id_archive", id_archive);
+                    float valeur = float.Parse(nouvelleValeur);
+                    change.Parameters.AddWithValue("@nouvelleValeur", valeur);
+                    change.ExecuteNonQuery();
+                    labelmetragelineaire.Text = nouvelleValeur;
+                }
+                catch { MessageBox.Show("Metrage lineaire invalide", "Metrage lineaire", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
 
@@ -467,13 +488,16 @@ namespace gestion_archive
                 {
                     // Utiliser la date sélectionnée stockée dans la boîte de dialogue
                     DateTime selectedDate = dialog.SelectedDate;
-
-                    //Cherche la cote associée a l'archive
-                    var change = new NpgsqlCommand("UPDATE archive SET date_archive = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
-                    change.Parameters.AddWithValue("@id_archive", id_archive);
-                    change.Parameters.AddWithValue("@nouvelleValeur", selectedDate);
-                    change.ExecuteNonQuery();
-                    labeldate_archive.Text = selectedDate.ToShortDateString();
+                    try
+                    {
+                        //Cherche la cote associée a l'archive
+                        var change = new NpgsqlCommand("UPDATE archive SET date_archive = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
+                        change.Parameters.AddWithValue("@id_archive", id_archive);
+                        change.Parameters.AddWithValue("@nouvelleValeur", selectedDate);
+                        change.ExecuteNonQuery();
+                        labeldate_archive.Text = selectedDate.ToShortDateString();
+                    }
+                    catch { MessageBox.Show("date de l'archive invalide", "Date archive", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 }
             }    
         }
@@ -488,13 +512,16 @@ namespace gestion_archive
                 {
                     // Utiliser la date sélectionnée stockée dans la boîte de dialogue
                     DateTime selectedDate = dialog.SelectedDate;
-
-                    //Cherche la cote associée a l'archive
-                    var change = new NpgsqlCommand("UPDATE archive SET date_archivage = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
-                    change.Parameters.AddWithValue("@id_archive", id_archive);
-                    change.Parameters.AddWithValue("@nouvelleValeur", selectedDate);
-                    change.ExecuteNonQuery();
-                    labeldate_archivage.Text = selectedDate.ToShortDateString();
+                    try
+                    {
+                        //Cherche la cote associée a l'archive
+                        var change = new NpgsqlCommand("UPDATE archive SET date_archivage = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
+                        change.Parameters.AddWithValue("@id_archive", id_archive);
+                        change.Parameters.AddWithValue("@nouvelleValeur", selectedDate);
+                        change.ExecuteNonQuery();
+                        labeldate_archivage.Text = selectedDate.ToShortDateString();
+                    }
+                    catch { MessageBox.Show("date de l'archivage invalide", "Date Archivage", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 }
             }
         }
@@ -507,13 +534,17 @@ namespace gestion_archive
             // Vérifier si une valeur a été saisie
             if (!string.IsNullOrEmpty(nouvelleValeur))
             {
-                //Cherche la cote associée a l'archive
-                var change = new NpgsqlCommand("UPDATE archive SET temps_conservation = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
-                change.Parameters.AddWithValue("@id_archive", id_archive);
-                int valeur = int.Parse(nouvelleValeur);
-                change.Parameters.AddWithValue("@nouvelleValeur", valeur);
-                change.ExecuteNonQuery();
-                labeltemps_conservation.Text = nouvelleValeur;
+                try
+                {
+                    //Cherche la cote associée a l'archive
+                    var change = new NpgsqlCommand("UPDATE archive SET temps_conservation = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
+                    change.Parameters.AddWithValue("@id_archive", id_archive);
+                    int valeur = int.Parse(nouvelleValeur);
+                    change.Parameters.AddWithValue("@nouvelleValeur", valeur);
+                    change.ExecuteNonQuery();
+                    labeltemps_conservation.Text = nouvelleValeur;
+                }
+                catch { MessageBox.Show("Temps de conservation invalide", "Temps de conservation", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
 
@@ -525,12 +556,16 @@ namespace gestion_archive
             // Vérifier si une valeur a été saisie
             if (!string.IsNullOrEmpty(nouvelleValeur))
             {
-                //Cherche la cote associée a l'archive
-                var change = new NpgsqlCommand("UPDATE archive SET description = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
-                change.Parameters.AddWithValue("@id_archive", id_archive);
-                change.Parameters.AddWithValue("@nouvelleValeur", nouvelleValeur);
-                change.ExecuteNonQuery();
-                labeltemps_conservation.Text = nouvelleValeur;
+                try
+                {
+                    //Cherche la cote associée a l'archive
+                    var change = new NpgsqlCommand("UPDATE archive SET description = @nouvelleValeur WHERE id_archive = @id_archive;", conn);
+                    change.Parameters.AddWithValue("@id_archive", id_archive);
+                    change.Parameters.AddWithValue("@nouvelleValeur", nouvelleValeur);
+                    change.ExecuteNonQuery();
+                    labeltemps_conservation.Text = nouvelleValeur;
+                }
+                catch { MessageBox.Show("Description invalide", "Description", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
     }

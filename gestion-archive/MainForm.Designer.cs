@@ -101,7 +101,7 @@
             this.panel1.Controls.Add(this.button_menu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1557, 79);
             this.panel1.TabIndex = 0;
@@ -122,7 +122,7 @@
             this.button_menu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_menu.Image = ((System.Drawing.Image)(resources.GetObject("button_menu.Image")));
             this.button_menu.Location = new System.Drawing.Point(24, 12);
-            this.button_menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_menu.Margin = new System.Windows.Forms.Padding(4);
             this.button_menu.Name = "button_menu";
             this.button_menu.Size = new System.Drawing.Size(62, 50);
             this.button_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -141,7 +141,7 @@
             this.sidebar.Controls.Add(this.pnExit);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 79);
-            this.sidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sidebar.Margin = new System.Windows.Forms.Padding(4);
             this.sidebar.Name = "sidebar";
             this.sidebar.Size = new System.Drawing.Size(120, 790);
             this.sidebar.TabIndex = 1;
@@ -167,7 +167,7 @@
             this.button_archives.Image = ((System.Drawing.Image)(resources.GetObject("button_archives.Image")));
             this.button_archives.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_archives.Location = new System.Drawing.Point(-8, -33);
-            this.button_archives.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_archives.Margin = new System.Windows.Forms.Padding(4);
             this.button_archives.Name = "button_archives";
             this.button_archives.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button_archives.Size = new System.Drawing.Size(440, 162);
@@ -197,7 +197,7 @@
             this.button_emplacement.Image = global::gestion_archive.Properties.Resources.icon_loupe32;
             this.button_emplacement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_emplacement.Location = new System.Drawing.Point(-8, -33);
-            this.button_emplacement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_emplacement.Margin = new System.Windows.Forms.Padding(4);
             this.button_emplacement.Name = "button_emplacement";
             this.button_emplacement.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button_emplacement.Size = new System.Drawing.Size(440, 162);
@@ -240,7 +240,7 @@
             this.button_outils.Image = ((System.Drawing.Image)(resources.GetObject("button_outils.Image")));
             this.button_outils.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_outils.Location = new System.Drawing.Point(-8, -33);
-            this.button_outils.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_outils.Margin = new System.Windows.Forms.Padding(4);
             this.button_outils.Name = "button_outils";
             this.button_outils.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button_outils.Size = new System.Drawing.Size(440, 162);
@@ -269,7 +269,7 @@
             this.button_addarchive.Image = global::gestion_archive.Properties.Resources.icon_plus32;
             this.button_addarchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_addarchive.Location = new System.Drawing.Point(-8, -33);
-            this.button_addarchive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_addarchive.Margin = new System.Windows.Forms.Padding(4);
             this.button_addarchive.Name = "button_addarchive";
             this.button_addarchive.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button_addarchive.Size = new System.Drawing.Size(440, 162);
@@ -298,7 +298,7 @@
             this.button_addemplacement.Image = global::gestion_archive.Properties.Resources.icon_plus32;
             this.button_addemplacement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_addemplacement.Location = new System.Drawing.Point(-8, -33);
-            this.button_addemplacement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_addemplacement.Margin = new System.Windows.Forms.Padding(4);
             this.button_addemplacement.Name = "button_addemplacement";
             this.button_addemplacement.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button_addemplacement.Size = new System.Drawing.Size(440, 162);
@@ -327,7 +327,7 @@
             this.button_deletearchive.Image = global::gestion_archive.Properties.Resources.icon_moins32;
             this.button_deletearchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_deletearchive.Location = new System.Drawing.Point(-8, -33);
-            this.button_deletearchive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_deletearchive.Margin = new System.Windows.Forms.Padding(4);
             this.button_deletearchive.Name = "button_deletearchive";
             this.button_deletearchive.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button_deletearchive.Size = new System.Drawing.Size(440, 162);
@@ -356,7 +356,7 @@
             this.button_modifierlieu.Image = global::gestion_archive.Properties.Resources.plan;
             this.button_modifierlieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_modifierlieu.Location = new System.Drawing.Point(-8, -33);
-            this.button_modifierlieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_modifierlieu.Margin = new System.Windows.Forms.Padding(4);
             this.button_modifierlieu.Name = "button_modifierlieu";
             this.button_modifierlieu.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button_modifierlieu.Size = new System.Drawing.Size(440, 162);
@@ -397,7 +397,7 @@
             this.button_recolement.Image = global::gestion_archive.Properties.Resources.plan_daction;
             this.button_recolement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_recolement.Location = new System.Drawing.Point(-8, -33);
-            this.button_recolement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_recolement.Margin = new System.Windows.Forms.Padding(4);
             this.button_recolement.Name = "button_recolement";
             this.button_recolement.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button_recolement.Size = new System.Drawing.Size(440, 162);
@@ -426,7 +426,7 @@
             this.button_dorecolement.Image = global::gestion_archive.Properties.Resources.plan_daction;
             this.button_dorecolement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_dorecolement.Location = new System.Drawing.Point(-8, -33);
-            this.button_dorecolement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_dorecolement.Margin = new System.Windows.Forms.Padding(4);
             this.button_dorecolement.Name = "button_dorecolement";
             this.button_dorecolement.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button_dorecolement.Size = new System.Drawing.Size(440, 162);
@@ -455,7 +455,7 @@
             this.button_exportrecolement.Image = global::gestion_archive.Properties.Resources.icon_exporter32;
             this.button_exportrecolement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_exportrecolement.Location = new System.Drawing.Point(-8, -33);
-            this.button_exportrecolement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_exportrecolement.Margin = new System.Windows.Forms.Padding(4);
             this.button_exportrecolement.Name = "button_exportrecolement";
             this.button_exportrecolement.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button_exportrecolement.Size = new System.Drawing.Size(440, 162);
@@ -496,7 +496,7 @@
             this.button_emprunt.Image = global::gestion_archive.Properties.Resources.icon_emprunt;
             this.button_emprunt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_emprunt.Location = new System.Drawing.Point(-8, -33);
-            this.button_emprunt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_emprunt.Margin = new System.Windows.Forms.Padding(4);
             this.button_emprunt.Name = "button_emprunt";
             this.button_emprunt.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button_emprunt.Size = new System.Drawing.Size(440, 162);
@@ -524,7 +524,7 @@
             this.button_emprunterarchive.Image = global::gestion_archive.Properties.Resources.fleche_emprunt1;
             this.button_emprunterarchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_emprunterarchive.Location = new System.Drawing.Point(-8, -33);
-            this.button_emprunterarchive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_emprunterarchive.Margin = new System.Windows.Forms.Padding(4);
             this.button_emprunterarchive.Name = "button_emprunterarchive";
             this.button_emprunterarchive.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button_emprunterarchive.Size = new System.Drawing.Size(440, 162);
@@ -552,7 +552,7 @@
             this.button_rendrearchive.Image = global::gestion_archive.Properties.Resources.fleche_rendre;
             this.button_rendrearchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_rendrearchive.Location = new System.Drawing.Point(-8, -33);
-            this.button_rendrearchive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_rendrearchive.Margin = new System.Windows.Forms.Padding(4);
             this.button_rendrearchive.Name = "button_rendrearchive";
             this.button_rendrearchive.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button_rendrearchive.Size = new System.Drawing.Size(440, 162);
@@ -580,7 +580,7 @@
             this.button_historiqueemprunt.Image = global::gestion_archive.Properties.Resources.icon_historique;
             this.button_historiqueemprunt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_historiqueemprunt.Location = new System.Drawing.Point(-8, -33);
-            this.button_historiqueemprunt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_historiqueemprunt.Margin = new System.Windows.Forms.Padding(4);
             this.button_historiqueemprunt.Name = "button_historiqueemprunt";
             this.button_historiqueemprunt.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button_historiqueemprunt.Size = new System.Drawing.Size(440, 162);
@@ -608,7 +608,7 @@
             this.button_exit.Image = ((System.Drawing.Image)(resources.GetObject("button_exit.Image")));
             this.button_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_exit.Location = new System.Drawing.Point(-8, -33);
-            this.button_exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_exit.Margin = new System.Windows.Forms.Padding(4);
             this.button_exit.Name = "button_exit";
             this.button_exit.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button_exit.Size = new System.Drawing.Size(440, 162);
@@ -646,7 +646,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Archive Gestion";
