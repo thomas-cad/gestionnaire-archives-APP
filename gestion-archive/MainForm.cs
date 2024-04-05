@@ -63,20 +63,6 @@ namespace gestion_archive
 
         bool toolExpand = false; 
 
-        private void CloseAll()
-        {
-            //Recupère le nombre de forms ouverts
-            int nb_open = (int)System.Windows.Forms.Application.OpenForms.Count;
-
-            for (int i = 0;  i < nb_open; i++)
-            {
-                if(System.Windows.Forms.Application.OpenForms[i] != this)//Verifie qu'il ne s'agit pas du main
-                {
-                    System.Windows.Forms.Application.OpenForms[i].Close(); //Ferme les formes
-                }
-            }
-        }
-
         private void button_outils_Click(object sender, EventArgs e)
         {
             toolTransition.Start();
@@ -102,7 +88,7 @@ namespace gestion_archive
                 if (toolContainer.Height <= 53)
                 {
                     toolTransition.Stop();
-                    toolExpand = false;
+                    toolExpand = false; 
                 }
             }
         }
@@ -209,8 +195,6 @@ namespace gestion_archive
             // Vérifie si la variable 'archives' est nulle, ce qui indique que le formulaire des archives n'a pas encore été créé.
             if (archives == null)
             {
-                // Fermer tous les formulaires enfants du formulaire principal.
-                CloseAll();
 
                 // Créer une nouvelle instance de SearchArchiveForm en lui passant la connexion en tant que paramètre.
                 archives = new SearchArchiveForm(conn);
@@ -248,7 +232,6 @@ namespace gestion_archive
             // Afficher le form de Emplecement
             if (emplacement == null)
             {
-                CloseAll();
                 emplacement = new SearchEmplacementForm(conn);
                 emplacement.FormClosed += Emplacement_FormClosed; ;
                 emplacement.MdiParent = this;
@@ -271,7 +254,6 @@ namespace gestion_archive
             // Afficher le form de AddArchives
             if (addArchive == null)
             {
-                CloseAll();
                 addArchive = new AddArchiveForm(conn);
                 addArchive.FormClosed += AddArchive_FormClosed; ; 
                 addArchive.MdiParent = this;
@@ -294,7 +276,6 @@ namespace gestion_archive
             // Afficher le form de addEmplacement
             if (addEmplacement == null)
             {
-                CloseAll();
                 addEmplacement = new AddEmplacementForm(conn);
                 addEmplacement.FormClosed += AddEmplacement_FormClosed; ;
                 addEmplacement.MdiParent = this;
@@ -317,7 +298,6 @@ namespace gestion_archive
             // Afficher le form de deleteemplacement
             if (deleteForm == null)
             {
-                CloseAll();
                 deleteForm = new DeleteForm(conn);
                 deleteForm.FormClosed += DeleteRecolement_FormClosed;
                 deleteForm.MdiParent = this;
@@ -340,7 +320,6 @@ namespace gestion_archive
             // Afficher le form pour modifier un lieu
             if (modifierLieu == null)
             {
-                CloseAll();
                 modifierLieu = new ModifierLieuForm(conn);
                 modifierLieu.FormClosed += ModifierLieu_FormClosed; ;
                 modifierLieu.MdiParent = this;
@@ -363,7 +342,6 @@ namespace gestion_archive
             // Afficher le form du recolement
             if (recolement == null)
             {
-                CloseAll();
                 recolement = new RecolementForm(conn);
                 recolement.FormClosed += Recolement_FormClosed; 
                 recolement.MdiParent = this;
@@ -386,7 +364,6 @@ namespace gestion_archive
             // Afficher le form du recolement
             if (emprunter == null)
             {
-                CloseAll();
                 emprunter = new EmpruntForm(conn);
                 emprunter.FormClosed += Emprunter_FormClosed;
                 emprunter.MdiParent = this;
@@ -409,7 +386,6 @@ namespace gestion_archive
             // Afficher le form pour rendre une archive
             if (rendre == null)
             {
-                CloseAll();
                 rendre = new RendreForm(conn);
                 rendre.FormClosed += Rendre_FormClosed; ;
                 rendre.MdiParent = this;
@@ -432,7 +408,6 @@ namespace gestion_archive
             // Afficher le form pour emprunter une archive
             if (historiqueEmprunt == null)
             {
-                CloseAll();
                 historiqueEmprunt = new HistoriqueEmpruntForm(conn);
                 historiqueEmprunt.FormClosed += HistoriqueEmprunt_FormClosed; ;
                 historiqueEmprunt.MdiParent = this;
@@ -466,7 +441,6 @@ namespace gestion_archive
             // Afficher le form de Archives
             if (archives == null)
             {
-                CloseAll();
                 archives = new SearchArchiveForm(conn);
                 archives.FormClosed += Archives_FormClosed;
                 archives.MdiParent = this;

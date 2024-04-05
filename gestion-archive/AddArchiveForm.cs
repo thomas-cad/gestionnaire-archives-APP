@@ -303,6 +303,8 @@ namespace gestion_archive
             else
             {
                 check_date = true;
+                date_archive = DateArchive.Value;
+                date_archivage = DateArchivage.Value;
             }
 
             return check_cote && check_description && check_agent && check_service && check_date && check_ml && check_delete_time;
@@ -381,18 +383,23 @@ namespace gestion_archive
         {
             if (Checking()) //Test si la requete peut etre effectuee
             {
-                var insert_requete = new NpgsqlCommand("INSERT INTO archive (id_service, id_agent, cote, description, date_archive, date_archivage, temps_conservation, metrage_lineaire) VALUES (@id_service, @id_agent, @cote, @description, @date_archive, @date_archivage, @temps_conservation, @ml)", conn);
-                insert_requete.Parameters.AddWithValue("@id_service", id_service);
-                insert_requete.Parameters.AddWithValue("@id_agent", id_agent);
-                insert_requete.Parameters.AddWithValue("@cote", cote);
-                insert_requete.Parameters.AddWithValue("@description", description);
-                insert_requete.Parameters.AddWithValue("@date_archive", date_archive.Date);
-                insert_requete.Parameters.AddWithValue("@date_archivage", date_archivage.Date);
-                insert_requete.Parameters.AddWithValue("@temps_conservation", temps_conservation);
-                insert_requete.Parameters.AddWithValue("@ml", ml);
-                insert_requete.ExecuteNonQuery();
-                ResetValues(); //Reset les valeurs des champs
-                MessageBox.Show("Archive ajoutée avec succès");
+                try
+                {
+                    var insert_requete = new NpgsqlCommand("INSERT INTO archive (id_service, id_agent, cote, description, date_archive, date_archivage, temps_conservation, metrage_lineaire) VALUES (@id_service, @id_agent, @cote, @description, @date_archive, @date_archivage, @temps_conservation, @ml)", conn);
+                    insert_requete.Parameters.AddWithValue("@id_service", id_service);
+                    insert_requete.Parameters.AddWithValue("@id_agent", id_agent);
+                    insert_requete.Parameters.AddWithValue("@cote", cote);
+                    insert_requete.Parameters.AddWithValue("@description", description);
+                    insert_requete.Parameters.AddWithValue("@date_archive", date_archive.Date);
+                    insert_requete.Parameters.AddWithValue("@date_archivage", date_archivage.Date);
+                    insert_requete.Parameters.AddWithValue("@temps_conservation", temps_conservation);
+                    insert_requete.Parameters.AddWithValue("@ml", ml);
+                    insert_requete.ExecuteNonQuery();
+                    ResetValues(); //Reset les valeurs des champs
+                    MessageBox.Show("Archive ajoutée avec succès");
+                }
+                catch(Exception ex) { MessageBox.Show("Erreur : " + ex); }
+
             }
         }
     }
