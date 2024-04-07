@@ -119,8 +119,8 @@ namespace gestion_archive
 
         private void ReturnButton_Click(object sender, EventArgs e)
         {
-            previous_form.Show();
-            this.Close();
+            previous_form.Show(); //Reouvre l'ancien form
+            this.Close(); //Ferme le form actuel
         }
 
         private void EditLieuForm_Load(object sender, EventArgs e)

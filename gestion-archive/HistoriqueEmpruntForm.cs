@@ -46,9 +46,10 @@ namespace gestion_archive
                     MessageBox.Show("Id invalide", "ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
+                
                 var check_emprunt = new NpgsqlCommand("SELECT COUNT(*) FROM archive WHERE id_archive = @id_archive", conn);
                 check_emprunt.Parameters.AddWithValue("@id_archive", id_archive);
-                if ((long)check_emprunt.ExecuteScalar() > 0)
+                if ((long)check_emprunt.ExecuteScalar() > 0)//Verifie existence
                 {
                     check_id_archive = true;
                 }

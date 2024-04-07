@@ -54,10 +54,11 @@ namespace gestion_archive
 
         private void ValiderButton_Click(object sender, EventArgs e)
         {
-            if (checkEpi())
+            if (checkEpi()) //Verifie les conditions
             {
                 try
                 {
+                    //Execute la fonction PgSQL d'insertion de la BDD
                     var insert_query = new NpgsqlCommand("SELECT add_epis (@lieu, @epi)", conn);
                     insert_query.Parameters.AddWithValue("@lieu", id_lieu);
                     insert_query.Parameters.AddWithValue("@epi", epi);
