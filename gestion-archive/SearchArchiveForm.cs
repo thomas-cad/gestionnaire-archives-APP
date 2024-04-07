@@ -104,6 +104,7 @@ namespace gestion_archive
                     MessageBox.Show("Cote invalide", "Cote", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
+                //Recupere id archive
                 var check_cote = new NpgsqlCommand("SELECT id_archive FROM archive WHERE cote = @cote", conn);
                 check_cote.Parameters.AddWithValue("@cote", cote);
                 object result = check_cote.ExecuteScalar();
@@ -112,7 +113,7 @@ namespace gestion_archive
                     id_archive = (int)result;
                     var check_emprunt = new NpgsqlCommand("SELECT COUNT(*) FROM archive WHERE id_archive = @id_archive", conn);
                     check_emprunt.Parameters.AddWithValue("@id_archive", id_archive);
-                    if ((long)check_emprunt.ExecuteScalar() > 0)
+                    if ((long)check_emprunt.ExecuteScalar() > 0) //Verifie existence
                     {
                         check_id_archive = true;
                     }

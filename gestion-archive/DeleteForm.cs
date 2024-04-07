@@ -187,13 +187,14 @@ namespace gestion_archive
             {
                 try
                 {
+                    //Requete d'insertion de la destruction & maj de l'archive
                     var new_destruction = new NpgsqlCommand(@"
                         UPDATE archive SET id_emplacement = NULL WHERE id_archive = @id_archive;
                         INSERT INTO destruction (id_archive, id_agent, date) VALUES (@id_archive, @id_agent, CURRENT_DATE)", conn);
 
                     foreach (DataRow row in dt_id_archive.Rows)
                     {
-                        new_destruction.Parameters.Clear();
+                        new_destruction.Parameters.Clear(); //Supprimer les anciens parametres
                         new_destruction.Parameters.AddWithValue("@id_agent", id_agent);
                         new_destruction.Parameters.AddWithValue("@id_archive", row["id"]);
 
@@ -218,7 +219,7 @@ namespace gestion_archive
 
         private void AgentComboBox_Leave(object sender, EventArgs e)
         {
-            if (id_agent == -1)
+            if (id_agent == -1) //-1 signifie un agent non valide
             {
                 MessageBox.Show("L'agent saisi est invalide", "Invalide", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 AgentComboBox.Focus();
@@ -237,7 +238,7 @@ namespace gestion_archive
             try
             {
                 string[] split = AgentComboBox.Text.Split(new string[] { " : " }, StringSplitOptions.None); //Recupere la fin de l'item contenant l'id
-                int id_check = int.Parse(split[1]);
+                int id_check = int.Parse(split[1]); //recupere l'id
                 NpgsqlCommand check_id = new NpgsqlCommand("SELECT COUNT(*) FROM agent WHERE id_agent = @id_check", conn);
                 check_id.Parameters.AddWithValue("@id_check", id_check);
 
@@ -260,7 +261,7 @@ namespace gestion_archive
         {
             if (AgentComboBox.DroppedDown == false)
             {
-                AgentComboBox.DroppedDown = true;
+                AgentComboBox.DroppedDown = true; //deroule la combobox
             }
         }
 

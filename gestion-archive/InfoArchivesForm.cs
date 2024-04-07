@@ -45,7 +45,7 @@ namespace gestion_archive
         {
             archives.Activate(); 
         }
-        private void ResetValues()
+        private void ResetValues() //Reset les valeurs
         {
             labelid_archive.Text = string.Empty;
             labelcote.Text = string.Empty;
